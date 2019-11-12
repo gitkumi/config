@@ -64,9 +64,9 @@ alias syss='systemctl status'
 alias google='googler'
 alias goo='googler'
 
-# tty-clock
-alias tty-clock='tty-clock -c -C 4'
-
 # Tmuxinator
 alias rice='tmuxinator milk'
 alias xrice='tmux kill-session -t milk'
+
+# tty-clock
+alias tty-clock='tty-clock -c -C 4 -n -D'

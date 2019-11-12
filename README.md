@@ -1,25 +1,26 @@
 ## dotfiles
-- files stored on ~
+- Files stored on ~
 
 ## dotconfig
-- files stored on ~/.config
+- Files stored on ~/.config
 
 ## scripts
-- User scripts.
+- User scripts
 
 ## Arch installed packages 
 - arch.txt  
 
 ## ~/
-- .bashrc
-- .bash_aliases
-- .xprofile
-- .dir_colors
+- .bash_aliases 
+- .bashrc 
+- .dir_colors 
 - .vimrc
+- .tmux.conf
 
 ## ~/.config/
 - xfce4
 - cava
+- tmuxinator
 
 ## Updating
 - Run copy.sh
