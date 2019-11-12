@@ -1,0 +1,14 @@
+# /home/takumi/.config/tmuxinator/rice.yml
+
+name: rice
+root: ~/
+
+windows:
+  - main:
+      layout: 4cb5,134x39,0,0{67x39,0,0[67x4,0,0,0,67x34,0,5,1],66x39,68,0[66x10,68,0,2,66x28,68,11,3]}
+      # layout: e988,134x39,0,0{67x39,0,0[67x10,0,0,0,67x28,0,11,1],66x39,68,0[66x10,68,0,2,66x28,68,11,3]}
+      panes:
+        - cava
+        - cmus
+        - ufetch
+        - gotop

@@ -1,0 +1,17 @@
+# /home/takumi/.config/tmuxinator/dashboard.yml
+
+name: dashboard
+root: ~/
+
+windows:
+  - dashboard:
+      layout: d5d0,190x50,0,0{90x50,0,0[90x35,0,0,8,90x14,0,36,12],99x50,91,0[99x35,91,0,9,99x14,91,36{50x14,91,36,10,48x14,142,36,11}]}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - cmus
+        - cava
+        - gotop
+        - ufetch
+        - tty-clock
