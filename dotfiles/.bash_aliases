@@ -65,8 +65,11 @@ alias google='googler'
 alias goo='googler'
 
 # Tmuxinator
-alias rice='tmuxinator milk'
-alias xrice='tmux kill-session -t milk'
+alias rice='tmuxinator rice'
+alias xrice='tmux kill-session -t rice'
+
+alias music='tmuxinator music'
+alias xmusic='tmux kill-session -t music'
 
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'

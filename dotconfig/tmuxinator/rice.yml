@@ -4,11 +4,15 @@ name: rice
 root: ~/
 
 windows:
-  - main:
-      layout: 4cb5,134x39,0,0{67x39,0,0[67x4,0,0,0,67x34,0,5,1],66x39,68,0[66x10,68,0,2,66x28,68,11,3]}
-      # layout: e988,134x39,0,0{67x39,0,0[67x10,0,0,0,67x28,0,11,1],66x39,68,0[66x10,68,0,2,66x28,68,11,3]}
+  - dashboard:
+      layout: a614,190x50,0,0{133x50,0,0[133x40,0,0,0,133x9,0,41,1],56x50,134,0[56x10,134,0,2,56x10,134,11,3,56x28,134,22,4]}
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
       panes:
-        - cava
         - cmus
+        - cava
+        - tty-clock
         - ufetch
-        - gotop
+        - 
+        
