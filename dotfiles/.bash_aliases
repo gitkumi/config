@@ -61,8 +61,8 @@ alias sysr='sudo systemctl restart'
 alias syss='systemctl status'
 
 # Googler
-alias google='googler'
-alias goo='googler'
+alias google='googler --count 5'
+alias goo='googler --count 5'
 
 # Tmuxinator
 alias rice='tmuxinator rice'

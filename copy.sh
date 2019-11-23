@@ -7,6 +7,23 @@ declare -r REPO_DIR=$ROOT_DIR/Documents/config
 declare -r DOT_DIR=$REPO_DIR/dotfiles
 declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
 
+# ~/
+declare -r DOT_FILES=(
+  .bashrc 
+  .bash_aliases 
+  .xprofile
+  .dir_colors 
+  .vimrc
+  .tmux.conf
+)
+
+# ~/.config
+declare -r DOT_CONFIG_FILES=(
+  cava
+  xfce4
+  tmuxinator
+)
+
 # Initialize
 echo 'Initializing directories..'
 mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig $REPO_DIR/scripts
@@ -20,13 +37,6 @@ echo 'Copying user scripts..'
 cp -R $ROOT_DIR/scripts $REPO_DIR
 
 # ~/
-declare -r DOT_FILES=(
-  .bashrc 
-  .bash_aliases 
-  .dir_colors 
-  .vimrc
-  .tmux.conf
-)
 for file in ${DOT_FILES[*]}
 do
   echo "Copying $file.."
@@ -34,11 +44,6 @@ do
 done
 
 # ~/.config
-declare -r DOT_CONFIG_FILES=(
-  cava
-  xfce4
-  tmuxinator
-)
 for file in ${DOT_CONFIG_FILES[*]}
 do
   echo "Copying $file.."

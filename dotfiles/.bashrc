@@ -23,4 +23,9 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 
+if [ -f ~/.temp_aliases ]; then
+. ~/.temp_aliases
+fi
+
+
 eval $(dircolors -b $HOME/.dir_colors)

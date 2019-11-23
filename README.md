@@ -13,6 +13,7 @@
 ## ~/
 - .bash_aliases 
 - .bashrc 
+- .xprofile 
 - .dir_colors 
 - .vimrc
 - .tmux.conf
