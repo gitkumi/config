@@ -5,11 +5,15 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias lla='ls -la'
-alias c='clear'
+alias ls='exa --oneline'
+alias ll='exa --long'
+alias lla='exa --long --all'
+alias ltree='exa --tree --level=3'
+alias lgrid='exa'
+alias lnew='exa --long --sort=new --reverse'
+alias lmod='exa --long --sort=modified --reverse'
 
+alias c='clear'
 alias bye!='shutdown -h now'
 
 # Tar
