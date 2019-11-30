@@ -27,5 +27,7 @@ if [ -f ~/.temp_aliases ]; then
 . ~/.temp_aliases
 fi
 
+# Add escripts to PATH
+export PATH=$PATH:/home/takumi/.mix/escripts
 
 eval $(dircolors -b $HOME/.dir_colors)
