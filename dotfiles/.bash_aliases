@@ -77,3 +77,6 @@ alias xmusic='tmux kill-session -t music'
 
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'
+
+# later
+alias later='clear && later'
