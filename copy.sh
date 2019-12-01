@@ -10,6 +10,7 @@ declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
 # ~/
 declare -r DOT_FILES=(
   .bashrc 
+  .bash_profile 
   .bash_aliases 
   .xprofile
   .dir_colors 
