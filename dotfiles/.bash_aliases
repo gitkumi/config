@@ -77,3 +77,7 @@ alias xmusic='tmux kill-session -t music'
 
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'
+
+# Ecto
+alias ectom='mix ecto.migrate'
+alias ectores='mix ecto.reset'
