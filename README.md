@@ -7,8 +7,9 @@
 ## scripts
 - User scripts
 
-## Arch installed packages 
-- arch.txt  
+## Installed packages 
+- Packages  
+- Packages.aur  
 
 ## ~/
 - .bash_aliases 
