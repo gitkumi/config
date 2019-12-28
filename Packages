@@ -60,6 +60,7 @@ patch
 pavucontrol
 pkgconf
 postgresql
+python-cairo
 reiserfsprogs
 s-nail
 seahorse
@@ -126,5 +127,6 @@ xfdesktop
 xfwm4
 xfwm4-themes
 xorg-server
+yarn
 z
 zip

@@ -16,6 +16,7 @@ declare -r DOT_FILES=(
   .dir_colors 
   .vimrc
   .tmux.conf
+  .tool-versions
 )
 
 # ~/.config

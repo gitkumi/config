@@ -18,6 +18,7 @@
 - .dir_colors 
 - .vimrc
 - .tmux.conf
+- .tool-versions
 
 ## ~/.config/
 - xfce4
@@ -29,3 +30,7 @@
 
 ## Adding config
 - Add copy command in copy.sh
+
+## Manual Installation
+- yay (https://github.com/Jguer/yay)
+- asdf-vm (https://asdf-vm.com/#/) (nodejs, elixir, erlang)
