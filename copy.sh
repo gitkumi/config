@@ -31,7 +31,11 @@ mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig $REPO_DIR/scripts
 
 # Installed packages
 echo 'Copying installed arch packages..'
-pacman -Qe > $REPO_DIR/arch.txt
+pacman -Qqen > $REPO_DIR/Packages
+
+# Installed packages
+echo 'Copying installed arch packages (AUR)..'
+pacman -Qqem > $REPO_DIR/Packages.aur
 
 # User scripts
 echo 'Copying user scripts..'
