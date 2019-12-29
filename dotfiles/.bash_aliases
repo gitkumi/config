@@ -79,6 +79,7 @@ alias tty-clock='tty-clock -c -C 4 -n -D'
 # vtop
 alias vtop='vtop --theme nord'
 
-# Ecto
+# Mix/Elixir
+alias esb='mix escript.build'
 alias ectom='mix ecto.migrate'
 alias ectores='mix ecto.reset'
