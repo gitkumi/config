@@ -5,13 +5,12 @@ root: ~/
 
 windows:
   - dashboard:
-      layout: d572,190x50,0,0{100x50,0,0[100x41,0,0,0,100x8,0,42,1],89x50,101,0[89x10,101,0{51x10,101,0,2,37x10,153,0,3},89x39,101,11,4]}
+      layout: 69ab,190x50,0,0{139x50,0,0[139x42,0,0,0,139x7,0,43,1],50x50,140,0[50x7,140,0,2,50x42,140,8,7]}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
         - cmus
         - cava
-        - clear && later
         - tty-clock
-        - gotop
+        - clear && ufetch && later

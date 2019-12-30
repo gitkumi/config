@@ -50,6 +50,7 @@
         <value type="string" value="ibus panel"/>
       </property>
       <property name="names-ordered" type="array">
+        <value type="string" value="task manager"/>
         <value type="string" value="thunar"/>
         <value type="string" value="deluge"/>
         <value type="string" value="networkmanager applet"/>

@@ -76,6 +76,9 @@ alias xrice='tmux kill-session -t rice'
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'
 
+# vtop
+alias vtop='vtop --theme nord'
+
 # Ecto
 alias ectom='mix ecto.migrate'
 alias ectores='mix ecto.reset'
