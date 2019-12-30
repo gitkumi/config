@@ -7,10 +7,12 @@ lightdm-settings
 mailspring
 nord-vim
 nord-xfce-terminal
+powerline-fonts-git
 simplenote-electron-bin
 syncthingtray
 tmuxinator
 ttf-monapo
+ttf-ubraille
 tty-clock
 ufetch-git
 vim-plug

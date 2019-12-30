@@ -60,6 +60,7 @@ patch
 pavucontrol
 pkgconf
 postgresql
+powerline
 python-cairo
 reiserfsprogs
 s-nail

@@ -5,11 +5,11 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 
-alias ls='exa --oneline'
+alias ls='exa'
+alias lsl='exa --oneline'
 alias ll='exa --long'
 alias lla='exa --long --all'
 alias ltree='exa --tree --level=3'
-alias lgrid='exa'
 alias lnew='exa --long --sort=new --reverse'
 alias lmod='exa --long --sort=modified --reverse'
 
@@ -72,9 +72,6 @@ alias goo='googler --count 5'
 # Tmuxinator
 alias rice='tmuxinator rice'
 alias xrice='tmux kill-session -t rice'
-
-alias music='tmuxinator music'
-alias xmusic='tmux kill-session -t music'
 
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'

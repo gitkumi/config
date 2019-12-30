@@ -5,14 +5,20 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+
+# Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
 
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Add escripts to PATH
-export PATH=$PATH:/home/takumi/.mix/escripts
+export PATH=$PATH:/home/takumi/.asdf/installs/elixir/1.9.4-otp-22/.mix/escripts
 
 # Loads Z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh

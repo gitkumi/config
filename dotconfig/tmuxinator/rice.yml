@@ -5,7 +5,7 @@ root: ~/
 
 windows:
   - dashboard:
-      layout: 60d0,190x50,0,0{107x50,0,0[107x41,0,0,0,107x8,0,42,1],82x50,108,0[82x10,108,0{41x10,108,0,8,40x10,150,0,9},82x39,108,11,6]}
+      layout: d572,190x50,0,0{100x50,0,0[100x41,0,0,0,100x8,0,42,1],89x50,101,0[89x10,101,0{51x10,101,0,2,37x10,153,0,3},89x39,101,11,4]}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
