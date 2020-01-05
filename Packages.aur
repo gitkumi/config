@@ -4,6 +4,7 @@ googler
 insomnia
 lightdm-settings
 mailspring
+multibootusb
 nord-vim
 nord-xfce-terminal
 powerline-fonts-git
@@ -14,4 +15,5 @@ ttf-monapo
 tty-clock
 ufetch-git
 vim-plug
+woeusb
 yay

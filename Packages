@@ -23,6 +23,8 @@ fzf
 garcon
 gcc
 git
+gnome-calculator
+gnome-disk-utility
 gpick
 groff
 grub
@@ -62,6 +64,7 @@ pkgconf
 postgresql
 powerline
 python-cairo
+qemu
 reiserfsprogs
 s-nail
 seahorse
