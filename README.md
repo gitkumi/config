@@ -34,11 +34,11 @@
 ## Manual Installation
 - yay (https://github.com/Jguer/yay)
 - asdf-vm (https://asdf-vm.com/#/) (nodejs, elixir, erlang)
-- VS Code extensions (install Settings Sync and provide the gist) (https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
+- VS Code extensions (install Settings Sync and provide the gist https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
 
 ## Restoring
-- Run install_packages.sh then run copy.sh
-- Do the manual stuff
+- Do manual installation first (need yay to install AUR packages)
+- Run install_packages.sh, install_packages_aur.sh, and copy.sh
 
 ## Notes
-- When running install_package.sh and a package is not found, it will fail. Should check the Arch repo and manually update the name. (most probably it was changed)
+- When running install_package.sh or install_packages_aur.sh and a package is not found, it will fail. Should check the Arch/AUR repo and manually update the name. (most probably it was changed)

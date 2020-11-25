@@ -1,1 +1,2 @@
-cp -R dotconfig/. ~/.config && cp -R dotfiles/. ~/
+cp -R dotconfig/. ~/.config
+cp -R dotfiles/. ~/
