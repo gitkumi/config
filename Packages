@@ -71,6 +71,7 @@ pavucontrol
 pkgconf
 postgresql
 powerline
+pulseaudio
 python-cairo
 qemu
 reiserfsprogs
