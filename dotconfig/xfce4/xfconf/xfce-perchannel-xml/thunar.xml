@@ -20,7 +20,7 @@
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,134,50,50,583,50,50,80,50,128"/>
+  <property name="last-details-view-column-widths" type="string" value="50,134,50,50,665,50,50,63,50,63"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_MODIFIED"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
 </channel>

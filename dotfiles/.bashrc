@@ -32,8 +32,13 @@ if [ -f ~/.temp_aliases ]; then
 . ~/.temp_aliases
 fi
 
-eval $(dircolors -b $HOME/.dir_colors)
-
+# Loads asdf
+if [ -f $HOME/.asdf/asdf.sh ]; then
 . $HOME/.asdf/asdf.sh
+fi
 
+if [ -f $HOME/.asdf/completions/asdf.bash ]; then
 . $HOME/.asdf/completions/asdf.bash
+fi
+
+eval $(dircolors -b $HOME/.dir_colors)
