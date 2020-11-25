@@ -42,6 +42,7 @@ alias gcmm='git commit -m'
 alias gcma='git commit --amend -v'
 alias gcma!='git commit --amend --no-edit'
 alias grbi='git rebase -i'
+alias uncommit='git reset --soft HEAD^'
 
 # Yarn
 alias y='yarn'
