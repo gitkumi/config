@@ -46,7 +46,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance1187;firefox.instance151071;firefox.instance3631;firefox.instance7602"/>
+      <property name="mpris-players" type="string" value="firefox.instance11783;firefox.instance1187;firefox.instance151071;firefox.instance3631;firefox.instance7602;firefox.instance9225"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
