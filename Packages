@@ -12,6 +12,7 @@ code
 deluge
 dhcpcd
 dialog
+discord
 evince
 exa
 exo
@@ -61,7 +62,6 @@ noto-fonts-cjk
 noto-fonts-extra
 ntfs-3g
 openssh
-orage
 os-prober
 pacman
 papirus-icon-theme
@@ -153,7 +153,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
@@ -178,6 +177,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
