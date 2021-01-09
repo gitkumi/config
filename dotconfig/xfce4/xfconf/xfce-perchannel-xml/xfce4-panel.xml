@@ -39,6 +39,17 @@
       <property name="names-hidden" type="array">
         <value type="string" value="networkmanager applet"/>
       </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="networkmanager applet"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="Nicotine+"/>
+        <value type="string" value="discord1"/>
+      </property>
+      <property name="hidden-items" type="array">
+        <value type="string" value="Nicotine+"/>
+        <value type="string" value="discord1"/>
+      </property>
     </property>
     <property name="plugin-7" type="string" value="statusnotifier">
       <property name="square-icons" type="bool" value="true"/>
@@ -47,7 +58,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance1174;firefox.instance11783;firefox.instance1187;firefox.instance151071;firefox.instance17857;firefox.instance29259;firefox.instance3631;firefox.instance39927;firefox.instance45996;firefox.instance48503;firefox.instance5955;firefox.instance7602;firefox.instance900;firefox.instance9225"/>
+      <property name="mpris-players" type="string" value="chromium.instance24889;chromium.instance31969;firefox.instance1059;firefox.instance1174;firefox.instance11783;firefox.instance1187;firefox.instance151071;firefox.instance17309;firefox.instance17857;firefox.instance1845;firefox.instance2417;firefox.instance25729;firefox.instance26680;firefox.instance2824;firefox.instance29259;firefox.instance29453;firefox.instance3585;firefox.instance3631;firefox.instance39927;firefox.instance4133;firefox.instance45996;firefox.instance4822;firefox.instance4842;firefox.instance48503;firefox.instance49068;firefox.instance5097;firefox.instance5955;firefox.instance6257;firefox.instance6407;firefox.instance7602;firefox.instance900;firefox.instance9225;spotify"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>

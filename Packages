@@ -39,6 +39,7 @@ gvfs
 gvfs-smb
 gzip
 htop
+inotify-tools
 jfsutils
 libtool
 lightdm
@@ -57,6 +58,7 @@ netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+nicotine+
 nm-connection-editor
 noto-fonts-cjk
 noto-fonts-extra

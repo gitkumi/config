@@ -6,6 +6,8 @@
       <value type="string" value="Firefox"/>
       <value type="string" value="Mailspring"/>
       <value type="string" value="nm-applet"/>
+      <value type="string" value="org.nicotine_plus.Nicotine"/>
+      <value type="string" value="Spotify"/>
       <value type="string" value="Syncthing GTK"/>
       <value type="string" value="thunar"/>
       <value type="string" value="Thunar"/>
