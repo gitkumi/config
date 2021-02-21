@@ -30,6 +30,7 @@ gettext
 git
 gnome-calculator
 gnome-disk-utility
+gnome-sound-recorder
 gparted
 gpick
 grep
@@ -38,6 +39,7 @@ grub
 gvfs
 gvfs-smb
 gzip
+hexchat
 htop
 inotify-tools
 jfsutils
@@ -70,6 +72,7 @@ papirus-icon-theme
 parole
 patch
 pavucontrol
+pinta
 pkgconf
 postgresql
 powerline

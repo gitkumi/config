@@ -42,3 +42,6 @@ if [ -f $HOME/.asdf/completions/asdf.bash ]; then
 fi
 
 eval $(dircolors -b $HOME/.dir_colors)
+
+# Helpful docs in Erlang
+export KERL_BUILD_DOCS="yes"
