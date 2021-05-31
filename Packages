@@ -65,6 +65,7 @@ nm-connection-editor
 noto-fonts-cjk
 noto-fonts-extra
 ntfs-3g
+ntp
 openssh
 os-prober
 pacman
@@ -80,6 +81,7 @@ pulseaudio
 python-cairo
 qemu
 reiserfsprogs
+rtorrent
 s-nail
 seahorse
 sed
@@ -87,7 +89,6 @@ speedtest-cli
 sshfs
 sudo
 syncthing
-syncthing-gtk
 texinfo
 thunar
 thunar-archive-plugin
