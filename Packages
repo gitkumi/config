@@ -41,6 +41,7 @@ gvfs-smb
 gzip
 hexchat
 htop
+inkscape
 inotify-tools
 jfsutils
 libtool
@@ -89,6 +90,7 @@ speedtest-cli
 sshfs
 sudo
 syncthing
+tailscale
 texinfo
 thunar
 thunar-archive-plugin
