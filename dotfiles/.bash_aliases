@@ -46,6 +46,9 @@ alias grbi='git rebase -i'
 alias uncommit='git reset --soft HEAD^'
 alias gitclear='git reset --hard'
 
+# NPM
+alias nr = 'npm run'
+
 # Yarn
 alias y='yarn'
 

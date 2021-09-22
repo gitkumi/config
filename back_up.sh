@@ -17,6 +17,7 @@ declare -r DOT_FILES=(
   .vimrc
   .tmux.conf
   .tool-versions
+  .Xmodmap
 )
 
 # ~/.config

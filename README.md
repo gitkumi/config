@@ -19,6 +19,7 @@
 - .vimrc
 - .tmux.conf
 - .tool-versions
+- .Xmodmap
 
 ## ~/.config/
 - xfce4
