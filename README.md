@@ -25,6 +25,7 @@
 - xfce4
 - cava
 - tmuxinator
+- nvim (neovim)
 
 ## Updating
 - Run back_up.sh
@@ -39,7 +40,7 @@
 
 ## Restoring
 - Do manual installation first (need yay to install AUR packages)
-- Run install_packages.sh, install_packages_aur.sh, and copy.sh
+- Run install_packages.sh, install_packages_aur.sh, and restore.sh
 
 ## Notes
 - When running install_package.sh or install_packages_aur.sh and a package is not found, it will fail. Should check the Arch/AUR repo and manually update the name. (most probably it was changed)
