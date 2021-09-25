@@ -25,13 +25,12 @@
 - xfce4
 - cava
 - tmuxinator
-- nvim (neovim)
 
 ## Updating
 - Run back_up.sh
 
 ## Adding config
-- Update back_up.sh to include new config
+- Update README.md and back_up.sh to include new config
 
 ## Manual Installation
 - yay (https://github.com/Jguer/yay)
@@ -43,4 +42,4 @@
 - Run install_packages.sh, install_packages_aur.sh, and restore.sh
 
 ## Notes
-- When running install_package.sh or install_packages_aur.sh and a package is not found, it will fail. Should check the Arch/AUR repo and manually update the name. (most probably it was changed)
+- Sometimes package name gets changed which causes installation script to fail. Check Ach/AUR repo and manually update the name to fix.
