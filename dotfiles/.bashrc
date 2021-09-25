@@ -14,7 +14,7 @@ POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
 # Set vim as default editor
-export VISUAL=nvim
+export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Add escripts to PATH
