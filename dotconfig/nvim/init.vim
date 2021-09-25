@@ -3,7 +3,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
- 
+
 colorscheme nord
 :set number
 
@@ -16,4 +16,3 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 80
 
 :nnoremap <F5> :buffers<CR>:buffer<Space>
-

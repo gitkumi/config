@@ -46,6 +46,7 @@ man-pages
 mousepad
 mpv
 nano
+neovim
 netctl
 network-manager-applet
 networkmanager
@@ -65,6 +66,7 @@ postgresql
 powerline
 python-cairo
 qemu
+ranger
 reiserfsprogs
 s-nail
 seahorse
