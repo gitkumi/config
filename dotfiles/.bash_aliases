@@ -45,6 +45,7 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 alias uncommit='git reset --soft HEAD^'
 alias gitclear='git reset --hard'
+alias gitclean='git branch | grep -v "master" | xargs git branch -D'
 
 # NPM
 alias nr='npm run'
