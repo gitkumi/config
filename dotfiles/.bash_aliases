@@ -53,6 +53,9 @@ alias nr='npm run'
 # Yarn
 alias y='yarn'
 
+# PNPM
+alias p='pnpm'
+
 # Yay/Pacman
 alias yayin='yay -S'
 alias yayre='yay -Rns'
