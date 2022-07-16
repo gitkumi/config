@@ -33,6 +33,7 @@ grub
 gvfs
 gvfs-smb
 htop
+inotify-tools
 jfsutils
 lightdm
 lightdm-gtk-greeter
@@ -64,7 +65,7 @@ pkgconf
 postgresql
 powerline
 python-cairo
-qemu
+qemu-desktop
 ranger
 reiserfsprogs
 s-nail
