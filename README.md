@@ -22,25 +22,25 @@ Installed packages
 - Packages.aur
 ```
   
-## Saving config
+### Saving config
 - Run back_up.sh
 
-## Adding config
+### Adding config
 - Update README.md and back_up.sh to include the new config
 
-## Installing
+### Installing
 - Do manual installation first
 - Run install_packages.sh, install_packages_aur.sh, and restore.sh
 
-## Manual installation
-- [yay](https://github.com/Jguer/yay)
+#### Manual installation
+- [yay](https://github.com/Jguer/yay)  
   Required to install AUR packages
   
-- [asdf-vm](https://asdf-vm.com/#/) 
+- [asdf-vm](https://asdf-vm.com/#/)  
   Install nodejs, elixir, erlang
   
-- VS Code extensions 
+- VS Code extensions  
   Install Settings Sync and provide this [gist](https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
 
-## Notes
+### Notes
 - Sometimes package name gets changed which causes installation script to fail. Check Arch/AUR repo and manually update the name to fix.
