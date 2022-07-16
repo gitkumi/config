@@ -21,12 +21,12 @@ Installed packages
 - Packages
 - Packages.aur
 ```
-  
-### Saving config
-- Run back_up.sh
 
 ### Adding config
 - Update README.md and back_up.sh to include the new config
+    
+### Saving config
+- Run back_up.sh
 
 ### Installing
 - Do manual installation first
