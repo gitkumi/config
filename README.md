@@ -42,4 +42,4 @@
 - Run install_packages.sh, install_packages_aur.sh, and restore.sh
 
 ## Notes
-- Sometimes package name gets changed which causes installation script to fail. Check Ach/AUR repo and manually update the name to fix.
+- Sometimes package name gets changed which causes installation script to fail. Check Arch/AUR repo and manually update the name to fix.
