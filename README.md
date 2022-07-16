@@ -1,15 +1,17 @@
-## dotfiles
+```
+dotfiles
 - Files stored on ~
 
-## dotconfig
+dotconfig
 - Files stored on ~/.config
 
-## scripts
+scripts
 - User scripts
 
-## Installed packages 
+Installed packages 
 - Packages  
 - Packages.aur  
+```
 
 ## ~/
 - .bash_aliases 
