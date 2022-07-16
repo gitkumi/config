@@ -13,4 +13,4 @@ windows:
         - cmus
         - cava
         - tty-clock
-        - clear && ufetch && later
+        - clear && ufetch
