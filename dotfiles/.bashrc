@@ -17,9 +17,6 @@ POWERLINE_BASH_SELECT=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# Add escripts to PATH
-export PATH=$PATH:/home/takumi/.asdf/installs/elixir/1.11.2/.mix/escripts
-
 # Loads Z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
