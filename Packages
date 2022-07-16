@@ -33,6 +33,7 @@ grub
 gvfs
 gvfs-smb
 htop
+inetutils
 inotify-tools
 jfsutils
 lightdm
