@@ -18,6 +18,7 @@ colorscheme dracula
 :set tabstop=2
 :set softtabstop=2
 :set mouse=a
+:set termguicolors
 
 let g:airline_powerline_fonts=1
 let g:netrw_banner = 0
