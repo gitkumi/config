@@ -15,17 +15,16 @@ colorscheme dracula
 :set number
 :set encoding=UTF-8
 :set autoindent
+:set expandtab
 :set tabstop=2
 :set softtabstop=2
+:set shiftwidth=2
 :set mouse=a
 :set termguicolors
 
 let g:airline_powerline_fonts=1
 let g:netrw_banner = 0
 let NERDTreeShowHidden=1
-
-:nnoremap <F5> :buffers<CR>:buffer<Space>
-:nnoremap <C-p> :GFiles<Cr>
 
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
@@ -40,3 +39,16 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " Close tab if NERDTree is the only buffer.
 autocmd BufEnter * if tabpagenr('$') > 1 && !len(filter(tabpagebuflist(), 'getbufvar(v:val,"&ft") != "nerdtree"')) | tabclose | endif
+
+function! FZFOpen(command_str)
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<c-w>\<c-w>"
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+:nnoremap <silent> <C-b> :call FZFOpen(':Buffers')<CR>
+:nnoremap <silent> <C-g>g :call FZFOpen(':Ag')<CR>
+:nnoremap <silent> <C-g>c :call FZFOpen(':Commands')<CR>
+:nnoremap <silent> <C-g>l :call FZFOpen(':BLines')<CR>
+:nnoremap <silent> <C-p> :call FZFOpen(':GFiles')<CR>
