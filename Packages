@@ -17,6 +17,7 @@ evince
 exa
 exo
 fakeroot
+fd
 ffmpegthumbnailer
 firefox
 flex
@@ -48,7 +49,6 @@ man-pages
 mousepad
 mpv
 nano
-neovim
 netctl
 network-manager-applet
 networkmanager
