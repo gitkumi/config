@@ -25,6 +25,7 @@ declare -r DOT_CONFIG_FILES=(
   cava
   xfce4
   tmuxinator
+  nvim
 )
 
 # Initialize

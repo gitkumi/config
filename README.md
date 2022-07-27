@@ -13,6 +13,7 @@ dotconfig (Files stored on ~/.config)
 - xfce4
 - cava
 - tmuxinator
+- nvim
 
 scripts
 - User scripts
