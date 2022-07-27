@@ -19,9 +19,6 @@ alias bye!='shutdown -h now'
 # Tar
 alias untar='tar -xzvf'
 
-#OpenVPN
-alias vpn='sudo openvpn'
-
 # Git
 alias g='git'
 alias gs='git status'
