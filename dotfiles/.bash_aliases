@@ -20,6 +20,10 @@ alias qq='exit'
 # Tar
 alias untar='tar -xzvf'
 
+# vim
+alias vi='nvim'
+alias vim='nvim'
+
 # Git
 alias g='git'
 alias gs='git status'

@@ -13,8 +13,8 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
-# Set vim as default editor
-export VISUAL=vim
+# Set nvim as default editor
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # Loads Z

@@ -6,15 +6,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 :call plug#end()
 
 :let g:airline_powerline_fonts=1
 :let g:netrw_banner = 0
-:let NERDTreeShowHidden=1
 
 :colorscheme dracula
 :set hidden
@@ -83,28 +80,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
 
-" Start NERDTree when Vim starts with a directory argument.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-" Close tab if NERDTree is the only buffer.
-autocmd BufEnter * if tabpagenr('$') > 1 && !len(filter(tabpagebuflist(), 'getbufvar(v:val,"&ft") != "nerdtree"')) | tabclose | endif
-
-function! FZFOpen(command_str)
-  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-    exe "normal! \<c-w>\<c-w>"
-  endif
-  exe 'normal! ' . a:command_str . "\<cr>"
-endfunction
-
-:nnoremap <silent> <C-g>g :call FZFOpen(':Ag')<CR>
-:nnoremap <silent> <C-g>c :call FZFOpen(':Commands')<CR>
-:nnoremap <silent> <C-g>l :call FZFOpen(':BLines')<CR>
-:nnoremap <silent> <C-p> :call FZFOpen(':GFiles')<CR>
+:nnoremap <silent> <C-g>g :Ag<CR>
+:nnoremap <silent> <C-g>c :Commands<CR>
+:nnoremap <silent> <C-g>l :BLines<CR>
+:nnoremap <silent> <C-p> :GFiles<CR>
