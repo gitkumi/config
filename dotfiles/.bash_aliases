@@ -15,6 +15,7 @@ alias lmod='exa --long --sort=modified --reverse'
 
 alias c='clear'
 alias bye!='shutdown -h now'
+alias qq='exit'
 
 # Tar
 alias untar='tar -xzvf'
