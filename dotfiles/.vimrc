@@ -81,6 +81,4 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocActionAsync('format')
 
 :nnoremap <silent> <C-g>g :Ag<CR>
-:nnoremap <silent> <C-g>c :Commands<CR>
-:nnoremap <silent> <C-g>l :BLines<CR>
 :nnoremap <silent> <C-p> :GFiles<CR>

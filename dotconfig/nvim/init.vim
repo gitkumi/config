@@ -1,6 +1,7 @@
 :call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
@@ -9,6 +10,8 @@ Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 :call plug#end()
+
+lua require("telescope").load_extension "file_browser"
 
 :let g:airline_powerline_fonts=1
 :let g:netrw_banner = 0
@@ -79,3 +82,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
+
+:nnoremap <silent> <C-p>f :Telescope grep_string<CR>
+:nnoremap <silent> <C-p>o :Telescope file_browser<CR>
+:nnoremap <silent> <C-p> :Telescope git_files<CR>
