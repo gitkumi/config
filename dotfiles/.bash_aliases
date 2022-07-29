@@ -74,10 +74,6 @@ alias sysg='sudo systemctl start'
 alias sysr='sudo systemctl restart'
 alias syss='systemctl status'
 
-# Googler
-alias google='googler --count 5'
-alias goo='googler --count 5'
-
 # Tmuxinator
 alias rice='tmuxinator rice'
 alias xrice='tmux kill-session -t rice'
