@@ -2,7 +2,7 @@
 declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
 declare -r ROOT_DIR=/home/takumi
-declare -r REPO_DIR=$ROOT_DIR/Documents/config
+declare -r REPO_DIR=$ROOT_DIR/config
 
 declare -r DOT_DIR=$REPO_DIR/dotfiles
 declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig

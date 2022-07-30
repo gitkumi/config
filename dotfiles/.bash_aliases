@@ -68,7 +68,7 @@ alias pacser='pacman -Ss'
 alias pacorph='sudo pacman -Qdt'
 alias pacreorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacls='pacman -Qe'
-alias pacsave='/home/takumi/Documents/config/back_up.sh'
+alias pacsave='/home/takumi/config/back_up.sh'
 
 # Systemd
 alias syse='sudo systemctl enable'
