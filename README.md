@@ -4,7 +4,6 @@ dotfiles (Files stored on ~)
 - .bashrc
 - .xprofile
 - .dir_colors
-- .vimrc
 - .tmux.conf
 - .tool-versions
 - .Xmodmap

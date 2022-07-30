@@ -14,7 +14,6 @@ declare -r DOT_FILES=(
   .bash_aliases 
   .xprofile
   .dir_colors 
-  .vimrc
   .tmux.conf
   .tool-versions
   .Xmodmap
