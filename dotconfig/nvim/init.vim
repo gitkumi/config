@@ -8,7 +8,6 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 :call plug#end()
 
@@ -35,7 +34,6 @@ lua require("telescope").load_extension "file_browser"
 :set updatetime=300
 :set shortmess+=c
 :set signcolumn=number
-:set clipboard=unnamedplus
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -47,10 +45,6 @@ lua require("telescope").load_extension "file_browser"
 " :nmap <silent> gy <Plug>(coc-type-definition)
 " :nmap <silent> gi <Plug>(coc-implementation)
 " :nmap <silent> gr <Plug>(coc-references)
-
-
-" Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 :nmap <leader>rn <Plug>(coc-rename)
