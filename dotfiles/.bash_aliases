@@ -24,6 +24,8 @@ alias untar='tar -xzvf'
 alias vi='nvim'
 alias vim='nvim'
 
+alias zz='cd $(find * -type d | fzf)'
+
 # Git
 alias g='git'
 alias gs='git status'

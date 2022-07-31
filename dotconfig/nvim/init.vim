@@ -47,11 +47,11 @@ lua require("telescope").load_extension "file_browser"
 " :nmap <silent> gr <Plug>(coc-references)
 
 " Symbol renaming.
-:nmap <leader>rn <Plug>(coc-rename)
+" :nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-:xmap <leader>f  <Plug>(coc-format-selected)
-:nmap <leader>f  <Plug>(coc-format-selected)
+:xmap <leader>p  <Plug>(coc-format-selected)
+:nmap <leader>p  <Plug>(coc-format-selected)
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -85,3 +85,8 @@ command! -nargs=0 Format :call CocActionAsync('format')
 :nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 :nnoremap <leader>fb <cmd>Telescope buffers<cr>
 :nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+"This unsets the "last search pattern" register by hitting return
+:nnoremap <CR> :noh<CR><CR>
+
+:map <leader>tn :tabnew<cr>
+
