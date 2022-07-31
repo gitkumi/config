@@ -80,6 +80,15 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
 
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+:inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+:inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
 :nnoremap <leader>fp <cmd>Telescope git_files<cr>
 :nnoremap <leader>ff <cmd>Telescope find_files<cr>
 :nnoremap <leader>fg <cmd>Telescope live_grep<cr>
