@@ -26,40 +26,6 @@ alias vim='nvim'
 
 alias zz='cd $(find * -type d | fzf)'
 
-# Git
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gl='git log --oneline --decorate --graph'
-alias glfull='git log --decorate --graph'
-alias gaa='git add -A'
-alias gp='git push'
-alias gpl='git pull'
-alias gr='git remote'
-alias grv='git remote -v'
-alias gcl='git clone'
-alias gch='git checkout'
-alias gb='git branch'
-alias gchb='git checkout -b'
-alias gcm='git commit -v'
-alias gcmm='git commit -m'
-alias gcma='git commit --amend -v'
-alias gcma!='git commit --amend --no-edit'
-alias grb='git rebase'
-alias grbi='git rebase -i'
-alias uncommit='git reset --soft HEAD^'
-alias gitclear='git reset --hard'
-alias gitclean='git branch | grep -v "master" | xargs git branch -D'
-
-# NPM
-alias nr='npm run'
-
-# Yarn
-alias y='yarn'
-
-# PNPM
-alias p='pnpm'
-
 # Yay/Pacman
 alias yayin='yay -S'
 alias yayre='yay -Rns'
@@ -89,6 +55,40 @@ alias tty-clock='tty-clock -c -C 4 -n -D'
 
 # vtop
 alias vtop='vtop --theme nord'
+
+# Git
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gl='git log --oneline --decorate --graph'
+alias glfull='git log --decorate --graph'
+alias gaa='git add -A'
+alias gp='git push'
+alias gpl='git pull'
+alias gr='git remote'
+alias grv='git remote -v'
+alias gcl='git clone'
+alias gch='git checkout'
+alias gb='git branch'
+alias gchb='git checkout -b'
+alias gcm='git commit -v'
+alias gcmm='git commit -m'
+alias gcma='git commit --amend -v'
+alias gcma!='git commit --amend --no-edit'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+alias uncommit='git reset --soft HEAD^'
+alias gitclear='git reset --hard'
+alias gitclean='git branch | grep -v "master" | cut -c 3- | gum choose --no-limit | xargs git branch -D'
+
+# NPM
+alias nr='npm run'
+
+# Yarn
+alias y='yarn'
+
+# PNPM
+alias p='pnpm'
 
 # Mix/Elixir
 alias esb='mix escript.build'
