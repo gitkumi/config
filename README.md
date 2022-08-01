@@ -4,6 +4,7 @@
 │   ├── cava
 │   ├── nvim
 │   ├── tmuxinator
+│   ├── user-dirs.dirs
 │   └── xfce4
 ├── dotfiles (Files stored on ~)
 │   ├── .bash_aliases
