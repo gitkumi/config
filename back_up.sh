@@ -29,19 +29,19 @@ declare -r DOT_CONFIG_FILES=(
 )
 
 # Initialize
-echo 'Initializing directories..'
+echo "Initializing directories.."
 mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig $REPO_DIR/scripts
 
 # Installed packages
-echo 'Copying installed arch packages..'
+echo "Copying installed arch packages.."
 pacman -Qqen > $REPO_DIR/Packages
 
 # Installed packages
-echo 'Copying installed arch packages (AUR)..'
+echo "Copying installed arch packages (AUR).."
 pacman -Qqem > $REPO_DIR/Packages.aur
 
 # User scripts
-echo 'Copying user scripts..'
+echo "Copying user scripts.."
 cp -R $ROOT_DIR/scripts $REPO_DIR
 
 # ~/
@@ -59,7 +59,7 @@ do
 done
 
 # commit changes and push to repo
-echo 'Committing changes and pushing to repo..'
+echo "Committing changes and pushing to repo.."
 git -C "$REPO_DIR" add -A
 git -C "$REPO_DIR" commit -m "$TIMESTAMP" 
 git -C "$REPO_DIR" push
