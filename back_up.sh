@@ -30,7 +30,7 @@ declare -r DOT_CONFIG_FILES=(
 
 # Initialize
 echo "Initializing directories.."
-mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig $REPO_DIR/scripts
+mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig
 
 # Installed packages
 echo "Copying installed arch packages.."
@@ -39,10 +39,6 @@ pacman -Qqen > $REPO_DIR/Packages
 # Installed packages
 echo "Copying installed arch packages (AUR).."
 pacman -Qqem > $REPO_DIR/Packages.aur
-
-# User scripts
-echo "Copying user scripts.."
-cp -R $ROOT_DIR/scripts $REPO_DIR
 
 # ~/
 for file in ${DOT_FILES[*]}

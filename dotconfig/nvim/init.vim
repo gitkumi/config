@@ -35,20 +35,6 @@ lua require("telescope").load_extension "file_browser"
 :set shortmess+=c
 :set signcolumn=number
 
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-" :nmap <silent> [g <Plug>(coc-diagnostic-prev)
-" :nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
-" :nmap <silent> gd <Plug>(coc-definition)
-" :nmap <silent> gy <Plug>(coc-type-definition)
-" :nmap <silent> gi <Plug>(coc-implementation)
-" :nmap <silent> gr <Plug>(coc-references)
-
-" Symbol renaming.
-" :nmap <leader>rn <Plug>(coc-rename)
-
 " Formatting selected code.
 :xmap <leader>p  <Plug>(coc-format-selected)
 :nmap <leader>p  <Plug>(coc-format-selected)
@@ -94,6 +80,7 @@ command! -nargs=0 Format :call CocActionAsync('format')
 :nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 :nnoremap <leader>fb <cmd>Telescope buffers<cr>
 :nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 "This unsets the "last search pattern" register by hitting return
 :nnoremap <CR> :noh<CR><CR>
 

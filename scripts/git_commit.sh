@@ -4,7 +4,7 @@ for i in "$@"; do
   case $i in
       -l|--long)
       LONG=true
-      shift # past argument with no value
+      shift
       ;;
     -*|--*)
       echo "Unknown option $i"

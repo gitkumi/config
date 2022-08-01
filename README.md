@@ -44,8 +44,7 @@
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install [z](https://github.com/rupa/z)
     - Install nodejs, elixir, and erlang via [asdf-vm](https://asdf-vm.com/#/)
-    - Install VS Code Extensions
-      Install Settings Sync and provide this [gist](https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
+    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
 
 ### Adding a new config
 Update the following files:  
@@ -62,4 +61,4 @@ Run restore.sh
 - Sometimes package name gets changed which causes installation script to fail. Check Arch/AUR repo and manually update the name in `Packages` or `Packages.aur` to fix.
 
 ### TODO
-- Setup cron to automatically save configs
+- Setup cron to automatically run `back_up.sh`
