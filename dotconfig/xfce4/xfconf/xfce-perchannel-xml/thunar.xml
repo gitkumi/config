@@ -11,7 +11,7 @@
     <value type="string" value="886C35286C351304"/>
     <value type="string" value="dc16f5b4-f756-4d30-8041-9a57782ebdea"/>
   </property>
-  <property name="last-window-width" type="int" value="1362"/>
+  <property name="last-window-width" type="int" value="1358"/>
   <property name="last-window-height" type="int" value="707"/>
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="hidden-bookmarks" type="array">
@@ -20,7 +20,7 @@
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,134,50,50,663,50,50,80,50,208"/>
+  <property name="last-details-view-column-widths" type="string" value="50,134,50,50,707,50,50,80,50,160"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
 </channel>

@@ -44,7 +44,7 @@
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install [z](https://github.com/rupa/z)
     - Install nodejs, elixir, and erlang via [asdf-vm](https://asdf-vm.com/#/)
-    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/751c1ba1002636ec194b2edafee551ac)
+    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/c25479bdc423fe539611e3c0e281fd8d)
 
 ### Adding a new config
 Update the following files:  
