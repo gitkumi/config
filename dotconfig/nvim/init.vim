@@ -4,6 +4,7 @@ Plug 'vim-airline/vim-airline'
 :call plug#end()
 
 :let g:airline_powerline_fonts=1
+:let g:airline#extensions#tabline#enabled = 1
 :let g:netrw_banner = 0
 
 :colorscheme dracula
