@@ -1,10 +1,6 @@
 :call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'sheerun/vim-polyglot'
-Plug 'ap/vim-css-color'
-Plug 'ryanoasis/vim-devicons'
 :call plug#end()
 
 :let g:airline_powerline_fonts=1
