@@ -141,3 +141,5 @@ xorg-server
 yarn
 z
 zip
+zsh
+zsh-completions
