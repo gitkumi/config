@@ -1,21 +1,13 @@
 ```
 ├── back_up.sh
-├── dotconfig (Files stored on ~/.config)
+├── dotconfig
+│   ├── alacritty
 │   ├── cava
 │   ├── nvim
 │   ├── tmuxinator
 │   ├── user-dirs.dirs
-│   ├── xfce4
-│   └── alacritty
-├── dotfiles (Files stored on ~)
-│   ├── .bash_aliases
-│   ├── .bash_profile
-│   ├── .bashrc
-│   └── .dir_colors
-│   └── .tmux.conf
-│   └── .tool-versions
-│   └── .Xmodmap
-│   └── .xprofile
+│   └── xfce4
+├── dotfiles
 ├── install_package_aur.sh
 ├── install_package.sh
 ├── Packages
@@ -23,6 +15,8 @@
 ├── README.md
 ├── restore.sh
 └── scripts
+    ├── git_checkout.sh
+    └── git_commit.sh
 ```
 
 ### Installing (clean machine)
