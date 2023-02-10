@@ -54,7 +54,7 @@ alias xrice='tmux kill-session -t rice'
 alias tty-clock='tty-clock -c -C 4 -n -D'
 
 # vtop
-alias vtop='vtop --theme nord'
+alias vtop='vtop --theme dracula'
 
 # Git
 alias g='git'
