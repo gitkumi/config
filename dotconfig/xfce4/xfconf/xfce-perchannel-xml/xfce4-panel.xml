@@ -40,6 +40,7 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “californication5” active: californication5 (80%)"/>
         <value type="string" value="wi-fi network connection “californication5” active: californication5 (76%)"/>
         <value type="string" value="clipman"/>
         <value type="string" value="requesting a wi-fi network address for “californication5”…"/>
