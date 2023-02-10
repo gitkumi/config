@@ -25,6 +25,7 @@ declare -r DOT_CONFIG_FILES=(
   xfce4
   tmuxinator
   nvim
+  alacritty
   user-dirs.dirs
 )
 

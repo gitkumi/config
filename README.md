@@ -5,7 +5,8 @@
 │   ├── nvim
 │   ├── tmuxinator
 │   ├── user-dirs.dirs
-│   └── xfce4
+│   ├── xfce4
+│   └── alacritty
 ├── dotfiles (Files stored on ~)
 │   ├── .bash_aliases
 │   ├── .bash_profile
