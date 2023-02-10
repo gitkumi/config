@@ -11,6 +11,7 @@ declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
 declare -r DOT_FILES=(
   .zshrc
   .z_aliases
+  .p10k.zsh
   .xprofile
   .dir_colors 
   .tmux.conf
