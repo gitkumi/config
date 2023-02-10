@@ -16,7 +16,7 @@ export KERL_BUILD_DOCS="yes"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git)
+plugins=(git fzf fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
