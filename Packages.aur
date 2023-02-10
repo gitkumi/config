@@ -12,6 +12,7 @@ nvim-packer-git
 orage
 otf-fira-code
 powerline-fonts-git
+powerline-shell
 simplenote-electron-bin
 tmuxinator
 ttf-monapo

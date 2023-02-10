@@ -46,10 +46,6 @@ alias sysg='sudo systemctl start'
 alias sysr='sudo systemctl restart'
 alias syss='systemctl status'
 
-# Tmuxinator
-alias rice='tmuxinator rice'
-alias xrice='tmux kill-session -t rice'
-
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'
 

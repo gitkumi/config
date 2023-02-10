@@ -67,7 +67,6 @@ patch
 pavucontrol
 pkgconf
 postgresql
-powerline
 python-cairo
 qemu-desktop
 ranger
