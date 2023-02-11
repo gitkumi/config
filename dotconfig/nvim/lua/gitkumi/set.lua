@@ -24,6 +24,8 @@ vim.opt.incsearch = true
 
 vim.opt.updatetime = 250
 
+vim.opt.undofile = true
+
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = 'menuone,noselect'
 
