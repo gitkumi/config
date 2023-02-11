@@ -3,6 +3,22 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+if is_bootstrap then
+    print '=================================='
+    print '    Plugins are being installed'
+    print '    Wait until Packer completes,'
+    print '       then restart nvim'
+    print '=================================='
+    return
+end
+
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+  command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
+  group = packer_group,
+  pattern = vim.fn.expand '$MYVIMRC',
+})
+
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -72,6 +88,31 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
+    use {
+        'j-hui/fidget.nvim',
+        config = function()
+            require'fidget'.setup{}
+        end
+    }
+
+    use 'tpope/vim-sleuth'
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+          'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+
+    vim.api.nvim_create_autocmd({ "VimEnter" }, { 
+        callback = function() 
+            require("nvim-tree.api").tree.open()
+        end 
+    })
+
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 end)
 
 

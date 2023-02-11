@@ -1,10 +1,10 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = '\\'
 
--- netrw
+-- Go to netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- select all
+-- Select all
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- move highlighted
@@ -24,10 +24,22 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
--- vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Replace all
 vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Show documentation/signature
+vim.keymap.set("n", "K", function() vim.lsp.buf.signature_help() end)
+vim.keymap.set("n", "<C-k>", function() vim.lsp.buf.hover() end)
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+-- File tree
+vim.keymap.set('n', '<leader>b', function() 
+  vim.cmd.NvimTreeFocus()
+  vim.cmd.NvimTreeFindFile()
+end)
+vim.keymap.set('n', '<C-b>', vim.cmd.NvimTreeToggle)
