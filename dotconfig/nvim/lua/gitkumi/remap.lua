@@ -39,4 +39,3 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- File tree
 vim.keymap.set('n', '<leader>b', vim.cmd.NvimTreeFocus)
-vim.keymap.set('n', '<C-b>', vim.cmd.NvimTreeToggle)
