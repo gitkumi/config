@@ -9,7 +9,7 @@ require("indent_blankline").setup {
         "IndentBlanklineIndent",
     },
     -- space_char_blankline = " ",
-    -- space_char_highlight_list = {
-    --     "IndentBlanklineIndent",
-    -- },
+    space_char_highlight_list = {
+        "IndentBlanklineIndent",
+    },
 }

@@ -22,6 +22,16 @@ vim.opt.wrap = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.completeopt = 'menuone,noselect'
+
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
