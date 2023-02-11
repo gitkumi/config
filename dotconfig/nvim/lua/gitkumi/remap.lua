@@ -38,4 +38,5 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- File tree
-vim.keymap.set('n', '<leader>b', vim.cmd.NvimTreeFocus)
+vim.keymap.set('n', '<leader>b', vim.cmd.NvimTreeToggle)
+vim.keymap.set('n', '<leader>B', vim.cmd.NvimTreeFocus)
