@@ -106,12 +106,6 @@ return require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    vim.api.nvim_create_autocmd({ "VimEnter" }, { 
-        callback = function() 
-            require("nvim-tree.api").tree.open()
-        end 
-    })
-
     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 end)
 

@@ -7,8 +7,6 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
@@ -25,4 +23,10 @@ require("nvim-tree").setup({
   update_focused_file = {
     enable = true,
   },
+})
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { 
+    callback = function() 
+        require("nvim-tree.api").tree.open()
+    end 
 })
