@@ -13,6 +13,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- J stay in place
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- New line
+vim.keymap.set("n", "<Enter>", "o<Esc>")
+vim.keymap.set("n", "<Shift><Enter>", "O<Esc>")
+
 -- Center after nav
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

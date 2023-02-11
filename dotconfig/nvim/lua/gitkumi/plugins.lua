@@ -39,20 +39,23 @@ return require('packer').startup(function(use)
         }
     }
 
-    use 'nvim-tree/nvim-web-devicons'
     use('laytan/cloak.nvim')
-    use 'Mofiqul/dracula.nvim'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-        options = { theme = 'dracula-nvim' }
-    }
+
+    use 'nvim-tree/nvim-web-devicons'
+
+    use "windwp/nvim-ts-autotag"
+
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use 'Mofiqul/dracula.nvim'
+
     use {
-        "windwp/nvim-ts-autotag"
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        options = { theme = 'dracula-nvim' }
     }
 end)
 
