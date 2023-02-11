@@ -39,6 +39,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    use 'tpope/vim-fugitive'
+
+    use 'fatih/vim-go'
+
     use 'lewis6991/gitsigns.nvim'
 
     use 'laytan/cloak.nvim'
