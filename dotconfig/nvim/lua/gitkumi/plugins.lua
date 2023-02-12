@@ -14,9 +14,9 @@ end
 
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
-  command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
-  group = packer_group,
-  pattern = vim.fn.expand '$MYVIMRC',
+    command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
+    group = packer_group,
+    pattern = vim.fn.expand '$MYVIMRC',
 })
 
 return require('packer').startup(function(use)
@@ -101,11 +101,10 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
-          'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
 end)
 
 
