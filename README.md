@@ -38,8 +38,8 @@
 3. Manual installation that can be deferred
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install [z](https://github.com/rupa/z)
-    - Install nodejs, elixir, and erlang via [asdf-vm](https://asdf-vm.com/#/)
-    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/c25479bdc423fe539611e3c0e281fd8d)
+    - Install asdf plugins (nodejs, elixir, and erlang, go) via [asdf-vm](https://asdf-vm.com/#/)
+    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/c25479bdc423fe539611e3c0e281fd8d) (Might be outdated)
 
 ### Adding a new config
 Update the following files:  
