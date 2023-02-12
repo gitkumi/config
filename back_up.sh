@@ -29,6 +29,9 @@ declare -r DOT_CONFIG_FILES=(
   user-dirs.dirs
 )
 
+# Delete existing folders
+rm -rf $REPO_DIR/dotfiles $REPO_DIR/dotconfig
+
 # Initialize
 echo "Initializing directories.."
 mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig
