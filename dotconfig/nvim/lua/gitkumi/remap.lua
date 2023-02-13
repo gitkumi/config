@@ -32,9 +32,8 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pp', builtin.git_files, { desc = '[p] Find in git files'})
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[f] Find in all files'})
 vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics, { desc = '[D]iagnostics' })
--- Search in project
 vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })  -- Search in project
 end)
 
 -- Harpoon
@@ -45,7 +44,6 @@ end)
 vim.keymap.set('n', '<leader><space>', function() 
     require("harpoon.ui").toggle_quick_menu()
 end)
-
 
 vim.keymap.set('n', '<leader>n', function() 
     require("harpoon.ui").nav_next()
