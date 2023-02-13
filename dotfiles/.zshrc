@@ -20,6 +20,7 @@ plugins=(git fzf fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
+# Enable autocomplete in zsh
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
