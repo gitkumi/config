@@ -10,7 +10,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- New line
 vim.keymap.set("n", "<Enter>", "o<Esc>")
-vim.keymap.set("n", "<Shift><Enter>", "O<Esc>")
+vim.keymap.set("n", "<S-Enter>", "O<Esc>")
 
 -- Center after nav
 vim.keymap.set("n", "J", "mzJ`z")
