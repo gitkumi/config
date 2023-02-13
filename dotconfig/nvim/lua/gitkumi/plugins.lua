@@ -121,6 +121,8 @@ return require('packer').startup(function(use)
             require'colorizer'.setup()
         end
     }
+
+    use 'ThePrimeagen/harpoon'
 end)
 
 
