@@ -91,5 +91,3 @@ alias esb='mix escript.build'
 alias ectom='mix ecto.migrate'
 alias ectores='mix ecto.reset'
 
-# Adds color to tmux
-# alias tmux='TERM=xterm-256color tmux'
