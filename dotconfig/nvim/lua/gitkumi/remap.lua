@@ -4,25 +4,30 @@ vim.g.maplocalleader = "\\"
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Move highlighted
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 -- New line
 vim.keymap.set("n", "<Enter>", "o<Esc>")
 vim.keymap.set("n", "<S-Enter>", "O<Esc>")
 
--- Center after nav
+-- Move highlighted
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Center after moving
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "G", "Gzz")
 
 -- Replace all
-vim.keymap.set("n", "<leader>d", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- File tree
+-- Duplicate
+vim.keymap.set("n", "<leader>d", "V%y'>pV$%")
+vim.keymap.set("v", "<leader>d", "y'>pV$%")
+
+-- File Tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
 
