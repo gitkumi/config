@@ -23,8 +23,11 @@ vim.keymap.set("n", "G", "Gzz")
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Select block
+vim.keymap.set("n", "<leader><S-v>", "0V$%")
+
 -- Duplicate
-vim.keymap.set("n", "<leader>d", "V%y'>pV$%")
+-- vim.keymap.set("n", "<leader>d", "V%y'>pV$%")
 vim.keymap.set("v", "<leader>d", "y'>pV$%")
 
 -- File Tree
