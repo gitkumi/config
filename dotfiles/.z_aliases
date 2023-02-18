@@ -1,10 +1,4 @@
-# Linux
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~"
-
+# ls
 alias ls='exa'
 alias lsl='exa --oneline'
 alias ll='exa --long'
