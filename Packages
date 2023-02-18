@@ -26,6 +26,7 @@ fzf
 garcon
 gcc
 git
+gitui
 gnome-calculator
 gnome-disk-utility
 gparted
@@ -38,7 +39,6 @@ htop
 inetutils
 inotify-tools
 jfsutils
-lazygit
 lightdm
 lightdm-gtk-greeter
 linux
