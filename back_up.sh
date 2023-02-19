@@ -2,7 +2,7 @@
 
 declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
-declare =r USER=$(whoami)
+declare -r USER=$(whoami)
 declare -r USER_DIR=/home/$USER
 declare -r REPO_DIR=$USER_DIR/config
 
