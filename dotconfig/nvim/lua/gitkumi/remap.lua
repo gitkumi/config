@@ -25,13 +25,6 @@ vim.keymap.set("n", "#", "#zz")
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Select block
-vim.keymap.set("n", "<leader><S-v>", "0V$%")
-
--- Duplicate
--- vim.keymap.set("n", "<leader>d", "V%y'>pV$%")
-vim.keymap.set("v", "<leader>d", "y'>pV$%")
-
 -- File Tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
@@ -79,4 +72,8 @@ end)
 
 vim.keymap.set('n', '<leader>4', function() 
     require("harpoon.ui").nav_file(4)
+end)
+
+vim.keymap.set('n', '<leader>5', function() 
+    require("harpoon.ui").nav_file(5)
 end)
