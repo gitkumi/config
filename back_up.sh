@@ -1,8 +1,10 @@
 #!/bin/bash
+
 declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
-declare -r ROOT_DIR=/home/takumi
-declare -r REPO_DIR=$ROOT_DIR/config
+declare =r USER=$(whoami)
+declare -r USER_DIR=/home/$USER
+declare -r REPO_DIR=$USER_DIR/config
 
 declare -r DOT_DIR=$REPO_DIR/dotfiles
 declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
@@ -30,17 +32,17 @@ declare -r DOT_CONFIG_FILES=(
 )
 
 # Delete existing folders
-rm -rf $REPO_DIR/dotfiles $REPO_DIR/dotconfig
+rm -rf $DOT_DIR $DOT_CONFIG_DIR
 
 # Initialize
 echo "Initializing directories.."
-mkdir -p $REPO_DIR/dotfiles $REPO_DIR/dotconfig
+mkdir -p $DOT_DIR $DOT_CONFIG_DIR
 
-# Installed packages
+# Save installed packages
 echo "Copying installed arch packages.."
 pacman -Qqen > $REPO_DIR/Packages
 
-# Installed packages
+# Save installed packages
 echo "Copying installed arch packages (AUR).."
 pacman -Qqem > $REPO_DIR/Packages.aur
 
@@ -48,14 +50,14 @@ pacman -Qqem > $REPO_DIR/Packages.aur
 for file in ${DOT_FILES[*]}
 do
   echo "Copying $file.."
-  cp -R $ROOT_DIR/$file $DOT_DIR
+  cp -R $USER_DIR/$file $DOT_DIR
 done
 
 # ~/.config
 for file in ${DOT_CONFIG_FILES[*]}
 do
   echo "Copying $file.."
-  cp -R $ROOT_DIR/.config/$file $DOT_CONFIG_DIR
+  cp -R $USER_DIR/.config/$file $DOT_CONFIG_DIR
 done
 
 # commit changes and push to repo
