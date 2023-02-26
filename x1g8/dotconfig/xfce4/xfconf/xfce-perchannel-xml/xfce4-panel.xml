@@ -18,7 +18,6 @@
         <value type="int" value="12"/>
         <value type="int" value="7"/>
         <value type="int" value="8"/>
-        <value type="int" value="6"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
       </property>
@@ -38,16 +37,6 @@
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
-    </property>
-    <property name="plugin-6" type="string" value="systray">
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="orage"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="wi-fi network connection “californication5” active: californication5 (69%)"/>
-        <value type="string" value="configuring wi-fi network connection “californication5”…"/>
-        <value type="string" value="no network connection"/>
-      </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>

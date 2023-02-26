@@ -56,10 +56,10 @@
     <property name="snap_to_windows" type="bool" value="false"/>
     <property name="snap_width" type="int" value="10"/>
     <property name="sync_to_vblank" type="bool" value="false"/>
-    <property name="theme" type="string" value="Arc-Darker"/>
+    <property name="theme" type="string" value="Arc-Dark"/>
     <property name="tile_on_move" type="bool" value="true"/>
     <property name="title_alignment" type="string" value="center"/>
-    <property name="title_font" type="string" value="Sans Bold 9"/>
+    <property name="title_font" type="string" value="JetBrains Mono Bold 12"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="false"/>
     <property name="title_shadow_active" type="string" value="false"/>
@@ -105,5 +105,6 @@
     <property name="vblank_mode" type="string" value="auto"/>
     <property name="cycle_minimized" type="bool" value="false"/>
     <property name="zoom_pointer" type="bool" value="true"/>
+    <property name="margin_right" type="int" value="0"/>
   </property>
 </channel>
