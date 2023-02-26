@@ -62,7 +62,7 @@ pacman -Qqem > $REPO_DIR/$DEVICE/Packages.aur
 # ~/
 for file in ${DOT_FILES[*]}
 do
-  echo "[dot files] Copying $USER_DIR/$file to $DEVICE/$DOT_DIR.."
+  echo "Copying $USER_DIR/$file to $DEVICE/$DOT_DIR.."
   cp -R $USER_DIR/$file $DEVICE/$DOT_DIR
 done
 
