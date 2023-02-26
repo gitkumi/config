@@ -62,14 +62,14 @@ pacman -Qqem > $REPO_DIR/$DEVICE/Packages.aur
 # ~/
 for file in ${DOT_FILES[*]}
 do
-  echo "Copying $file.."
+  echo "[dot files] Copying $file.."
   cp -R $USER_DIR/$file $DEVICE/$DOT_DIR
 done
 
 # ~/.config
 for file in ${DOT_CONFIG_FILES[*]}
 do
-  echo "Copying $file.."
+  echo "[dot config files] Copying $file.."
   cp -R $USER_DIR/.config/$file $DEVICE/$DOT_CONFIG_DIR
 done
 
