@@ -17,10 +17,10 @@ declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
 declare -r USER=$(whoami)
 declare -r USER_DIR=/home/$USER
-declare -r REPO_DIR=$USER_DIR/config
+declare -r REPO_DIR=$USER_DIR/config/$DEVICE
 
-declare -r DOT_DIR=$DEVICE/$REPO_DIR/dotfiles
-declare -r DOT_CONFIG_DIR=$DEVICE/$REPO_DIR/dotconfig
+declare -r DOT_DIR=$REPO_DIR/dotfiles
+declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
 
 # ~/
 declare -r DOT_FILES=(
@@ -53,11 +53,11 @@ mkdir -p $DOT_DIR $DOT_CONFIG_DIR $DEVICE
 
 # Save installed packages
 echo "Copying installed arch packages.."
-pacman -Qqen > $REPO_DIR/$DEVICE/Packages
+pacman -Qqen > $REPO_DIR/Packages
 
 # Save installed packages
 echo "Copying installed arch packages (AUR).."
-pacman -Qqem > $REPO_DIR/$DEVICE/Packages.aur
+pacman -Qqem > $REPO_DIR/Packages.aur
 
 # ~/
 for file in ${DOT_FILES[*]}
