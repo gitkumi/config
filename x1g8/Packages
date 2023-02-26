@@ -59,6 +59,7 @@ noto-fonts-cjk
 noto-fonts-extra
 ntfs-3g
 os-prober
+pacgraph
 papirus-icon-theme
 parole
 pavucontrol
@@ -147,6 +148,7 @@ xfconf
 xfdesktop
 xfwm4
 xfwm4-themes
+xkeycaps
 xorg-server
 xorg-server-xephyr
 xorg-xinit
