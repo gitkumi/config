@@ -7,8 +7,6 @@ if [ -z "$DEVICE" ]; then
   exit 1;
 fi
 
-echo "Device: $DEVICE"
-
 declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
 declare -r USER=$(whoami)
@@ -44,6 +42,7 @@ declare -r DOT_CONFIG_FILES=(
 rm -rf $DOT_DIR $DOT_CONFIG_DIR
 
 # Initialize
+echo "Device: $DEVICE"
 echo "Initializing directories.."
 mkdir -p $DOT_DIR $DOT_CONFIG_DIR
 

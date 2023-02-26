@@ -18,9 +18,8 @@
     Check Arch/AUR and manually update the name in `Packages` or `Packages.aur`
 
 3. Manual tasks that can be deferred
-    - Install oh-my-zsh
-    - Install powerlevel10k theme 
-    - Setup lightdm
+    - Setup xfce panels (?)
+    - Setup lightdm/greeter
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install asdf plugins (nodejs, elixir, and erlang, go) via [asdf-vm](https://asdf-vm.com/#/)
     - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/c25479bdc423fe539611e3c0e281fd8d) 
