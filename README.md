@@ -22,12 +22,15 @@
 ### Installation
 
 1. Manual tasks
-    - Setup device SSH key
+    - Initialize device SSH key
+    - Add SSH key to GitHub
     - Install [yay](https://github.com/Jguer/yay)
     - Install [git](https://wiki.archlinux.org/title/git) and clone this repo
       ```
       pacman -S git && cd ~ && git clone git@github.com:gitkumi/config.git
       ```
+    - Install oh-my-zsh
+    - Install powerlevel10k theme 
       
 2. Run installation scripts  
       ```
