@@ -40,6 +40,8 @@ libva-intel-driver
 libva-mesa-driver
 lightdm
 lightdm-gtk-greeter
+lightdm-webkit-theme-litarvan
+lightdm-webkit2-greeter
 linux
 linux-firmware
 logrotate
@@ -146,6 +148,7 @@ xfdesktop
 xfwm4
 xfwm4-themes
 xorg-server
+xorg-server-xephyr
 xorg-xinit
 yarn
 z

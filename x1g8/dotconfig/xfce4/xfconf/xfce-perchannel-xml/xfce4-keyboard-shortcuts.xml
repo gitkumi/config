@@ -56,10 +56,10 @@
       <property name="Print" type="string" value="xfce4-screenshooter -f -s /home/takumi/pictures/screenshots/">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/takumi/pictures/screenshots">
+      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -s /home/takumi/pictures/screenshots/">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;Print" type="string" value="xfce4-screenshooter -w -s /home/takumi/pictures/screenshots">
+      <property name="&lt;Super&gt;Print" type="string" value="xfce4-screenshooter -w -s /home/takumi/pictures/screenshots/">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
     </property>
