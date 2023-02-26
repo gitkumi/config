@@ -1,24 +1,3 @@
-```
-├── back_up.sh
-├── dotconfig
-│   ├── alacritty
-│   ├── cava
-│   ├── nvim
-│   ├── tmuxinator
-│   ├── user-dirs.dirs
-│   └── xfce4
-├── dotfiles
-├── install_package_aur.sh
-├── install_package.sh
-├── Packages
-├── Packages.aur
-├── README.md
-├── restore.sh
-└── scripts
-    ├── git_checkout.sh
-    └── git_commit.sh
-```
-
 ### Installation
 
 1. Manual tasks
@@ -32,7 +11,7 @@
       
 2. Run installation scripts  
       ```
-      cd ~/config && ./install_packages.sh && ./install_packages_aur.sh && restore.sh 
+      cd ~/config && install_packages.sh && install_packages_aur.sh && restore.sh 
       ```
 
     Installing may fail if one of the package names gets changed.  
