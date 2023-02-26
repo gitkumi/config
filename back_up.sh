@@ -71,6 +71,7 @@ done
 
 # commit changes and push to repo
 echo "Committing changes and pushing to repo.."
+git -C "$CONFIG_DIR" rebase origin/master
 git -C "$CONFIG_DIR" add -A
 git -C "$CONFIG_DIR" commit -m "$TIMESTAMP" 
 git -C "$CONFIG_DIR" push
