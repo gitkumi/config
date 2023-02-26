@@ -40,6 +40,8 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “californication5” active: californication5 (81%)"/>
+        <value type="string" value="wi-fi network connection “californication5” active: californication5 (87%)"/>
         <value type="string" value="deluge"/>
         <value type="string" value="wi-fi network connection “californication5” active: californication5 (84%)"/>
         <value type="string" value="wi-fi network connection “californication5” active: californication5 (80%)"/>

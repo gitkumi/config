@@ -19,6 +19,7 @@ alias vi='nvim'
 alias vim='nvim'
 
 alias zz='cd $(find * -type d | fzf)'
+alias cat='bat'
 
 # Yay/Pacman
 alias yayin='yay -S'

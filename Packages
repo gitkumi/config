@@ -4,6 +4,7 @@ arc-solid-gtk-theme
 autoconf
 automake
 base
+bat
 binutils
 bison
 calibre
@@ -33,6 +34,7 @@ gparted
 gpick
 groff
 grub
+gum
 gvfs
 gvfs-smb
 htop
