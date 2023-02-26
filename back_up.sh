@@ -1,5 +1,18 @@
 #!/bin/bash
 
+while getopts "d:" arg; do
+  case $arg in
+    d) declare -r DEVICE=$OPTARG;;
+  esac
+done
+
+if [ -z "$DEVICE" ]; then
+  echo "Device is required."
+  exit 1;
+fi
+
+echo "Device: $DEVICE"
+
 declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
 
 declare -r USER=$(whoami)
@@ -32,32 +45,32 @@ declare -r DOT_CONFIG_FILES=(
 )
 
 # Delete existing folders
-rm -rf $DOT_DIR $DOT_CONFIG_DIR
+rm -rf $DEVICE/$DOT_DIR $DEVICE/$DOT_CONFIG_DIR
 
 # Initialize
 echo "Initializing directories.."
-mkdir -p $DOT_DIR $DOT_CONFIG_DIR
+mkdir -p $DEVICE/$DOT_DIR $DEVICE/$DOT_CONFIG_DIR
 
 # Save installed packages
 echo "Copying installed arch packages.."
-pacman -Qqen > $REPO_DIR/Packages
+pacman -Qqen > $REPO_DIR/$DEVICE/Packages
 
 # Save installed packages
 echo "Copying installed arch packages (AUR).."
-pacman -Qqem > $REPO_DIR/Packages.aur
+pacman -Qqem > $REPO_DIR/$DEVICE/Packages.aur
 
 # ~/
 for file in ${DOT_FILES[*]}
 do
   echo "Copying $file.."
-  cp -R $USER_DIR/$file $DOT_DIR
+  cp -R $USER_DIR/$file $DEVICE/$DOT_DIR
 done
 
 # ~/.config
 for file in ${DOT_CONFIG_FILES[*]}
 do
   echo "Copying $file.."
-  cp -R $USER_DIR/.config/$file $DOT_CONFIG_DIR
+  cp -R $USER_DIR/.config/$file $DEVICE/$DOT_CONFIG_DIR
 done
 
 # commit changes and push to repo

@@ -11,4 +11,5 @@ if [ -z "$DEVICE" ]; then
   exit 1;
 fi
 
-xargs -a $DEVICE/Packages.aur yay -S
+echo "Hello $DEVICE!"
+
