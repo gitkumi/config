@@ -19,8 +19,8 @@ declare -r USER=$(whoami)
 declare -r USER_DIR=/home/$USER
 declare -r REPO_DIR=$USER_DIR/config
 
-declare -r DOT_DIR=$REPO_DIR/dotfiles
-declare -r DOT_CONFIG_DIR=$REPO_DIR/dotconfig
+declare -r DOT_DIR=$DEVICE/$REPO_DIR/dotfiles
+declare -r DOT_CONFIG_DIR=$DEVICE/$REPO_DIR/dotconfig
 
 # ~/
 declare -r DOT_FILES=(
@@ -45,11 +45,11 @@ declare -r DOT_CONFIG_FILES=(
 )
 
 # Delete existing folders
-rm -rf $DEVICE/$DOT_DIR $DEVICE/$DOT_CONFIG_DIR
+rm -rf $DOT_DIR $DOT_CONFIG_DIR
 
 # Initialize
 echo "Initializing directories.."
-mkdir -p $DEVICE/$DOT_DIR $DEVICE/$DOT_CONFIG_DIR
+mkdir -p $DOT_DIR $DOT_CONFIG_DIR $DEVICE
 
 # Save installed packages
 echo "Copying installed arch packages.."
@@ -62,15 +62,15 @@ pacman -Qqem > $REPO_DIR/$DEVICE/Packages.aur
 # ~/
 for file in ${DOT_FILES[*]}
 do
-  echo "Copying $USER_DIR/$file to $DEVICE/$DOT_DIR.."
-  cp -R $USER_DIR/$file ./$DEVICE/$DOT_DIR
+  echo "Copying $file.."
+  cp -R $USER_DIR/$file $DOT_DIR
 done
 
 # ~/.config
 for file in ${DOT_CONFIG_FILES[*]}
 do
-  echo "Copying $USER_DIR/.config/$file to $DEVICE/$DOT_CONFIG_DIR.."
-  cp -R $USER_DIR/.config/$file ./$DEVICE/$DOT_CONFIG_DIR
+  echo "Copying $file.."
+  cp -R $USER_DIR/.config/$file $DOT_CONFIG_DIR
 done
 
 # commit changes and push to repo
