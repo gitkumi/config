@@ -63,9 +63,8 @@ pacgraph
 papirus-icon-theme
 parole
 pavucontrol
-pipewire-audio
-pipewire-pulse
 postgresql
+pulseaudio
 python-cairo
 qemu-desktop
 ranger
@@ -98,7 +97,6 @@ vulkan-intel
 vulkan-radeon
 wget
 wireless_tools
-wireplumber
 xarchiver
 xclip
 xdg-user-dirs
