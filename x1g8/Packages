@@ -1,4 +1,5 @@
 alacritty
+alsa-utils
 arc-gtk-theme
 arc-solid-gtk-theme
 base
@@ -72,6 +73,7 @@ reiserfsprogs
 s-nail
 seahorse
 smartmontools
+sof-firmware
 speedtest-cli
 sshfs
 syncthing
