@@ -22,7 +22,7 @@
     - Setup lightdm/greeter
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install asdf plugins (nodejs, elixir, and erlang, go) via [asdf-vm](https://asdf-vm.com/#/)
-    - Setup VS Code Settings Sync and provide this [gist](https://gist.github.com/gitkumi/c25479bdc423fe539611e3c0e281fd8d) 
+    - Sync VS Code Settings
 
 ### Adding a new config
 
