@@ -132,6 +132,9 @@ return require('packer').startup(function(use)
             }
         end
     }
+
+    use 'leafgarland/typescript-vim'
+    use 'peitalin/vim-jsx-typescript'
 end)
 
 
