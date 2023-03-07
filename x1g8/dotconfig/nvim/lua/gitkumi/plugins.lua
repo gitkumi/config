@@ -132,8 +132,6 @@ return require('packer').startup(function(use)
             }
         end
     }
-
-    use 'maxmellon/vim-jsx-pretty'
 end)
 
 
