@@ -84,6 +84,7 @@ alias p='pnpm'
 
 # Mix/Elixir
 alias m='mix'
+alias mps='mix phx.server'
 alias esb='mix escript.build'
 alias ectom='mix ecto.migrate'
 alias ectores='mix ecto.reset'
