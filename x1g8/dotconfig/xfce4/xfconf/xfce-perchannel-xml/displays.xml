@@ -36,16 +36,16 @@
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="61055d8856d2390dc0755d1946b58ee14f0d3095"/>
       <property name="Resolution" type="string" value="2560x1080"/>
-      <property name="RefreshRate" type="double" value="59.937888198757761"/>
+      <property name="RefreshRate" type="double" value="74.944485566247224"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="false"/>
+      <property name="Primary" type="bool" value="true"/>
       <property name="Scale" type="empty">
         <property name="X" type="double" value="1"/>
         <property name="Y" type="double" value="1"/>
       </property>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="1920"/>
+        <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
@@ -73,10 +73,10 @@
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="61055d8856d2390dc0755d1946b58ee14f0d3095"/>
       <property name="Resolution" type="string" value="2560x1080"/>
-      <property name="RefreshRate" type="double" value="59.937888198757761"/>
+      <property name="RefreshRate" type="double" value="74.944485566247224"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="false"/>
+      <property name="Primary" type="bool" value="true"/>
       <property name="Scale" type="empty">
         <property name="X" type="double" value="1"/>
         <property name="Y" type="double" value="1"/>
@@ -104,7 +104,7 @@
       </property>
     </property>
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="f95cad36b1263aca1e771725ed404a3600721b5b"/>
       <property name="Resolution" type="string" value="1920x1080"/>
       <property name="RefreshRate" type="double" value="60.033005523373298"/>
@@ -121,5 +121,6 @@
       </property>
     </property>
   </property>
-  <property name="Notify" type="int" value="1"/>
+  <property name="Notify" type="int" value="2"/>
+  <property name="AutoEnableProfiles" type="bool" value="false"/>
 </channel>
