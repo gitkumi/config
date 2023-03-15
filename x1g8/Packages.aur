@@ -7,6 +7,7 @@ nutty
 nvim-packer-git
 oh-my-zsh-git
 orage
+pacgraph
 powerline-fonts-git
 powerline-shell
 simplenote-electron-bin
