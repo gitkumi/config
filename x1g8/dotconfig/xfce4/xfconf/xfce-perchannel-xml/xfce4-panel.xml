@@ -41,7 +41,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance43935;firefox.instance1958;firefox.instance21300;firefox.instance21561;firefox.instance27212;firefox.instance2975;firefox.instance32121;firefox.instance3928;firefox.instance5391;firefox.instance791;firefox.instance8028;firefox.instance815;firefox.instance817;firefox.instance818;firefox.instance820;firefox.instance824;firefox.instance827;firefox.instance830;firefox.instance831;firefox.instance841;firefox.instance850;firefox.instance852;firefox.instance90015;firefox.instance922;firefox.instance983"/>
+      <property name="mpris-players" type="string" value="chromium.instance43935;firefox.instance1958;firefox.instance21300;firefox.instance21561;firefox.instance27212;firefox.instance2975;firefox.instance32121;firefox.instance3928;firefox.instance3951;firefox.instance5391;firefox.instance5952;firefox.instance791;firefox.instance8028;firefox.instance815;firefox.instance817;firefox.instance818;firefox.instance820;firefox.instance824;firefox.instance827;firefox.instance830;firefox.instance831;firefox.instance841;firefox.instance850;firefox.instance851;firefox.instance852;firefox.instance855;firefox.instance857;firefox.instance90015;firefox.instance922;firefox.instance983"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
