@@ -11,6 +11,8 @@ alias c='clear'
 alias bye!='shutdown -h now'
 alias qq='exit'
 
+alias cat='bat'
+
 # Tar
 alias untar='tar -xzvf'
 
