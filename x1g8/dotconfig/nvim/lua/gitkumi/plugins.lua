@@ -87,8 +87,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'tpope/vim-sleuth'
-
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -96,7 +94,7 @@ return require('packer').startup(function(use)
         },
     }
 
-    use({
+    use{
         'kylechui/nvim-surround',
         tag = '*', -- Use for stability; omit to use `main` branch for the latest features
         config = function()
@@ -104,7 +102,7 @@ return require('packer').startup(function(use)
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    })
+    }
 
     use {
         'norcalli/nvim-colorizer.lua',
@@ -117,9 +115,7 @@ return require('packer').startup(function(use)
 
     use 'folke/zen-mode.nvim'
 
-    use 'leafgarland/typescript-vim'
-
-    use 'peitalin/vim-jsx-typescript'
+    use 'MunifTanjim/prettier.nvim'
 end)
 
 
