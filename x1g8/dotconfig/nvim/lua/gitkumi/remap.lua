@@ -22,12 +22,6 @@ vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "#", "#zz")
 
--- Tab for tabbing
-vim.keymap.set("n", "<Tab>", ">>")
-vim.keymap.set("n", "<S-Tab>", "<<")
-vim.keymap.set("v", "<Tab>", ">")
-vim.keymap.set("v", "<S-Tab>", "<")
-
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
