@@ -87,13 +87,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    use {
-        'j-hui/fidget.nvim',
-        config = function()
-            require'fidget'.setup{}
-        end
-    }
-
     use 'tpope/vim-sleuth'
 
     use {
@@ -102,12 +95,12 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
-    
+
     use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        'kylechui/nvim-surround',
+        tag = '*', -- Use for stability; omit to use `main` branch for the latest features
         config = function()
-            require("nvim-surround").setup({
+            require('nvim-surround').setup({
                 -- Configuration here, or leave empty to use defaults
             })
         end
@@ -122,18 +115,10 @@ return require('packer').startup(function(use)
 
     use 'ThePrimeagen/harpoon'
 
-    use {
-        "folke/zen-mode.nvim",
-        config = function()
-            require("zen-mode").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
+    use 'folke/zen-mode.nvim'
 
     use 'leafgarland/typescript-vim'
+
     use 'peitalin/vim-jsx-typescript'
 end)
 
