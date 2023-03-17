@@ -20,6 +20,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "%", "%zz")
+vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
 -- Replace all
@@ -34,13 +35,23 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>pp', builtin.git_files)
 vim.keymap.set('n', '<leader>pf', builtin.find_files)
-vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', '<leader>pq', builtin.lsp_references)
+
 -- Search in project
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
-vim.keymap.set('n', '<leader>pq', require('telescope.builtin').oldfiles)
+vim.keymap.set('n', '<leader>po', require('telescope.builtin').oldfiles)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
+
+-- diagnostics (trouble.nvim)
+vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+
 -- Harpoon
 vim.keymap.set('n', '<leader>a', function() 
     require("harpoon.mark").add_file()

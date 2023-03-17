@@ -117,6 +117,16 @@ return require('packer').startup(function(use)
     use 'leafgarland/typescript-vim'
 
     use 'peitalin/vim-jsx-typescript'
+
+    use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {
+          -- Configuration here, or leave empty to use defaults
+        }
+      end
+    }
 end)
 
 

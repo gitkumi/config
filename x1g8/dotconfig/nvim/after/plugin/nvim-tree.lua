@@ -25,7 +25,7 @@ require("nvim-tree").setup({
         local window_h_int = math.floor(window_h)
         local center_x = (screen_w - window_w) / 2
         local center_y = ((vim.opt.lines:get() - window_h) / 2)
-                         - vim.opt.cmdheight:get()
+        - vim.opt.cmdheight:get()
         return {
           border = "rounded",
           relative = "editor",
@@ -34,7 +34,7 @@ require("nvim-tree").setup({
           width = window_w_int,
           height = window_h_int,
         }
-        end,
+      end,
     },
   },
   renderer = {
@@ -53,8 +53,8 @@ require("nvim-tree").setup({
   },
 })
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, { 
-    callback = function() 
-        require("nvim-tree.api").tree.open()
-    end 
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function()
+    require("nvim-tree.api").tree.open()
+  end
 })
