@@ -33,6 +33,11 @@ if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
 fi
 
+# Loads temporary stuff
+if [ -f ~/.z_temp ]; then
+. ~/.z_temp
+fi
+
 # Loads asdf
 if [ -f $HOME/.asdf/asdf.sh ]; then
 . $HOME/.asdf/asdf.sh
