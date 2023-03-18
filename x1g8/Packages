@@ -28,6 +28,7 @@ gnome-disk-utility
 gparted
 gpick
 grub
+gum
 gvfs
 gvfs-smb
 htop
@@ -41,8 +42,6 @@ libva-intel-driver
 libva-mesa-driver
 lightdm
 lightdm-gtk-greeter
-lightdm-webkit-theme-litarvan
-lightdm-webkit2-greeter
 linux
 linux-firmware
 logrotate

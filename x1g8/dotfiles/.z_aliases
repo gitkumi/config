@@ -49,6 +49,7 @@ alias tty-clock='tty-clock -c -C 4 -n -D'
 
 # Git
 alias g='git'
+alias gdf='git diff'
 alias gs='git status'
 alias ga='git add'
 alias gl='git log --oneline --decorate --graph'
