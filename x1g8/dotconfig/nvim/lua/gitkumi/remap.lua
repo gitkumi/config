@@ -6,7 +6,6 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- New line
 vim.keymap.set("n", "<Enter>", "o<Esc>")
-vim.keymap.set("n", "<S-Enter>", "O<Esc>")
 
 -- Move highlighted
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -21,6 +20,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
+
+-- Window navigation
+vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
+vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
+vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
+vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
 -- Delete without overwriting current buffer
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])

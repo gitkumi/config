@@ -125,6 +125,14 @@ return require('packer').startup(function(use)
         }
       end
     }
+
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    use{ 'anuvyklack/pretty-fold.nvim',
+       config = function()
+          require('pretty-fold').setup()
+       end
+    }
 end)
 
 

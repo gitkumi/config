@@ -89,9 +89,8 @@ alias p='pnpm'
 # Mix/Elixir
 alias m='mix'
 alias mps='mix phx.server'
-alias meb='mix escript.build'
-alias ectom='mix ecto.migrate'
-alias ectores='mix ecto.reset'
+alias mem='mix ecto.migrate'
+alias mer='mix ecto.reset'
 
 # Go
 alias gotest='$(asdf where golang)/packages/bin/gotestsum'
