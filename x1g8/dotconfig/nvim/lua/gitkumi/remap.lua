@@ -27,6 +27,9 @@ vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
+-- Make . work with visually selected lines
+-- vim.keymap.set("v", ".", ":normal.<CR>")
+
 -- Delete without overwriting current buffer
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
@@ -46,15 +49,11 @@ vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
 -- Telescope
 local builtin = require('telescope.builtin')
 
--- Search in project
-vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
-
 vim.keymap.set('n', '<leader>pp', builtin.git_files)
+vim.keymap.set('n', '<leader>ps', builtin.live_grep)
 vim.keymap.set('n', '<leader>pf', builtin.find_files)
-vim.keymap.set('n', '<leader>pq', builtin.lsp_references)
-vim.keymap.set('n', '<leader>po', require('telescope.builtin').oldfiles)
+vim.keymap.set('n', '<leader>pq', builtin.grep_string)
+vim.keymap.set('n', '<leader>pd', builtin.lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 
 -- diagnostics (trouble.nvim)
