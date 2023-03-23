@@ -49,11 +49,11 @@ vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
 -- Telescope
 local builtin = require('telescope.builtin')
 
+vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pp', builtin.git_files)
 vim.keymap.set('n', '<leader>ps', builtin.live_grep)
-vim.keymap.set('n', '<leader>pf', builtin.find_files)
 vim.keymap.set('n', '<leader>pq', builtin.grep_string)
-vim.keymap.set('n', '<leader>pd', builtin.lsp_references)
+vim.keymap.set('n', '<leader>pw', builtin.lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 
 -- diagnostics (trouble.nvim)
