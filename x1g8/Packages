@@ -62,7 +62,6 @@ os-prober
 papirus-icon-theme
 parole
 pavucontrol
-postgresql
 pulseaudio
 python-cairo
 qemu-desktop
@@ -74,6 +73,7 @@ seahorse
 smartmontools
 sof-firmware
 speedtest-cli
+sqlitebrowser
 sshfs
 syncthing
 tailscale

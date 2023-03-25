@@ -76,6 +76,8 @@ alias grba='git rebase --abort'
 alias uncommit='git reset --soft HEAD^'
 alias gitclear='git reset --hard'
 alias gitclean='git branch | grep -v "master" | cut -c 3- | gum choose --no-limit | xargs git branch -D'
+alias greset='git reset --hard'
+alias greset!='git reset --hard && git clean -df'
 
 # NPM
 alias nr='npm run'
@@ -88,6 +90,7 @@ alias p='pnpm'
 
 # Mix/Elixir
 alias m='mix'
+alias mdg='mix deps.get'
 alias mps='mix phx.server'
 alias mem='mix ecto.migrate'
 alias mer='mix ecto.reset'
