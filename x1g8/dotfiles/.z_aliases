@@ -98,3 +98,9 @@ alias mer='mix ecto.reset'
 # Go
 alias gotest='$(asdf where golang)/packages/bin/gotestsum'
 alias goreshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/" && export GOPATH="$(asdf where golang)/packages/"'
+
+# Docker
+alias d='docker'
+
+# Kubernetes
+alias k ='kubernetes'
