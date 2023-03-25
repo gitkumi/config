@@ -55,9 +55,7 @@ vim.keymap.set('n', '<leader>ps', builtin.live_grep)
 vim.keymap.set('n', '<leader>pq', builtin.grep_string)
 vim.keymap.set('n', '<leader>pw', builtin.lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>pr', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
+
 -- diagnostics (trouble.nvim)
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
   {silent = true, noremap = true}
