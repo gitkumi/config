@@ -127,14 +127,6 @@ return require('packer').startup(function(use)
     }
 
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-    use { 'anuvyklack/pretty-fold.nvim',
-       config = function()
-          require('pretty-fold').setup()
-       end
-    }
-
-    use 'terryma/vim-expand-region'
 end)
 
 
