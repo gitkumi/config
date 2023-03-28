@@ -51,11 +51,13 @@ local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pp', builtin.git_files)
-vim.keymap.set('n', '<leader>pf', builtin.live_grep)
+vim.keymap.set('n', '<leader>ps', builtin.live_grep)
 vim.keymap.set('n', '<leader>pq', builtin.grep_string)
 vim.keymap.set('n', '<leader>pw', builtin.lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
-
+vim.keymap.set('n', '<leader>pr', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
 -- diagnostics (trouble.nvim)
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
   {silent = true, noremap = true}
@@ -71,14 +73,6 @@ end)
 
 vim.keymap.set('n', '<leader><space>', function() 
     require("harpoon.ui").toggle_quick_menu()
-end)
-
-vim.keymap.set('n', '<leader>n', function() 
-    require("harpoon.ui").nav_next()
-end)
-
-vim.keymap.set('n', '<leader>p', function() 
-    require("harpoon.ui").nav_prev()
 end)
 
 vim.keymap.set('n', '<leader>1', function() 
