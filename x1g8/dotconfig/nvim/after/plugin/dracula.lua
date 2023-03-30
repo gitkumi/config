@@ -45,3 +45,12 @@ dracula.setup({
 })
 
 vim.cmd[[colorscheme dracula]]
+
+
+vim.cmd([[
+  augroup matchup_matchparen_highlight
+    autocmd!
+    autocmd ColorScheme * hi MatchWord gui=underline
+  augroup END
+]])
+

@@ -27,17 +27,12 @@ vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
--- Make . work with visually selected lines
--- vim.keymap.set("v", ".", ":normal.<CR>")
-
 -- Delete without overwriting current buffer
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- disable Q (same as pressing :)
-vim.keymap.set("n", "Q", "<nop>")
 
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -55,9 +50,6 @@ vim.keymap.set('n', '<leader>pf', builtin.live_grep)
 vim.keymap.set('n', '<leader>pw', builtin.grep_string)
 vim.keymap.set('n', '<leader>pe', builtin.lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>pr', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
 -- diagnostics (trouble.nvim)
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
   {silent = true, noremap = true}
@@ -94,3 +86,5 @@ end)
 vim.keymap.set('n', '<leader>5', function() 
     require("harpoon.ui").nav_file(5)
 end)
+
+

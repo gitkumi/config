@@ -127,6 +127,14 @@ return require('packer').startup(function(use)
     }
 
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+    use {
+      'andymass/vim-matchup',
+      setup = function()
+        -- may set any options here
+        vim.g.matchup_matchparen_offscreen = { method = "popup" }
+      end
+    }
 end)
 
 
