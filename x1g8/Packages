@@ -8,7 +8,6 @@ bat
 calibre
 chromium
 cmus
-deluge-gtk
 dhcpcd
 dialog
 discord
@@ -85,6 +84,7 @@ thunar-media-tags-plugin
 thunar-volman
 tldr
 tmux
+transmission-cli
 tree
 ttf-fira-code
 ttf-jetbrains-mono
