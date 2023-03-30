@@ -49,6 +49,10 @@ vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pf', builtin.live_grep)
 vim.keymap.set('n', '<leader>pw', builtin.grep_string)
 vim.keymap.set('n', '<leader>pe', builtin.lsp_references)
+
+vim.keymap.set('n', '<leader>p`', builtin.quickfix)
+vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)
+
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 -- diagnostics (trouble.nvim)
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
