@@ -45,6 +45,8 @@ vim.keymap.set('n', '<F1>', vim.lsp.buf.format)
 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>q', vim.lsp.buf.code_action)
 
+vim.keymap.set('n', '<F5>', vim.cmd.UndotreeToggle)
+
 -- Telescope
 local builtin = require('telescope.builtin')
 
