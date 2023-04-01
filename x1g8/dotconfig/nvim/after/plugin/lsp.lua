@@ -1,4 +1,8 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero').preset({
+  manage_nvim_cmp = {
+    set_sources = 'recommended'
+  }
+})
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
@@ -15,3 +19,20 @@ lsp.set_sign_icons({
 })
 
 lsp.setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({ select = true })
+  },
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+})
+
