@@ -28,11 +28,10 @@ vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
 -- Delete without overwriting current buffer
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
-
 
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -41,6 +40,11 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
 
+-- LSP
+vim.keymap.set('n', '<F1>', vim.lsp.buf.format)
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>q', vim.lsp.buf.code_action)
+
 -- Telescope
 local builtin = require('telescope.builtin')
 
@@ -48,47 +52,43 @@ vim.keymap.set('n', '<leader>pq', builtin.git_files)
 vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pf', builtin.live_grep)
 vim.keymap.set('n', '<leader>pw', builtin.grep_string)
-vim.keymap.set('n', '<leader>pe', builtin.lsp_references)
 
 vim.keymap.set('n', '<leader>p`', builtin.quickfix)
 vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)
 
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 -- diagnostics (trouble.nvim)
-vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
+-- vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
+--   { silent = true, noremap = true }
+-- )
+-- vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+--   { silent = true, noremap = true }
+-- )
 
 -- Harpoon
-vim.keymap.set('n', '<leader>a', function() 
-    require("harpoon.mark").add_file()
+vim.keymap.set('n', '<leader>a', function()
+  require("harpoon.mark").add_file()
 end)
 
-vim.keymap.set('n', '<leader><space>', function() 
-    require("harpoon.ui").toggle_quick_menu()
+vim.keymap.set('n', '<leader><space>', function()
+  require("harpoon.ui").toggle_quick_menu()
 end)
 
-vim.keymap.set('n', '<leader>1', function() 
-    require("harpoon.ui").nav_file(1)
+vim.keymap.set('n', '<leader>1', function()
+  require("harpoon.ui").nav_file(1)
 end)
 
-vim.keymap.set('n', '<leader>2', function() 
-    require("harpoon.ui").nav_file(2)
+vim.keymap.set('n', '<leader>2', function()
+  require("harpoon.ui").nav_file(2)
 end)
 
-vim.keymap.set('n', '<leader>3', function() 
-    require("harpoon.ui").nav_file(3)
+vim.keymap.set('n', '<leader>3', function()
+  require("harpoon.ui").nav_file(3)
 end)
 
-vim.keymap.set('n', '<leader>4', function() 
-    require("harpoon.ui").nav_file(4)
+vim.keymap.set('n', '<leader>4', function()
+  require("harpoon.ui").nav_file(4)
 end)
 
-vim.keymap.set('n', '<leader>5', function() 
-    require("harpoon.ui").nav_file(5)
+vim.keymap.set('n', '<leader>5', function()
+  require("harpoon.ui").nav_file(5)
 end)
-
-
