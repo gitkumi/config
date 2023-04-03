@@ -47,11 +47,11 @@ return require('packer').startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
 
-  use 'laytan/cloak.nvim'
-
   use 'nvim-tree/nvim-web-devicons'
 
-  use 'windwp/nvim-ts-autotag'
+  require('nvim-ts-autotag').setup({
+    filetypes = { "html" , "heex" },
+  })
 
   use {
     'windwp/nvim-autopairs',

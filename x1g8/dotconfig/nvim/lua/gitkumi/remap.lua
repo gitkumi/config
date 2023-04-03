@@ -29,7 +29,7 @@ vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
 -- Duplicate selected
 vim.keymap.set("n", "<leader>d", "<S-v>ypgv")
-vim.keymap.set("v", "<leader>d", "ypgv")
+vim.keymap.set("v", "<leader>d", "ykpgv")
 
 -- Delete without overwriting current buffer
 vim.keymap.set({ "n", "v" }, "<leader>x", [["_d]])
