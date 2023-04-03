@@ -38,6 +38,12 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- Quickfix
+vim.keymap.set("n", "]q", ":cnext")
+vim.keymap.set("n", "[q", ":cprevious")
+vim.keymap.set("n", "]Q", ":clast")
+vim.keymap.set("n", "[Q", ":cfirst")
+
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -68,7 +74,7 @@ vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>"
 )
 
 -- Harpoon
-vim.keymap.set('n', '<leader>a', function()
+vim.keymap.set('n', '<leader>`', function()
   require("harpoon.mark").add_file()
 end)
 
