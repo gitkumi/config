@@ -27,9 +27,13 @@ vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
+-- Duplicate selected
+vim.keymap.set("n", "<leader>d", "<S-v>ypgv")
+vim.keymap.set("v", "<leader>d", "ypgv")
+
 -- Delete without overwriting current buffer
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-vim.keymap.set({ "n", "v" }, "<leader>D", [["_dd]])
+vim.keymap.set({ "n", "v" }, "<leader>x", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -38,10 +42,10 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- File Tree
+-- File tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 
--- Undotree 
+-- Undo tree 
 vim.keymap.set('n', '<F5>', vim.cmd.UndotreeToggle)
 
 -- Telescope
@@ -54,10 +58,11 @@ vim.keymap.set('n', '<leader>pf', builtin.live_grep)
 vim.keymap.set('n', '<leader>p`', builtin.quickfix)
 vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)
 
--- diagnostics (trouble.nvim)
+-- Trouble
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
   { silent = true, noremap = true }
 )
+
 vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   { silent = true, noremap = true }
 )
