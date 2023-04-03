@@ -29,6 +29,7 @@ vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
 -- Delete without overwriting current buffer
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>D", [["_dd]])
 
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -39,13 +40,8 @@ vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- File Tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
-vim.keymap.set("n", "<leader>B", vim.cmd.NvimTreeFocus)
 
--- LSP
-vim.keymap.set('n', '<F1>', vim.lsp.buf.format)
-vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>q', vim.lsp.buf.code_action)
-
+-- Undotree 
 vim.keymap.set('n', '<F5>', vim.cmd.UndotreeToggle)
 
 -- Telescope
@@ -54,7 +50,6 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pq', builtin.git_files)
 vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pf', builtin.live_grep)
-vim.keymap.set('n', '<leader>pw', builtin.grep_string)
 
 vim.keymap.set('n', '<leader>p`', builtin.quickfix)
 vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)

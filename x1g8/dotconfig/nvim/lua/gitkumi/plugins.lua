@@ -15,8 +15,7 @@ return require('packer').startup(function(use)
       -- LSP Support
       { 'neovim/nvim-lspconfig' }, -- Required
       {
-                                   -- Optional
-        'williamboman/mason.nvim',
+        'williamboman/mason.nvim', -- Optional
         run = function()
           pcall(vim.cmd, 'MasonUpdate')
         end,
@@ -115,8 +114,6 @@ return require('packer').startup(function(use)
       }
     end
   }
-
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use {
     'andymass/vim-matchup',
