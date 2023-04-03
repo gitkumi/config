@@ -20,12 +20,11 @@ alias untar='tar -xzvf'
 alias vi='nvim'
 alias vim='nvim'
 
-alias zz='cd $(find * -type d | fzf)'
-
-# Yay/Pacman
+# Yay
 alias yayin='yay -S'
 alias yayre='yay -Rns'
 
+# Pacman
 alias pacin='sudo pacman -S'
 alias pacre='sudo pacman -Rns'
 alias pacupg='sudo pacman -Syu'
@@ -35,14 +34,6 @@ alias pacorphc='pacman -Qqd | pacman -Rsu --print -'
 alias pacreorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacls='pacman -Qe'
 alias pacsave='/home/takumi/config/back_up.sh'
-
-# Systemd
-alias syse='sudo systemctl enable'
-alias sysd='sudo systemctl disable'
-alias sysq='sudo systemctl stop'
-alias sysg='sudo systemctl start'
-alias sysr='sudo systemctl restart'
-alias syss='systemctl status'
 
 # tty-clock
 alias tty-clock='tty-clock -c -C 4 -n -D'
@@ -100,7 +91,7 @@ alias gotest='$(asdf where golang)/packages/bin/gotestsum'
 alias goreshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/" && export GOPATH="$(asdf where golang)/packages/"'
 
 # Docker
-# alias d='docker'
+alias d='docker'
 
 # Kubernetes
-# alias k ='kubernetes'
+alias k='kubernetes'
