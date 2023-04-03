@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-    icons_enabled = true,
+    icons_enabled = false,
     theme = 'auto',
     -- component_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
@@ -23,9 +23,9 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'filename'},
     lualine_c = {'diagnostics', 'searchcount'},
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'diff'},
-    lualine_z = {'branch'},
+    lualine_x = {'encoding', 'diff'},
+    lualine_y = {'branch'},
+    lualine_z = {'filetype'},
     -- lualine_y = {'progress'},
     -- lualine_z = {'location'}
   },
