@@ -55,12 +55,12 @@ vim.keymap.set('n', '<leader>p`', builtin.quickfix)
 vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)
 
 -- diagnostics (trouble.nvim)
--- vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
---   { silent = true, noremap = true }
--- )
--- vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
---   { silent = true, noremap = true }
--- )
+vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  { silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  { silent = true, noremap = true }
+)
 
 -- Harpoon
 vim.keymap.set('n', '<leader>a', function()
