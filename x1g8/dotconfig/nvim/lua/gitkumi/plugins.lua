@@ -49,9 +49,7 @@ return require('packer').startup(function(use)
 
   use 'nvim-tree/nvim-web-devicons'
 
-  require('nvim-ts-autotag').setup({
-    filetypes = { "html" , "heex" },
-  })
+  use 'windwp/nvim-ts-autotag'
 
   use {
     'windwp/nvim-autopairs',
@@ -124,4 +122,6 @@ return require('packer').startup(function(use)
   }
 
   use 'mbbill/undotree'
+
+  use 'RRethy/vim-illuminate'
 end)
