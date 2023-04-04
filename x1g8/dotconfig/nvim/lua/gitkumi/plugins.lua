@@ -35,9 +35,9 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } },
     extensions = {
       fzf = {
-        fuzzy = true,                       -- false will only do exact matching
-        override_generic_sorter = true,     -- override the generic sorter
-        override_file_sorter = true,        -- override the file sorter
+        fuzzy = true,                   -- false will only do exact matching
+        override_generic_sorter = true, -- override the generic sorter
+        override_file_sorter = true,    -- override the file sorter
         case_mode = "smart_case",
       }
     }
@@ -76,13 +76,13 @@ return require('packer').startup(function(use)
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons',       -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
 
   use {
     'kylechui/nvim-surround',
-    tag = '*',     -- Use for stability; omit to use `main` branch for the latest features
+    tag = '*', -- Use for stability; omit to use `main` branch for the latest features
     config = function()
       require('nvim-surround').setup({
         -- Configuration here, or leave empty to use defaults
@@ -110,14 +110,6 @@ return require('packer').startup(function(use)
       require("trouble").setup {
         -- Configuration here, or leave empty to use defaults
       }
-    end
-  }
-
-  use {
-    'andymass/vim-matchup',
-    setup = function()
-      -- may set any options here
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end
   }
 
