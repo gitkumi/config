@@ -39,10 +39,10 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Quickfix
-vim.keymap.set("n", "]q", ":cnext")
-vim.keymap.set("n", "[q", ":cprevious")
-vim.keymap.set("n", "]Q", ":clast")
-vim.keymap.set("n", "[Q", ":cfirst")
+vim.keymap.set("n", "]q", ":cnext<cr>")
+vim.keymap.set("n", "[q", ":cprevious<cr>")
+vim.keymap.set("n", "]Q", ":clast<cr>")
+vim.keymap.set("n", "[Q", ":cfirst<cr>")
 
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left><Left>]])
@@ -57,12 +57,12 @@ vim.keymap.set('n', '<F5>', vim.cmd.UndotreeToggle)
 -- Telescope
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>pq', builtin.git_files)
+vim.keymap.set('n', '<C-p>', builtin.git_files)
 vim.keymap.set('n', '<leader>po', builtin.find_files)
 vim.keymap.set('n', '<leader>pf', builtin.live_grep)
-
-vim.keymap.set('n', '<leader>p`', builtin.quickfix)
-vim.keymap.set('n', '<leader>p~', builtin.quickfixhistory)
+vim.keymap.set('n', '<leader>ps', builtin.current_buffer_fuzzy_find)
+vim.keymap.set('n', '<leader>pq', builtin.quickfix)
+vim.keymap.set('n', '<leader>pQ', builtin.quickfixhistory)
 
 -- Trouble
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>"
 )
 
 -- Harpoon
-vim.keymap.set('n', '<leader>`', function()
+vim.keymap.set('n', '<leader>a', function()
   require("harpoon.mark").add_file()
 end)
 
