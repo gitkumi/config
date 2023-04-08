@@ -52,7 +52,7 @@ vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 
 -- Undo tree 
-vim.keymap.set('n', '<F5>', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Telescope
 local builtin = require('telescope.builtin')

@@ -10,7 +10,6 @@ alias lmod='exa --long --sort=modified --reverse'
 alias c='clear'
 alias bye!='shutdown -h now'
 alias qq='exit'
-alias :q='exit'
 
 alias cat='bat'
 
@@ -41,8 +40,8 @@ alias tty-clock='tty-clock -c -C 4 -n -D'
 
 # Git
 alias g='git'
-alias gdf='git diff'
-alias gdfs='git diff --staged'
+alias gdf='git diff | bat'
+alias gdfs='git diff --staged | bat'
 alias gs='git status'
 alias ga='git add'
 alias gl='git log --oneline --decorate --graph'

@@ -5,9 +5,7 @@ local lsp = require('lsp-zero').preset({
 })
 
 lsp.on_attach(function(client, bufnr)
-  -- Based on defaults: 
   -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/api-reference.md#default_keymapsopts
-  -- (Modified a little bit)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
@@ -16,7 +14,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references)
   vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help)
 
-  vim.keymap.set('n', '<F1>', vim.lsp.buf.format)
+  vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename)
   vim.keymap.set('n', '<F3>', vim.lsp.buf.code_action)
 
