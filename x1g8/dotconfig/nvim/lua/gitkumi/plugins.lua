@@ -34,12 +34,12 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } },
     extensions = {
-      -- fzf = {
-      --   fuzzy = true,                   -- false will only do exact matching
-      --   override_generic_sorter = true, -- override the generic sorter
-      --   override_file_sorter = true,    -- override the file sorter
-      --   case_mode = "smart_case",
-      -- }
+      fzf = {
+        fuzzy = true,                   -- false will only do exact matching
+        override_generic_sorter = true, -- override the generic sorter
+        override_file_sorter = true,    -- override the file sorter
+        case_mode = "smart_case",
+      }
     }
   }
 
@@ -104,10 +104,10 @@ return require('packer').startup(function(use)
   use 'peitalin/vim-jsx-typescript'
 
   use {
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
+    'folke/trouble.nvim',
+    requires = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require("trouble").setup {
+      require('trouble').setup {
         -- Configuration here, or leave empty to use defaults
       }
     end
