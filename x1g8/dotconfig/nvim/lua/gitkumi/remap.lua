@@ -27,6 +27,9 @@ vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
+-- Search selected
+vim.keymap.set("n", "<leader><leader>", "#*")
+
 -- Duplicate selected
 vim.keymap.set("n", "<leader>d", "<S-v>ypgv")
 vim.keymap.set("v", "<leader>d", "ykpgv")
@@ -72,6 +75,8 @@ vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",
 vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   { silent = true, noremap = true }
 )
+
+vim.keymap.set('n', '<leader>t', ':ToggleTerm direction=float<cr>', { noremap = true, silent = true })
 
 -- Harpoon
 vim.keymap.set('n', '<leader>a', function()
