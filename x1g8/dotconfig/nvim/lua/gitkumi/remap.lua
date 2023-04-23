@@ -41,9 +41,6 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- Delete search
-vim.keymap.set("n", "<leader>z", [[:g@<C-r>"@d]])
-
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
