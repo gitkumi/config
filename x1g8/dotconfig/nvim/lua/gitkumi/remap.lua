@@ -42,8 +42,7 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Delete search
-vim.keymap.set("n", "<leader>z", [["zy:g@<C-r>z@d]])
-vim.keymap.set("v", "<leader>Z", [[:g@<C-r>"@d]])
+vim.keymap.set("n", "<leader>z", [[:g@<C-r>"@d]])
 
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
