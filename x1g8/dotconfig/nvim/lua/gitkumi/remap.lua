@@ -41,17 +41,21 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- Quickfix
-vim.keymap.set("n", "]q", ":cnext<cr>")
-vim.keymap.set("n", "[q", ":cprevious<cr>")
-vim.keymap.set("n", "]Q", ":clast<cr>")
-vim.keymap.set("n", "[Q", ":cfirst<cr>")
+-- Delete search
+vim.keymap.set("n", "<leader>z", [["zy:g@<C-r>z@d]])
+vim.keymap.set("v", "<leader>Z", [[:g@<C-r>"@d]])
 
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("v", "<leader>r", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
 vim.keymap.set("v", "<leader>R", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
+
+-- Quickfix
+vim.keymap.set("n", "]q", ":cnext<cr>")
+vim.keymap.set("n", "[q", ":cprevious<cr>")
+vim.keymap.set("n", "]Q", ":clast<cr>")
+vim.keymap.set("n", "[Q", ":cfirst<cr>")
 
 -- File tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
