@@ -1,9 +1,6 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
--- Select all
-vim.keymap.set("n", "<C-a>", "gg<S-v>G")
-
 -- New line
 vim.keymap.set("n", "<Enter>", "o<Esc>")
 
@@ -29,9 +26,6 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
-
--- Search selected
-vim.keymap.set("n", "<leader><leader>", "#*")
 
 -- Duplicate selected
 vim.keymap.set("n", "<leader>d", "<S-v>ypgv")
