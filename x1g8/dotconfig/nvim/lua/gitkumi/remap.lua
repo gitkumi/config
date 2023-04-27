@@ -7,6 +7,9 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 -- New line
 vim.keymap.set("n", "<Enter>", "o<Esc>")
 
+-- Yank like D or C
+vim.keymap.set('n', 'Y', 'y$')
+
 -- Move highlighted
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
