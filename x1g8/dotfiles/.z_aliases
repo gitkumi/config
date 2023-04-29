@@ -71,9 +71,6 @@ alias gitclean='git branch | grep -v "master" | cut -c 3- | gum choose --no-limi
 alias greset='git reset --hard'
 alias greset!='git reset --hard && git clean -df'
 
-# NPM
-alias nr='npm run'
-
 # Yarn
 alias y='yarn'
 
