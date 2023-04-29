@@ -163,6 +163,26 @@
           <property name="image-style" type="int" value="3"/>
           <property name="last-image" type="string" value="/home/takumi/pictures/wallpapers/cuphead.png"/>
         </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/takumi/pictures/wallpapers/cuphead.png"/>
+        </property>
+        <property name="workspace4" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/takumi/pictures/wallpapers/cuphead.png"/>
+        </property>
+        <property name="workspace5" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/takumi/pictures/wallpapers/cuphead.png"/>
+        </property>
+        <property name="workspace6" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/takumi/pictures/wallpapers/cuphead.png"/>
+        </property>
       </property>
       <property name="monitoreDP-1" type="empty">
         <property name="workspace0" type="empty">
@@ -187,7 +207,7 @@
   </property>
   <property name="last" type="empty">
     <property name="window-width" type="int" value="860"/>
-    <property name="window-height" type="int" value="621"/>
+    <property name="window-height" type="int" value="591"/>
   </property>
   <property name="desktop-menu" type="empty">
     <property name="show" type="bool" value="true"/>
