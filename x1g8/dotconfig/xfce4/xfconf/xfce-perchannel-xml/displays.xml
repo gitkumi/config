@@ -104,7 +104,7 @@
       </property>
     </property>
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="f95cad36b1263aca1e771725ed404a3600721b5b"/>
       <property name="Resolution" type="string" value="1920x1080"/>
       <property name="RefreshRate" type="double" value="60.033005523373298"/>
