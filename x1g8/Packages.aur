@@ -11,6 +11,7 @@ nvim-packer-git
 oh-my-zsh-git
 orage
 pacgraph
+pfetch
 popsicle
 powerline-fonts-git
 powerline-shell

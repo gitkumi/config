@@ -13,8 +13,7 @@ alias qq='exit'
 alias :q='exit'
 
 alias cat='bat'
-alias top='btm'
-alias htop='btm'
+alias fetch='pfetch'
 
 # Tar
 alias untar='tar -xzvf'
