@@ -117,10 +117,6 @@ return require('packer').startup(function(use)
 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
-
   use 'ethanholz/nvim-lastplace'
 
   use 'tpope/vim-fugitive'

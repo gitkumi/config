@@ -6,7 +6,6 @@ base
 base-devel
 bat
 bottom
-calibre
 chromium
 cmus
 dhcpcd
@@ -20,6 +19,7 @@ exo
 fd
 ffmpegthumbnailer
 firefox
+foliate
 fzf
 garcon
 git

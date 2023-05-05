@@ -79,8 +79,6 @@ vim.keymap.set("n", "<leader>pD", "<cmd>TroubleToggle workspace_diagnostics<cr>"
   { silent = true, noremap = true }
 )
 
-vim.keymap.set('n', '<leader>t', ':ToggleTerm direction=float<cr>', { noremap = true, silent = true })
-
 -- Harpoon
 vim.keymap.set('n', '<leader>a', function()
   require("harpoon.mark").add_file()
