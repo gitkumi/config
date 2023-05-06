@@ -12,6 +12,7 @@ dhcpcd
 dialog
 discord
 docker
+docker-compose
 efibootmgr
 evince
 exa
