@@ -45,3 +45,9 @@ dracula.setup({
 })
 
 vim.cmd [[colorscheme dracula]]
+
+vim.cmd [[autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact]]
+
+vim.cmd [[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]]
+
+
