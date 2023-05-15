@@ -1,9 +1,9 @@
 app=viewnior
 last_user=
-screenshot_dir=file:///home/takumi/pictures/screenshots
+screenshot_dir=file:/home/takumi/pictures/screenshots
 action=1
-delay=0
-region=3
+delay=2
+region=2
 show_mouse=1
 last_extension=png
 enable_imgur_upload=true

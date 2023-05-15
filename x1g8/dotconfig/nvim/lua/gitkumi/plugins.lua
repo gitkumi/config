@@ -16,9 +16,7 @@ return require('packer').startup(function(use)
       { 'neovim/nvim-lspconfig' }, -- Required
       {
         'williamboman/mason.nvim', -- Optional
-        run = function()
-          pcall(vim.cmd, 'MasonUpdate')
-        end,
+         run = ":MasonUpdate" -- :MasonUpdate updates registry contents
       },
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
