@@ -51,10 +51,6 @@ vim.keymap.set("n", "[q", ":cprevious<cr>")
 vim.keymap.set("n", "]Q", ":clast<cr>")
 vim.keymap.set("n", "[Q", ":cfirst<cr>")
 
--- Diffview
-vim.keymap.set("n", "<leader>gdo", ":DiffviewOpen<cr>")
-vim.keymap.set("n", "<leader>gdc", ":DiffviewClose<cr>")
-
 -- File tree
 vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 

@@ -113,9 +113,5 @@ return require('packer').startup(function(use)
 
   use 'mbbill/undotree'
 
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
   use 'ethanholz/nvim-lastplace'
-
-  use 'tpope/vim-fugitive'
 end)
