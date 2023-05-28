@@ -30,6 +30,7 @@ declare -r DOT_FILES=(
 
 # ~/.config
 declare -r DOT_CONFIG_FILES=(
+  gitui
   cava
   xfce4
   tmuxinator
