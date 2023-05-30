@@ -34,9 +34,6 @@ alias pacreorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacls='pacman -Qe'
 alias pacsave='/home/takumi/config/back_up.sh'
 
-# tty-clock
-alias tty-clock='tty-clock -c -C 4 -n -D'
-
 # Git
 alias g='git'
 alias gdf='git diff | bat'
