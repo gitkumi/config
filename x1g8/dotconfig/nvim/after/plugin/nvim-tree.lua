@@ -1,5 +1,3 @@
--- examples for your init.lua
-
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -92,7 +90,7 @@ require("nvim-tree").setup({
     },
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
   },
   update_focused_file = {
     enable = true,
@@ -103,9 +101,3 @@ require("nvim-tree").setup({
     }
   },
 })
-
--- vim.api.nvim_create_autocmd({ "VimEnter" }, {
---   callback = function()
---     require("nvim-tree.api").tree.open()
---   end
--- })
