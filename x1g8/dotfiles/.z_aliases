@@ -75,10 +75,6 @@ alias p='pnpm'
 
 # Mix/Elixir
 alias m='mix'
-alias mdg='mix deps.get'
-alias mps='mix phx.server'
-alias mem='mix ecto.migrate'
-alias mer='mix ecto.reset'
 
 # Go
 alias gotest='$(asdf where golang)/packages/bin/gotestsum'

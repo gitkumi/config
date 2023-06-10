@@ -1,6 +1,6 @@
 app=viewnior
 last_user=
-screenshot_dir=file:/home/takumi/downloads
+screenshot_dir=file:///home/takumi/pictures/screenshots
 action=1
 delay=2
 region=2
