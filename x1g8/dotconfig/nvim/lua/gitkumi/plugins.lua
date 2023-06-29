@@ -13,10 +13,10 @@ return require('packer').startup(function(use)
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' }, -- Required
+      { 'neovim/nvim-lspconfig' },             -- Required
       {
-        'williamboman/mason.nvim', -- Optional
-         run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+        'williamboman/mason.nvim',             -- Optional
+        run = ":MasonUpdate"                   -- :MasonUpdate updates registry contents
       },
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
