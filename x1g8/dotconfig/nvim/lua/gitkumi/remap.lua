@@ -70,6 +70,7 @@ vim.keymap.set('n', '<leader>pf', builtin.live_grep)
 vim.keymap.set('n', '<leader>ps', builtin.current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>pq', builtin.quickfix)
 vim.keymap.set('n', '<leader>pQ', builtin.quickfixhistory)
+vim.keymap.set('n', '<leader>pm', ":lua require('telescope').extensions.media_files.media_files()<CR>")
 
 -- Trouble
 vim.keymap.set("n", "<leader>pd", "<cmd>TroubleToggle document_diagnostics<cr>",

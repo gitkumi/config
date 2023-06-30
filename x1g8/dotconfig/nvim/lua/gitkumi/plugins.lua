@@ -37,11 +37,25 @@ return require('packer').startup(function(use)
         override_generic_sorter = true, -- override the generic sorter
         override_file_sorter = true,    -- override the file sorter
         case_mode = "smart_case",
+      },
+      media_files = {
+        -- filetypes whitelist
+        -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+        filetypes = { "png", "webp", "jpg", "jpeg" },
+        -- find command (defaults to `fd`)
+        -- find_cmd = "rg"
       }
     }
   }
 
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  use {
+    'nvim-telescope/telescope-media-files.nvim',
+    config = function()
+      require('telescope').load_extension('media_files')
+    end
+  }
 
   use 'lewis6991/gitsigns.nvim'
 
