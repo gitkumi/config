@@ -128,4 +128,13 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
 
   use 'ethanholz/nvim-lastplace'
+
+  use {
+    'nvim-pack/nvim-spectre',
+    config = function()
+      require('spectre').setup({
+        result_padding = ''
+      })
+    end
+  }
 end)
