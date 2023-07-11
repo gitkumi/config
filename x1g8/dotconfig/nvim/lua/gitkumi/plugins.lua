@@ -137,4 +137,13 @@ return require('packer').startup(function(use)
       })
     end
   }
+
+  use {
+    'tummetott/unimpaired.nvim',
+    config = function()
+      require('unimpaired').setup {
+        -- add any options here or leave empty
+      }
+    end
+  }
 end)
