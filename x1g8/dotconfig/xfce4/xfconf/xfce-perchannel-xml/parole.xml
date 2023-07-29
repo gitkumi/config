@@ -5,7 +5,7 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/home/takumi/Downloads/[FreeCourseSite.com] Udemy - Modern React with Redux [2019 Update]/1. Let&apos;s Dive In!"/>
+    <property name="last-used-media" type="string" value="/home/takumi"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="true"/>

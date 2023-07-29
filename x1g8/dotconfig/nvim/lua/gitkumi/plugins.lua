@@ -65,7 +65,11 @@ return require('packer').startup(function(use)
 
   use {
     'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup {} end
+    config = function()
+      require('nvim-autopairs').setup({
+        disable_in_visualblock = true
+      })
+    end
   }
 
   use 'Mofiqul/dracula.nvim'
