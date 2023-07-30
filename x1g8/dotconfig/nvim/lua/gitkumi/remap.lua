@@ -1,9 +1,6 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
--- New line
-vim.keymap.set("n", "<Enter>", "o<Esc>")
-
 -- Yank like D or C
 vim.keymap.set('n', 'Y', 'y$')
 
