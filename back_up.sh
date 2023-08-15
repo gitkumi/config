@@ -26,6 +26,7 @@ declare -r DOT_FILES=(
   .tmux.conf
   .tool-versions
   .Xmodmap
+  .gitconfig
 )
 
 # ~/.config
