@@ -148,4 +148,6 @@ return require('packer').startup(function(use)
       }
     end
   }
+
+  use 'sindrets/diffview.nvim'
 end)
