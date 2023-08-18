@@ -41,7 +41,6 @@ intel-media-driver
 intel-ucode
 iwd
 jfsutils
-libreoffice-still
 libva-intel-driver
 libva-mesa-driver
 lightdm
@@ -66,9 +65,11 @@ ntfs-3g
 os-prober
 parole
 pavucontrol
-pulseaudio
+pipewire
+pipewire-pulse
 python-cairo
 qemu-desktop
+qpwgraph
 ranger
 reiserfsprogs
 ripgrep
