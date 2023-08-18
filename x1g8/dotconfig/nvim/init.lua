@@ -706,5 +706,8 @@ vim.keymap.set('n', '<leader>5', function()
   require("harpoon.ui").nav_file(5)
 end)
 
+vim.cmd [[autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact]]
+vim.cmd [[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]]
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
