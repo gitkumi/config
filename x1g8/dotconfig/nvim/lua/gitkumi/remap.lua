@@ -38,10 +38,6 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 -- Paste without overwriting current buffer
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- Search current word on cursor
-vim.keymap.set("n", "<leader><leader>", '"pyiw?<C-r>"<CR>N')
-vim.keymap.set("v", "<leader><leader>", '"py?<C-r>"<CR>N')
-
 -- Replace all
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
 vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
