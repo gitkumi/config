@@ -22,7 +22,6 @@ declare -r DOT_FILES=(
   .z_aliases
   .p10k.zsh
   .xprofile
-  .dir_colors 
   .tmux.conf
   .tool-versions
   .Xmodmap
