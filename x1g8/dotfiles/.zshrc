@@ -56,3 +56,5 @@ if [ -f '/home/takumi/google-cloud-sdk/path.zsh.inc' ]; then . '/home/takumi/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/takumi/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/takumi/google-cloud-sdk/completion.zsh.inc'; fi
+
+export BAT_THEME="Catppuccin-mocha"
