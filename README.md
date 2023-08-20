@@ -6,12 +6,12 @@
     - Install [yay](https://github.com/Jguer/yay)
     - Install [git](https://wiki.archlinux.org/title/git) and clone this repo
       ```
-      pacman -S git && cd ~ && git clone git@github.com:gitkumi/config.git
+      pacman -S git && git clone git@github.com:gitkumi/config.git ~
       ```
       
 2. Run installation scripts  
       ```
-      cd ~/config && install_packages.sh && install_packages_aur.sh && restore.sh 
+      ~/install_packages.sh && ~/install_packages_aur.sh && ~/restore.sh 
       ```
 
     Installing may fail if one of the package names gets changed.  
@@ -22,7 +22,7 @@
     - Setup lightdm/greeter
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install asdf plugins (nodejs, elixir, and erlang, go) via [asdf-vm](https://asdf-vm.com/#/)
-    - Sync VS Code Settings
+    - Sync VSCode settings
 
 ### Adding a new config
 
