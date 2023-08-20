@@ -1,10 +1,15 @@
 beekeeper-studio-bin
+catppuccin-gtk-theme-frappe
+catppuccin-gtk-theme-latte
+catppuccin-gtk-theme-macchiato
+catppuccin-gtk-theme-mocha
 cava
 dracula-gtk-theme
 dracula-icons-git
 exercism
 insomnia
 lightdm-settings
+nordic-theme
 nutty
 nvim-packer-git
 oh-my-zsh-git

@@ -16,7 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
-
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
 --
@@ -24,12 +23,12 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   'tpope/vim-sleuth',
+  'ThePrimeagen/harpoon',
+  'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
   'windwp/nvim-ts-autotag',
-  'ThePrimeagen/harpoon',
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
-  'mbbill/undotree',
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -67,6 +66,7 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
+
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -378,14 +378,10 @@ require('telescope').setup {
   },
 }
 
--- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
--- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
--- vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>ps', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
@@ -393,15 +389,13 @@ vim.keymap.set('n', '<leader>ps', function()
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
-
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>po', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>pq', require('telescope.builtin').quickfix)
 vim.keymap.set('n', '<leader>pQ', require('telescope.builtin').quickfixhistory)
 vim.keymap.set('n', '<leader>ph', require('telescope.builtin').help_tags)
+vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -479,17 +473,7 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
--- Diagnostic keymaps
-
--- [[ Configure LSP ]]
---  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
-  -- NOTE: Remember that lua is a real programming language, and as such it is possible
-  -- to define small helper and utility functions so you don't have to repeat yourself
-  -- many times.
-  --
-  -- In this case, we create a function that lets us more easily define mappings specific
-  -- for LSP related items. It sets the mode, buffer and description for us each time.
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
@@ -498,8 +482,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
-  nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-  nmap('K', vim.lsp.buf.hover,' Hover Documentation')
+  nmap('K', vim.lsp.buf.hover, ' Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
@@ -508,7 +491,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>gt', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
   nmap('gr', vim.lsp.buf.references)
   nmap('gs', vim.lsp.buf.signature_help)
-
   nmap('<leader>f', vim.lsp.buf.format)
   nmap('<F2>', vim.lsp.buf.rename)
   nmap('<F3>', vim.lsp.buf.code_action)

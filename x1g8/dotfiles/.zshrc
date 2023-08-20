@@ -16,14 +16,13 @@ export KERL_BUILD_DOCS="yes"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git fzf fancy-ctrl-z)
+plugins=(git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
 # Enable autocomplete in zsh
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
-
 
 # Loads Z
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
@@ -47,11 +46,8 @@ if [ -f $HOME/.asdf/completions/asdf.bash ]; then
 . $HOME/.asdf/completions/asdf.bash
 fi
 
-eval $(dircolors -b $HOME/.dir_colors)
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 export PATH="$HOME/.fly/bin:$PATH"
 
