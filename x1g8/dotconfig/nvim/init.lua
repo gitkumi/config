@@ -448,7 +448,8 @@ require('nvim-treesitter.configs').setup {
     'html',
     'javascript',
     'typescript',
-    'elixir'
+    'elixir',
+    'heex'
   },
   auto_install = false,
   highlight = { enable = true },
