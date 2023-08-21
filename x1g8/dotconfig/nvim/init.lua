@@ -1,6 +1,6 @@
 vim.g.mapleader = '\\'
 vim.g.maplocalleader = '\\'
-
+vim.opt.termguicolors = true
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -86,10 +86,12 @@ require('lazy').setup({
   },
 
   {
-    'catppuccin/nvim',
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'tokyonight-moon'
     end,
   },
 
@@ -99,8 +101,8 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
+        theme = 'tokyonight-moon',
         icons_enabled = false,
-        theme = 'catppuccin-mocha',
         component_separators = '|',
         section_separators = '',
       },
@@ -300,6 +302,37 @@ require('lazy').setup({
       })
     end
   },
+
+  {
+    "elixir-tools/elixir-tools.nvim",
+    version = "*",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local elixir = require("elixir")
+      local elixirls = require("elixir.elixirls")
+
+      elixir.setup {
+        nextls = { enable = true },
+        credo = {},
+        elixirls = {
+          enable = true,
+          settings = elixirls.settings {
+            dialyzerEnabled = false,
+            enableTestLenses = false,
+          },
+          on_attach = function(client, bufnr)
+            vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+          end,
+        }
+      }
+    end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  }
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
