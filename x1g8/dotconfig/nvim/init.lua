@@ -101,7 +101,6 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        theme = 'tokyonight-moon',
         icons_enabled = false,
         component_separators = '|',
         section_separators = '',
