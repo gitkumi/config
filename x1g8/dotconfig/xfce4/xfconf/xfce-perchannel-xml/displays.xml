@@ -35,11 +35,11 @@
     <property name="HDMI-1" type="string" value="LG Electronics 34&quot;">
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="61055d8856d2390dc0755d1946b58ee14f0d3095"/>
-      <property name="Resolution" type="string" value="1920x1080"/>
-      <property name="RefreshRate" type="double" value="74.986470978549363"/>
+      <property name="Resolution" type="string" value="2560x1080"/>
+      <property name="RefreshRate" type="double" value="59.937888198757761"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="true"/>
+      <property name="Primary" type="bool" value="false"/>
       <property name="Scale" type="empty">
         <property name="X" type="double" value="1"/>
         <property name="Y" type="double" value="1"/>
@@ -72,11 +72,11 @@
     <property name="HDMI-1" type="string" value="LG Electronics 34&quot;">
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="61055d8856d2390dc0755d1946b58ee14f0d3095"/>
-      <property name="Resolution" type="string" value="1920x1080"/>
-      <property name="RefreshRate" type="double" value="74.986470978549363"/>
+      <property name="Resolution" type="string" value="2560x1080"/>
+      <property name="RefreshRate" type="double" value="59.937888198757761"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="true"/>
+      <property name="Primary" type="bool" value="false"/>
       <property name="Scale" type="empty">
         <property name="X" type="double" value="1"/>
         <property name="Y" type="double" value="1"/>

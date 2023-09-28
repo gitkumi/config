@@ -1,6 +1,6 @@
 nodejs 16.13.0
 erlang 25.3
 elixir 1.14.3
-golang 1.20.1
+golang 1.21.0
 rust 1.68.0
-
+bun 1.0.0

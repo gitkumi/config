@@ -17,8 +17,8 @@ docker
 docker-compose
 efibootmgr
 evince
-exa
 exo
+eza
 fd
 ffmpegthumbnailer
 firefox
@@ -27,6 +27,7 @@ fzf
 garcon
 git
 git-delta
+gitui
 gnome-calculator
 gnome-disk-utility
 gparted
@@ -161,6 +162,7 @@ xkeycaps
 xorg-server
 xorg-server-xephyr
 xorg-xinit
+xorg-xwininfo
 yarn
 z
 zip
