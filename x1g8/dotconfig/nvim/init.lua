@@ -330,8 +330,11 @@ require('lazy').setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-  }
+  },
 
+  {
+    'tpope/vim-fugitive'
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -650,13 +653,13 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Center after moving
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Window navigation
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
