@@ -692,6 +692,10 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Spectre
 vim.keymap.set('n', '<leader>pr', ":Spectre<CR>")
+
+-- Quickfix
+vim.keymap.set('n', '<leader>cq', ":call setqflist([], 'r')<Enter>", { desc = 'Clear Quickfixlist' })
+
 -- Diagnostics
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
