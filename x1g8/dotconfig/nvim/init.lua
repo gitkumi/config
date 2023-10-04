@@ -1,10 +1,9 @@
 vim.g.mapleader = '\\'
 vim.g.maplocalleader = '\\'
 vim.opt.termguicolors = true
--- Install package manager
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
     'git',
@@ -15,21 +14,10 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
+
 vim.opt.rtp:prepend(lazypath)
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
+
 require('lazy').setup({
-  'tpope/vim-sleuth',
-  'ThePrimeagen/harpoon',
-  'mbbill/undotree',
-  'nvim-tree/nvim-web-devicons',
-  'leafgarland/typescript-vim',
-  'peitalin/vim-jsx-typescript',
-  -- NOTE: This is where your plugins related to LSP can be installed.
-  --  The configuration is done below. Search for lspconfig to find it below.
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -62,6 +50,13 @@ require('lazy').setup({
       'rafamadriz/friendly-snippets',
     },
   },
+
+  'tpope/vim-sleuth',
+  'ThePrimeagen/harpoon',
+  'mbbill/undotree',
+  'nvim-tree/nvim-web-devicons',
+  'leafgarland/typescript-vim',
+  'peitalin/vim-jsx-typescript',
 
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -261,9 +256,7 @@ require('lazy').setup({
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
+      require("nvim-surround").setup({})
     end
   },
 
@@ -328,9 +321,9 @@ require('lazy').setup({
             enableTestLenses = false,
           },
           on_attach = function(client, bufnr)
-            vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+            -- vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+            -- vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+            -- vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
           end,
         }
       }
@@ -348,19 +341,6 @@ require('lazy').setup({
     '/home/takumi/projects/stackmap.nvim',
     dev = true
   }
-  -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
-  --       These are some example plugins that I've included in the kickstart repository.
-  --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
-  -- require 'kickstart.plugins.debug',
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
-  --    up-to-date with whatever is in the kickstart repo.
-  --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  --
-  --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
 }, {})
 
 vim.g.loaded_netrw = 1
@@ -534,7 +514,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
-  nmap('K', vim.lsp.buf.hover, ' Hover Documentation')
+  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
@@ -671,8 +651,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
--- vim.keymap.set("n", "<C-d>", "<C-d>zz")
--- vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Window navigation
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
@@ -745,6 +725,7 @@ vim.keymap.set('n', '<leader>5', function()
 end)
 
 vim.cmd [[autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact]]
+
 vim.cmd [[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
