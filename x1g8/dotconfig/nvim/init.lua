@@ -10,7 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
     'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable', -- latest stable release
+    '--branch=stable',
     lazypath,
   }
 end
@@ -59,10 +59,8 @@ require('lazy').setup({
   'peitalin/vim-jsx-typescript',
 
   {
-    -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
-      -- See `:help gitsigns.txt`
       signs = {
         add = { text = '+' },
         change = { text = '~' },
@@ -252,11 +250,11 @@ require('lazy').setup({
   },
 
   {
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
     config = function()
-      require("nvim-surround").setup({})
+      require('nvim-surround').setup({})
     end
   },
 
@@ -304,12 +302,12 @@ require('lazy').setup({
   },
 
   {
-    "elixir-tools/elixir-tools.nvim",
-    version = "*",
-    event = { "BufReadPre", "BufNewFile" },
+    'elixir-tools/elixir-tools.nvim',
+    version = '*',
+    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
-      local elixir = require("elixir")
-      local elixirls = require("elixir.elixirls")
+      local elixir = require('elixir')
+      local elixirls = require('elixir.elixirls')
 
       elixir.setup {
         nextls = { enable = true },
@@ -321,15 +319,15 @@ require('lazy').setup({
             enableTestLenses = false,
           },
           on_attach = function(client, bufnr)
-            -- vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-            -- vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-            -- vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+            -- vim.keymap.set('n', '<leader>fp', ':ElixirFromPipe<cr>', { buffer = true, noremap = true })
+            -- vim.keymap.set('n', '<leader>tp', ':ElixirToPipe<cr>', { buffer = true, noremap = true })
+            -- vim.keymap.set('v', '<leader>em', ':ElixirExpandMacro<cr>', { buffer = true, noremap = true })
           end,
         }
       }
     end,
     dependencies = {
-      "nvim-lua/plenary.nvim",
+      'nvim-lua/plenary.nvim',
     },
   },
 
@@ -373,15 +371,15 @@ vim.opt.updatetime = 50
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
 vim.opt.undofile = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+vim.opt.signcolumn = 'yes'
+vim.opt.isfname:append('@-@')
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = 'menuone,noselect'
