@@ -335,6 +335,12 @@ require('lazy').setup({
   {
     'tpope/vim-fugitive'
   },
+
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  }
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -658,8 +664,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "%", "%zz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz")
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Window navigation
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
