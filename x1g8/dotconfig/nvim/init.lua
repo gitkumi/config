@@ -26,7 +26,6 @@ require('lazy').setup({
   'ThePrimeagen/harpoon',
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
-  'windwp/nvim-ts-autotag',
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
   -- NOTE: This is where your plugins related to LSP can be installed.
@@ -294,6 +293,15 @@ require('lazy').setup({
   },
 
   {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup({
+        filetypes = { "html", "xml" },
+      })
+    end
+  },
+
+  {
     'windwp/nvim-autopairs',
     config = function()
       require('nvim-autopairs').setup({
@@ -337,9 +345,8 @@ require('lazy').setup({
   },
 
   {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
+    '/home/takumi/projects/stackmap.nvim',
+    dev = true
   }
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
