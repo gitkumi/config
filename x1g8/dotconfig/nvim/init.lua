@@ -270,9 +270,9 @@ require('lazy').setup({
   {
     'tummetott/unimpaired.nvim',
     config = function()
-      require('unimpaired').setup {
+      require('unimpaired').setup({
         -- add any options here or leave empty
-      }
+      })
     end
   },
 
