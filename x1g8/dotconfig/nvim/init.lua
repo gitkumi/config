@@ -659,9 +659,11 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
 vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
+vim.keymap.set("n", "<C-K>", "<C-W><C-K>")
+vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 
 -- Duplicate selected
-vim.keymap.set("n", "<leader>d", "<S-v>ypgv")
+vim.keymap.set("n", "<leader>d", "<S-v>ykpgv")
 vim.keymap.set("v", "<leader>d", "ykpgv")
 
 -- Delete without overwriting current buffer
@@ -687,13 +689,15 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<leader>pr', ":Spectre<CR>")
 
 -- Quickfix
-vim.keymap.set('n', '<leader>cq', ":call setqflist([], 'r')<Enter>", { desc = 'Clear Quickfixlist' })
+vim.keymap.set('n', '<leader>qx', ":call setqflist([], 'r')<Enter>", { desc = 'Clear Quickfixlist' })
+vim.keymap.set('n', '<leader>qo', ":copen<Enter>", { desc = 'Open Quickfixlist' })
+vim.keymap.set('n', '<leader>qc', ":cclose<Enter>", { desc = 'Close Quickfixlist' })
 
 -- Diagnostics
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>l', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Harpoon
 vim.keymap.set('n', '<leader>a', function()
