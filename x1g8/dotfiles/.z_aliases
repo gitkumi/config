@@ -75,7 +75,6 @@ alias ai='mods'
 
 # tmux
 alias t='tmux'
-alias tt='~/config/scripts/tms.sh'
 
 # yarn
 alias y='yarn'
