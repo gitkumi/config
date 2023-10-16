@@ -105,17 +105,8 @@ require('lazy').setup({
     main = "ibl",
     opts = {
       indent = {
-        -- highlight = {
-        --   "Whitespace",
-        -- },
         char = '┊',
       },
-      -- whitespace = {
-      --   highlight = {
-      --     "Whitespace",
-      --   },
-      --   remove_blankline_trail = true,
-      -- },
       scope = { enabled = false },
     }
   },
