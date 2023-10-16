@@ -54,7 +54,7 @@
     <property name="plugin-1" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="mixer-command" type="string" value="pavucontrol"/>
-      <property name="known-players" type="string" value="Chromium;Firefox Web Browser;VLC media player"/>
+      <property name="known-players" type="string" value="Chromium;firefox;Firefox Web Browser;vlc;VLC media player"/>
     </property>
   </property>
 </channel>
