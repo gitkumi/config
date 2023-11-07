@@ -25,6 +25,7 @@ firefox
 foliate
 fzf
 garcon
+gimp
 git
 git-delta
 gitui
@@ -38,12 +39,14 @@ gtk-engine-murrine
 gum
 gvfs
 gvfs-smb
+helix
 inetutils
 inotify-tools
 intel-media-driver
 intel-ucode
 iwd
 jfsutils
+libheif
 libva-intel-driver
 libva-mesa-driver
 lightdm
@@ -97,7 +100,6 @@ transmission-gtk
 tree
 ttf-fira-code
 ttf-jetbrains-mono
-ttf-jetbrains-mono-nerd
 tumbler
 unrar
 unzip

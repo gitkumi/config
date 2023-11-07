@@ -52,6 +52,8 @@ require('lazy').setup({
   },
 
   'tpope/vim-sleuth',
+  'tpope/vim-fugitive',
+  'RRethy/vim-illuminate',
   'ThePrimeagen/harpoon',
   'mbbill/undotree',
   'nvim-tree/nvim-web-devicons',
@@ -111,22 +113,15 @@ require('lazy').setup({
     }
   },
 
-  -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-  -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-      -- Only load if `make` is available. Make sure you have the system
-      -- requirements installed.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
-        --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
@@ -136,7 +131,6 @@ require('lazy').setup({
   },
 
   {
-    -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
@@ -251,7 +245,7 @@ require('lazy').setup({
 
   {
     'kylechui/nvim-surround',
-    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    version = '*',
     event = 'VeryLazy',
     config = function()
       require('nvim-surround').setup({})
@@ -269,7 +263,6 @@ require('lazy').setup({
     'tummetott/unimpaired.nvim',
     config = function()
       require('unimpaired').setup({
-        -- add any options here or leave empty
       })
     end
   },
@@ -331,10 +324,6 @@ require('lazy').setup({
       'nvim-lua/plenary.nvim',
     },
   },
-
-  {
-    'tpope/vim-fugitive'
-  }
 }, {})
 
 vim.g.loaded_netrw = 1
@@ -405,22 +394,22 @@ require('telescope').setup {
 
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader>ps', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
   })
-end, { desc = '[/] Fuzzily search in current buffer' })
+end)
 
-vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>po', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>pq', require('telescope.builtin').quickfix)
-vim.keymap.set('n', '<leader>pQ', require('telescope.builtin').quickfixhistory)
-vim.keymap.set('n', '<leader>ph', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', '<leader>pb', require('telescope.builtin').buffers)
+vim.keymap.set('n', '<leader>py', require('telescope.builtin').lsp_document_symbols)
+vim.keymap.set('n', '<leader>pz', require('telescope.builtin').oldfiles)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -519,7 +508,9 @@ local on_attach = function(_, bufnr)
   nmap('gs', vim.lsp.buf.signature_help)
   nmap('<leader>f', vim.lsp.buf.format)
   nmap('<F2>', vim.lsp.buf.rename)
+  nmap('<leader>re', vim.lsp.buf.rename)
   nmap('<F3>', vim.lsp.buf.code_action)
+  nmap('<leader>ca', vim.lsp.buf.code_action)
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
@@ -720,6 +711,10 @@ end)
 
 vim.keymap.set('n', '<leader>5', function()
   require("harpoon.ui").nav_file(5)
+end)
+
+vim.keymap.set('n', '<leader>6', function()
+  require("harpoon.ui").nav_file(6)
 end)
 
 vim.cmd [[autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact]]
