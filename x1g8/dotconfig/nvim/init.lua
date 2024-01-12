@@ -268,15 +268,6 @@ require('lazy').setup({
   },
 
   {
-    'nvim-pack/nvim-spectre',
-    config = function()
-      require('spectre').setup({
-        result_padding = ''
-      })
-    end
-  },
-
-  {
     'windwp/nvim-ts-autotag',
     config = function()
       require('nvim-ts-autotag').setup({
