@@ -659,9 +659,6 @@ vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 -- Undo tree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
--- Spectre
-vim.keymap.set('n', '<leader>pr', ":Spectre<CR>")
-
 -- Quickfix
 vim.keymap.set('n', '<leader>qx', ":call setqflist([], 'r')<Enter>", { desc = 'Clear Quickfixlist' })
 vim.keymap.set('n', '<leader>qo', ":copen<Enter>", { desc = 'Open Quickfixlist' })
