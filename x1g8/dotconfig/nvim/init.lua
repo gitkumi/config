@@ -121,9 +121,6 @@ require('lazy').setup({
 
   {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons'
-    },
     opts = {
       sort_by = "case_sensitive",
       view = {
