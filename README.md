@@ -21,8 +21,7 @@
     - Setup xfce panels (?)
     - Setup lightdm/greeter
     - Add device to [Tailscale](https://tailscale.com/) network
-    - Install asdf plugins (nodejs, elixir, and erlang, go) via [asdf-vm](https://asdf-vm.com/#/)
-    - Sync VSCode settings
+    - Install asdf plugins (nodejs, elixir, erlang, and go) via [asdf-vm](https://asdf-vm.com/#/)
 
 ### Adding a new config
 
