@@ -498,9 +498,7 @@ local on_attach = function(_, bufnr)
   nmap('gr', vim.lsp.buf.references)
   nmap('gs', vim.lsp.buf.signature_help)
   nmap('<leader>f', vim.lsp.buf.format)
-  nmap('<F2>', vim.lsp.buf.rename)
   nmap('<leader>re', vim.lsp.buf.rename)
-  nmap('<F3>', vim.lsp.buf.code_action)
   nmap('<leader>ca', vim.lsp.buf.code_action)
 
   -- Create a command `:Format` local to the LSP buffer
