@@ -375,15 +375,48 @@ vim.keymap.set('n', '<leader>ps', function()
   })
 end)
 
+vim.keymap.set('n', '<leader>pq', function()
+  require('telescope.builtin').quickfix(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end)
+
+vim.keymap.set('n', '<leader>pd', function()
+  require('telescope.builtin').diagnostics(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+
+end)
+
+vim.keymap.set('n', '<leader>pb', function()
+  require('telescope.builtin').buffers(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+
+end)
+
+vim.keymap.set('n', '<leader>py', function()
+require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+
+end)
+
+vim.keymap.set('n', '<leader>pz', function()
+  require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end)
+
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>po', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>pq', require('telescope.builtin').quickfix)
-vim.keymap.set('n', '<leader>pd', require('telescope.builtin').diagnostics)
-vim.keymap.set('n', '<leader>pb', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>py', require('telescope.builtin').lsp_document_symbols)
-vim.keymap.set('n', '<leader>pz', require('telescope.builtin').oldfiles)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -477,7 +510,7 @@ local on_attach = function(_, bufnr)
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-  nmap('<leader>gt', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
+  nmap('gt', vim.lsp.buf.type_definition, '[G]oto [T]ype Definition')
   nmap('gr', vim.lsp.buf.references)
   nmap('gs', vim.lsp.buf.signature_help)
   nmap('<leader>f', vim.lsp.buf.format)
