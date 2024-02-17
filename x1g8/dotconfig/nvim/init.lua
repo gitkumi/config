@@ -1,7 +1,3 @@
-vim.g.mapleader = '\\'
-vim.g.maplocalleader = '\\'
-vim.opt.termguicolors = true
-
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
@@ -165,7 +161,7 @@ require('lazy').setup({
         },
       },
       renderer = {
-        group_empty = true,
+        group_empty = false,
         indent_width = 2,
         indent_markers = {
           enable = true,
@@ -300,9 +296,13 @@ require('lazy').setup({
   },
 }, {})
 
+
+vim.g.mapleader = '\\'
+vim.g.maplocalleader = '\\'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
+vim.opt.showmode = false
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
