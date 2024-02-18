@@ -387,7 +387,6 @@ vim.keymap.set('n', '<leader>pd', function()
     winblend = 10,
     previewer = false,
   })
-
 end)
 
 vim.keymap.set('n', '<leader>pb', function()
@@ -395,15 +394,13 @@ vim.keymap.set('n', '<leader>pb', function()
     winblend = 10,
     previewer = false,
   })
-
 end)
 
 vim.keymap.set('n', '<leader>py', function()
-require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown {
+  require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
   })
-
 end)
 
 vim.keymap.set('n', '<leader>pz', function()
