@@ -18,6 +18,7 @@ alias untar='tar -xzvf'
 # vim
 alias vi='nvim'
 alias vim='nvim'
+alias vimconf='nvim ~/.config/nvim/init.lua'
 
 # yay
 alias yayin='yay -S'

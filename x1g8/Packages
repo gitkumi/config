@@ -73,6 +73,7 @@ pavucontrol
 pipewire
 pipewire-pulse
 python-cairo
+python-pynvim
 qemu-desktop
 qpwgraph
 ranger
@@ -100,6 +101,7 @@ tree
 ttf-fira-code
 ttf-jetbrains-mono
 tumbler
+ueberzug
 unrar
 unzip
 usbutils
