@@ -407,7 +407,7 @@ require('telescope').setup {
 
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.keymap.set('n', '<leader>ps', function()
+vim.keymap.set('n', '<leader>/', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
@@ -449,10 +449,11 @@ vim.keymap.set('n', '<leader>pz', function()
   })
 end)
 
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>po', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>pw', require('telescope.builtin').grep_string)
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -460,8 +461,8 @@ require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
     'go',
+    'bash',
     'lua',
-    'tsx',
     'vimdoc',
     'vim',
     'markdown',
@@ -470,6 +471,7 @@ require('nvim-treesitter.configs').setup {
     'html',
     'javascript',
     'typescript',
+    'tsx',
     'elixir',
     'heex'
   },
@@ -763,9 +765,8 @@ end)
 vim.keymap.set('n', '<leader>dq', ':diffget //2<Enter>]c')
 vim.keymap.set('n', '<leader>dp', ':diffget //3<Enter>]c')
 
-vim.cmd [[autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact]]
-
 vim.cmd [[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]]
+vim.cmd [[autocmd BufNewFile,BufRead *Jenskinsfile* set filetype=groovy]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
