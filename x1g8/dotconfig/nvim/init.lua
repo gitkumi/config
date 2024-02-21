@@ -104,7 +104,7 @@ require('lazy').setup({
     }
   },
 
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',  opts = {} },
 
   {
     'nvim-telescope/telescope.nvim',
@@ -154,6 +154,7 @@ require('lazy').setup({
         ["<C-s>"] = "actions.select_vsplit",
         ["<C-h>"] = "actions.select_split",
         ["<C-l>"] = "actions.refresh",
+        ["<Tab>"] = "actions.preview",
         ["gs"] = "actions.change_sort",
         ["gx"] = "actions.open_external",
         ["g."] = "actions.toggle_hidden",
@@ -167,107 +168,107 @@ require('lazy').setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
-  -- {
-  --   'nvim-tree/nvim-tree.lua',
-  --   opts = {
-  --     sort_by = "case_sensitive",
-  --     view = {
-  --       width = 30,
-  --       side = 'right',
-  --       float = {
-  --         enable = true,
-  --         quit_on_focus_loss = true,
-  --         open_win_config = function()
-  --           local screen_w = vim.opt.columns:get()
-  --           local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-  --           local window_w = screen_w * 0.6
-  --           local window_h = screen_h * 0.6
-  --           local window_w_int = math.floor(window_w)
-  --           local window_h_int = math.floor(window_h)
-  --           local center_x = (screen_w - window_w) / 2
-  --           local center_y = ((vim.opt.lines:get() - window_h) / 2)
-  --               - vim.opt.cmdheight:get()
-  --           return {
-  --             border = "rounded",
-  --             relative = "editor",
-  --             row = center_y,
-  --             col = center_x,
-  --             width = window_w_int,
-  --             height = window_h_int,
-  --           }
-  --         end,
-  --       },
-  --     },
-  --     renderer = {
-  --       group_empty = false,
-  --       indent_width = 2,
-  --       indent_markers = {
-  --         enable = true,
-  --         inline_arrows = true,
-  --         icons = {
-  --           corner = "└",
-  --           edge = "│",
-  --           item = "│",
-  --           bottom = "─",
-  --           none = "-",
-  --         },
-  --       },
-  --       icons = {
-  --         webdev_colors = true,
-  --         git_placement = "before",
-  --         modified_placement = "after",
-  --         padding = " ",
-  --         symlink_arrow = " ➛ ",
-  --         show = {
-  --           file = true,
-  --           folder = false,
-  --           folder_arrow = true,
-  --           git = true,
-  --           modified = true,
-  --         },
-  --         glyphs = {
-  --           default = "",
-  --           symlink = "",
-  --           bookmark = "",
-  --           modified = "●",
-  --           folder = {
-  --             arrow_closed = "▶",
-  --             arrow_open = "▼",
-  --             default = "",
-  --             open = "",
-  --             empty = "",
-  --             empty_open = "",
-  --             symlink = "",
-  --             symlink_open = "",
-  --           },
-  --           git = {
-  --             unstaged = "✗",
-  --             staged = "✓",
-  --             unmerged = "~",
-  --             renamed = "➜",
-  --             untracked = "★",
-  --             deleted = "x",
-  --             ignored = "◌",
-  --           },
-  --         },
-  --       },
-  --     },
-  --     git = {
-  --       ignore = false
-  --     },
-  --     filters = {
-  --       dotfiles = false,
-  --     },
-  --     update_focused_file = {
-  --       enable = true,
-  --     },
-  --     actions = {
-  --       open_file = {
-  --         quit_on_open = true
-  --       }
-  --     },
-  --   }
-  -- },
+  {
+    'nvim-tree/nvim-tree.lua',
+    opts = {
+      sort_by = "case_sensitive",
+      view = {
+        width = 30,
+        side = 'right',
+        float = {
+          enable = true,
+          quit_on_focus_loss = true,
+          open_win_config = function()
+            local screen_w = vim.opt.columns:get()
+            local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
+            local window_w = screen_w * 0.6
+            local window_h = screen_h * 0.6
+            local window_w_int = math.floor(window_w)
+            local window_h_int = math.floor(window_h)
+            local center_x = (screen_w - window_w) / 2
+            local center_y = ((vim.opt.lines:get() - window_h) / 2)
+                - vim.opt.cmdheight:get()
+            return {
+              border = "rounded",
+              relative = "editor",
+              row = center_y,
+              col = center_x,
+              width = window_w_int,
+              height = window_h_int,
+            }
+          end,
+        },
+      },
+      renderer = {
+        group_empty = false,
+        indent_width = 2,
+        indent_markers = {
+          enable = true,
+          inline_arrows = true,
+          icons = {
+            corner = "└",
+            edge = "│",
+            item = "│",
+            bottom = "─",
+            none = "-",
+          },
+        },
+        icons = {
+          webdev_colors = true,
+          git_placement = "before",
+          modified_placement = "after",
+          padding = " ",
+          symlink_arrow = " ➛ ",
+          show = {
+            file = true,
+            folder = false,
+            folder_arrow = true,
+            git = true,
+            modified = true,
+          },
+          glyphs = {
+            default = "",
+            symlink = "",
+            bookmark = "",
+            modified = "●",
+            folder = {
+              arrow_closed = "▶",
+              arrow_open = "▼",
+              default = "",
+              open = "",
+              empty = "",
+              empty_open = "",
+              symlink = "",
+              symlink_open = "",
+            },
+            git = {
+              unstaged = "✗",
+              staged = "✓",
+              unmerged = "~",
+              renamed = "➜",
+              untracked = "★",
+              deleted = "x",
+              ignored = "◌",
+            },
+          },
+        },
+      },
+      git = {
+        ignore = false
+      },
+      filters = {
+        dotfiles = false,
+      },
+      update_focused_file = {
+        enable = true,
+      },
+      actions = {
+        open_file = {
+          quit_on_open = true
+        }
+      },
+    }
+  },
 
   {
     'norcalli/nvim-colorizer.lua',
@@ -708,7 +709,7 @@ vim.keymap.set("v", "<leader>r", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
 vim.keymap.set("v", "<leader>R", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
 
 -- File tree
--- vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader><space>", function()
   require("oil").open()
 end)
