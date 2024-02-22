@@ -442,21 +442,21 @@ vim.keymap.set('n', '<leader>pd', function()
   })
 end)
 
-vim.keymap.set('n', '<leader>pb', function()
-  require('telescope.builtin').buffers(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end)
-
-vim.keymap.set('n', '<leader>py', function()
+vim.keymap.set('n', '<leader>ps', function()
   require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
   })
 end)
 
-vim.keymap.set('n', '<leader>pz', function()
+vim.keymap.set('n', '<leader>z', function()
+  require('telescope.builtin').buffers(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end)
+
+vim.keymap.set('n', '<leader>Z', function()
   require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
@@ -464,7 +464,7 @@ vim.keymap.set('n', '<leader>pz', function()
 end)
 
 vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
-vim.keymap.set('n', '<leader>po', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<leader>pz', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>pw', require('telescope.builtin').grep_string)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
