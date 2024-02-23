@@ -484,8 +484,7 @@ require('nvim-treesitter.configs').setup {
     'elixir',
     'heex',
     'templ',
-    'sql',
-    'makefile'
+    'sql'
   },
   auto_install = false,
   highlight = { enable = true },
