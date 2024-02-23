@@ -146,15 +146,10 @@ require('lazy').setup({
   },
 
   {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    vscode = true,
-    opts = {},
-    keys = {
-      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-      -- { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-    },
+    "ggandor/leap.nvim",
+    config = function()
+      require('leap').create_default_mappings()
+    end
   },
 
   {
@@ -487,7 +482,8 @@ require('nvim-treesitter.configs').setup {
     'typescript',
     'tsx',
     'elixir',
-    'heex'
+    'heex',
+    'templ'
   },
   auto_install = false,
   highlight = { enable = true },
@@ -778,6 +774,12 @@ end)
 
 vim.keymap.set('n', '<leader>dq', ':diffget //2<Enter>]c')
 vim.keymap.set('n', '<leader>dp', ':diffget //3<Enter>]c')
+
+vim.filetype.add({
+  extension = {
+    templ = "templ",
+  },
+})
 
 vim.cmd [[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]]
 vim.cmd [[autocmd BufNewFile,BufRead *Jenskinsfile* set filetype=groovy]]
