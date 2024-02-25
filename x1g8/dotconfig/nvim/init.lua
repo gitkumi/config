@@ -313,6 +313,10 @@ require('lazy').setup({
   },
 
   {
+    'eandrju/cellular-automaton.nvim'
+  },
+
+  {
     'elixir-tools/elixir-tools.nvim',
     version = '*',
     event = { 'BufReadPre', 'BufNewFile' },
@@ -775,6 +779,8 @@ end)
 
 vim.keymap.set('n', '<leader>dq', ':diffget //2<Enter>]c')
 vim.keymap.set('n', '<leader>dp', ':diffget //3<Enter>]c')
+
+vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>")
 
 vim.filetype.add({
   extension = {

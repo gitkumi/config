@@ -87,7 +87,7 @@ alias p='pnpm'
 alias m='mix'
 
 # go
-alias gotest='$(asdf where golang)/packages/bin/gotestsum'
+# alias gotest='$(asdf where golang)/packages/bin/gotestsum'
 alias goreshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/" && export GOPATH="$(asdf where golang)/packages/"'
 
 # docker
