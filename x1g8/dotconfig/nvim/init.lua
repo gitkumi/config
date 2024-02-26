@@ -715,7 +715,7 @@ end)
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Quickfix
-vim.keymap.set('n', '<leader>qx', ":call setqflist([], 'r')<Enter>", { desc = 'Clear Quickfixlist' })
+vim.keymap.set('n', '<leader>qx', ":call setqflist([], 'r')<Enter>:close<Enter>", { desc = 'Clear Quickfixlist' })
 vim.keymap.set('n', '<leader>qo', ":copen<Enter>", { desc = 'Open Quickfixlist' })
 vim.keymap.set('n', '<leader>qc', ":cclose<Enter>", { desc = 'Close Quickfixlist' })
 
@@ -754,10 +754,6 @@ end)
 
 vim.keymap.set('n', '<leader>5', function()
   require("harpoon.ui").nav_file(5)
-end)
-
-vim.keymap.set('n', '<leader>6', function()
-  require("harpoon.ui").nav_file(6)
 end)
 
 vim.keymap.set('n', '<leader>dq', ':diffget //2<Enter>]c')
