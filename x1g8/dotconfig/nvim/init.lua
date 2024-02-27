@@ -313,6 +313,16 @@ require('lazy').setup({
   },
 
   {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+
+  {
     'eandrju/cellular-automaton.nvim'
   },
 }, {})
@@ -435,6 +445,7 @@ vim.keymap.set('n', '<C-p>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>pz', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>pf', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader>pw', require('telescope.builtin').grep_string)
+vim.keymap.set('n', '<leader>pq', require('telescope.builtin').lsp_references)
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').help_tags)
 
 -- [[ Configure Treesitter ]]
@@ -666,6 +677,10 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- No need to press shift key
+vim.keymap.set("n", "]", "}")
+vim.keymap.set("n", "[", "{")
+
 -- Window navigation
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
@@ -711,6 +726,13 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>l', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+vim.keymap.set("n", "<leader>tx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>tw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>td", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>tq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>tl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+
 vim.keymap.set('n', '<leader>`', ':vs | :term<Enter>a')
 
 -- Harpoon
@@ -746,6 +768,7 @@ vim.keymap.set('n', '<leader>dq', ':diffget //2<Enter>]c')
 vim.keymap.set('n', '<leader>dp', ':diffget //3<Enter>]c')
 
 vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>")
+vim.keymap.set("n", "<leader>mir", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 vim.filetype.add({
   extension = {
