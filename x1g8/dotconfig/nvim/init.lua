@@ -677,10 +677,6 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- No need to press shift key
-vim.keymap.set("n", "]", "}")
-vim.keymap.set("n", "[", "{")
-
 -- Window navigation
 vim.keymap.set("n", "<C-H>", "<C-W><C-H>")
 vim.keymap.set("n", "<C-J>", "<C-W><C-J>")
