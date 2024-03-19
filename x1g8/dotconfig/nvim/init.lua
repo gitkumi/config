@@ -65,6 +65,23 @@ require('lazy').setup({
       vim.cmd.colorscheme 'tokyonight-moon'
     end,
   },
+  -- {
+  --   'jesseleite/nvim-noirbuddy',
+  --   dependencies = {
+  --     { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+  --   },
+  --   lazy = false,
+  --   priority = 1000,
+  --   preset = 'miami-nights',
+  --   opts = {
+  --     -- All of your `setup(opts)` will go here
+  --   },
+  --   config = function()
+  --     require('noirbuddy').setup {
+  --       preset = 'miami-nights',
+  --     }
+  --   end
+  -- },
 
   {
     -- Set lualine as statusline
@@ -105,6 +122,8 @@ require('lazy').setup({
   },
 
   { 'numToStr/Comment.nvim', opts = {} },
+
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 
   {
     'nvim-telescope/telescope.nvim',
@@ -392,9 +411,13 @@ require('telescope').setup {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
+        ['<C-f>'] = require('telescope.actions').to_fuzzy_refine,
       },
     },
   },
+  config = function()
+    require("telescope").load_extension("fzf")
+  end
 }
 
 pcall(require('telescope').load_extension, 'fzf')
