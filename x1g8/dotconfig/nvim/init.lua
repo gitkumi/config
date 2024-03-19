@@ -123,8 +123,6 @@ require('lazy').setup({
 
   { 'numToStr/Comment.nvim', opts = {} },
 
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
-
   {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
@@ -411,13 +409,9 @@ require('telescope').setup {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
-        ['<C-f>'] = require('telescope.actions').to_fuzzy_refine,
       },
     },
   },
-  config = function()
-    require("telescope").load_extension("fzf")
-  end
 }
 
 pcall(require('telescope').load_extension, 'fzf')
