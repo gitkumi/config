@@ -8,8 +8,10 @@ epiphany
 evince
 eza
 firefox
+fzf
 gdm
 git
+git-delta
 gnome-backgrounds
 gnome-calculator
 gnome-calendar
@@ -95,5 +97,6 @@ xf86-video-nouveau
 xf86-video-vmware
 xorg-xinit
 yelp
+zoxide
 zram-generator
 zsh

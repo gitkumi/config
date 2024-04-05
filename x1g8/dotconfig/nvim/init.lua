@@ -302,7 +302,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('telescope').setup {
   defaults = {
     layout_strategy = 'vertical',
-    layout_config = { width = 0.5 },
     mappings = {
       i = {
         ['<C-u>'] = false,

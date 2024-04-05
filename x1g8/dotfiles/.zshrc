@@ -10,14 +10,9 @@ if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
 fi
 
-# Loads asdf
-if [ -f $HOME/.asdf/asdf.sh ]; then
-. $HOME/.asdf/asdf.sh
-fi
+. /opt/asdf-vm/asdf.sh
 
-if [ -f $HOME/.asdf/completions/asdf.bash ]; then
-. $HOME/.asdf/completions/asdf.bash
-fi
+eval "$(zoxide init zsh)"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
