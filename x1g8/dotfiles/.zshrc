@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+plugins=(git fzf)
+
 # Loads aliases
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
@@ -13,10 +17,6 @@ fi
 . /opt/asdf-vm/asdf.sh
 
 eval "$(zoxide init zsh)"
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-plugins=(git fzf)
 
 export VISUAL=nvim
 
