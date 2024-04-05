@@ -9,22 +9,24 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 plugins=(git fzf)
 
-# Loads aliases
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
 fi
 
+if [ -f /opt/asdf-vm/asdf.sh ]; then
 . /opt/asdf-vm/asdf.sh
+fi
 
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 
 export VISUAL=nvim
-
 export EDITOR="$VISUAL"
-
 # Helpful docs in Erlang
 export KERL_BUILD_DOCS="yes"
-
 export BAT_THEME="Catppuccin-mocha"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
