@@ -70,6 +70,7 @@ network-manager-applet
 networkmanager
 orca
 rygel
+seahorse
 simple-scan
 smartmontools
 snapshot

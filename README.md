@@ -2,6 +2,8 @@
 
 1. [Initialize](https://wiki.archlinux.org/title/SSH_keys) SSH key
 
+https://github.com/White-Oak/arch-setup-for-dummies/blob/master/setting-up-ssh-agent.md
+
 2. Add SSH key to GitHub
 
 3. Install git and clone this repo
