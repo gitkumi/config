@@ -3,11 +3,13 @@
 1. Manual tasks
     - Initialize device SSH key
     - Add SSH key to GitHub
-    - Install [yay](https://github.com/Jguer/yay)
     - Install [git](https://wiki.archlinux.org/title/git) and clone this repo
       ```
-      pacman -S git && git clone git@github.com:gitkumi/config.git ~
+          pacman -S git
+          git config --global user.name "Takumi Ito"
+          git config --global user.email ito.tkmi@gmail.com
       ```
+    - Install [yay](https://github.com/Jguer/yay)
       
 2. Run installation scripts  
       ```
@@ -18,8 +20,6 @@
     Check Arch/AUR and manually update the name in `Packages` or `Packages.aur`
 
 3. Manual tasks that can be deferred
-    - Setup xfce panels (?)
-    - Setup lightdm/greeter
     - Add device to [Tailscale](https://tailscale.com/) network
     - Install asdf plugins (nodejs, elixir, erlang, and go) via [asdf-vm](https://asdf-vm.com/#/)
 

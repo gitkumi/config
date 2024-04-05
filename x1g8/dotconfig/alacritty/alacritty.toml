@@ -1,4 +1,4 @@
-import = ["/home/takumi/.config/alacritty/noirbuddy-miaminight.toml"]
+import = []
 
 [env]
 TERM = "xterm-256color"
@@ -7,7 +7,7 @@ TERM = "xterm-256color"
 size = 12.0
 
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrains Mono NerdFont"
 
 [shell]
 program = "/usr/bin/zsh"

@@ -1,11 +1,11 @@
 # ls
-alias ls='exa'
-alias lsl='exa --oneline'
-alias ll='exa --long'
-alias lla='exa --long --all'
-alias lt='exa --tree --level=3'
-alias lnew='exa --long --sort=new --reverse'
-alias lmod='exa --long --sort=modified --reverse'
+alias ls='eza'
+alias lsl='eza --oneline'
+alias ll='eza --long'
+alias lla='eza --long --all'
+alias lt='eza --tree --level=3'
+alias lnew='eza --long --sort=new --reverse'
+alias lmod='eza --long --sort=modified --reverse'
 
 alias c='clear'
 
