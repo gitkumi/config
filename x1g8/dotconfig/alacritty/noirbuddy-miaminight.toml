@@ -1,7 +1,0 @@
-[colors.primary]
-background = '#121212'
-foreground = '#d5d5d5'
-
-[colors.cursor]
-cursor = '#ffffff'
-text = '#ffffff'

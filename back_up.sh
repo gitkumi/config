@@ -21,21 +21,15 @@ declare -r DOT_FILES=(
   .zshrc
   .z_aliases
   .p10k.zsh
-  .xprofile
   .tmux.conf
   .tool-versions
-  .Xmodmap
   .gitconfig
 )
 
 # ~/.config
 declare -r DOT_CONFIG_FILES=(
-  cava
-  xfce4
-  tmuxinator
   nvim
   alacritty
-  user-dirs.dirs
 )
 
 # Delete existing folders
