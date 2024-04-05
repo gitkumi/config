@@ -59,6 +59,7 @@
     </property>
     <property name="plugin-3" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “californication5” active: californication5 (77%)"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="notes"/>
         <value type="string" value="wi-fi network connection “hamamatsu” active: pr500m-b99b1b-3 (72%)"/>
