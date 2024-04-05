@@ -1,6 +1,6 @@
 [user]
 	email = ito.tkmi@gmail.com
-	name = Takumi
+	name = Takumi Ito
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [core]
