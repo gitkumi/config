@@ -7,7 +7,7 @@ fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-plugins=(git fzf)
+plugins=(git fzf asdf)
 
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
