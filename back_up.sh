@@ -19,6 +19,7 @@ declare -r DOT_CONFIG_DIR=$CONFIG_DIR/dotconfig
 # ~/
 declare -r DOT_FILES=(
   .zshrc
+  .zprofile
   .z_aliases
   .p10k.zsh
   .tmux.conf
