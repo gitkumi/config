@@ -56,32 +56,32 @@ require('lazy').setup({
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
 
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      vim.cmd.colorscheme 'tokyonight-moon'
-    end,
-  },
   -- {
-  --   'jesseleite/nvim-noirbuddy',
-  --   dependencies = {
-  --     { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
-  --   },
+  --   "folke/tokyonight.nvim",
   --   lazy = false,
   --   priority = 1000,
-  --   preset = 'miami-nights',
-  --   opts = {
-  --     -- All of your `setup(opts)` will go here
-  --   },
+  --   opts = {},
   --   config = function()
-  --     require('noirbuddy').setup {
-  --       preset = 'miami-nights',
-  --     }
-  --   end
+  --     vim.cmd.colorscheme 'tokyonight-moon'
+  --   end,
   -- },
+  {
+    'jesseleite/nvim-noirbuddy',
+    dependencies = {
+      { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+    },
+    lazy = false,
+    priority = 1000,
+    preset = 'miami-nights',
+    opts = {
+      -- All of your `setup(opts)` will go here
+    },
+    config = function()
+      require('noirbuddy').setup {
+        preset = 'miami-nights',
+      }
+    end
+  },
 
   {
     -- Set lualine as statusline
