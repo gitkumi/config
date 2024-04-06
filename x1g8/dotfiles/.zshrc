@@ -7,10 +7,17 @@ fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+autoload -Uz compinit
+compinit
+
 plugins=(git fzf asdf)
 
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
+fi
+
+if [ -f ~/.z_keys ]; then
+. ~/.z_keys
 fi
 
 if [ -f /opt/asdf-vm/asdf.sh ]; then
