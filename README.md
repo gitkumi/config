@@ -4,30 +4,36 @@
 
 https://github.com/White-Oak/arch-setup-for-dummies/blob/master/setting-up-ssh-agent.md
 
-2. Add SSH key to GitHub
+2. Add SSH key to homelab and GitHub
 
-3. Install git and clone this repo
+3. Install [yay](https://github.com/Jguer/yay)
+
+4. Install git and clone this repo
 ```
   pacman -S git
   git config --global user.name "Takumi Ito"
   git config --global user.email ito.tkmi@gmail.com
-  git clone https://github.com/gitkumi/config.git
+  git clone https://github.com/gitkumi/config.git ~
 ```
 
-4. Install [yay](https://github.com/Jguer/yay)
-      
 5. Run installation scripts
 ```
-~/install_packages.sh && ~/install_packages_aur.sh && ~/restore.sh 
+~/config/install_packages.sh 
+~/config/install_packages_aur.sh
+~/config/restore.sh 
 ```
 
-Note: Installing may fail if one of the package names gets changed.  
+Note: Installation may fail if one of the package names gets changed.  
 Check Arch/AUR and manually update the name in `Packages` or `Packages.aur`
 
-6. Add device to [Tailscale](https://tailscale.com/) network
+6. Install [Tailscale](https://tailscale.com/) and add the device to network
 
-7. Install asdf plugins (nodejs, elixir, erlang, and go) via [asdf-vm](https://asdf-vm.com/#/)
-
+7. Install [asdf](https://asdf-vm.com/#/) and the following plugins:
+- Node
+- Go
+- Elixir
+- Erlang
+ 
 ### Adding a new config
 
 - Include the new config in `back_up.sh`
@@ -35,11 +41,11 @@ Check Arch/AUR and manually update the name in `Packages` or `Packages.aur`
 
 ### Saving config
 
-Run `back_up.sh`
+- Run `back_up.sh`
 
 ### Restoring config
 
-Run `restore.sh`
+- Run `restore.sh`
 
 ### TODO
 

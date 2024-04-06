@@ -31,7 +31,6 @@ declare -r DOT_FILES=(
 declare -r DOT_CONFIG_FILES=(
   nvim
   alacritty
-  bat
 )
 
 # Delete existing folders
