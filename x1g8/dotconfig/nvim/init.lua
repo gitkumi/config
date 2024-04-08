@@ -56,24 +56,6 @@ require('lazy').setup({
   'leafgarland/typescript-vim',
   'peitalin/vim-jsx-typescript',
 
-  -- {
-  --   'jesseleite/nvim-noirbuddy',
-  --   dependencies = {
-  --     { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
-  --   },
-  --   lazy = false,
-  --   priority = 1000,
-  --   preset = 'miami-nights',
-  --   opts = {
-  --     -- All of your `setup(opts)` will go here
-  --   },
-  --   config = function()
-  --     require('noirbuddy').setup {
-  --       preset = 'miami-nights',
-  --     }
-  --   end
-  -- },
-
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -108,17 +90,6 @@ require('lazy').setup({
         lualine_y = { 'filetype' },
         lualine_z = { 'branch', 'diff', 'diagnostics' },
       },
-      -- config = function()
-      --   local noirbuddy_lualine = require('noirbuddy.plugins.lualine')
-      --
-      --   require("nvim-lualine/lualine.nvim").setup({
-      --     opts = {
-      --       options = {
-      --         theme = noirbuddy_lualine.theme
-      --       }
-      --     }
-      --   })
-      -- end
     },
   },
 
