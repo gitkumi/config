@@ -57,29 +57,30 @@ require('lazy').setup({
   'peitalin/vim-jsx-typescript',
 
   -- {
-  --   "folke/tokyonight.nvim",
+  --   'jesseleite/nvim-noirbuddy',
+  --   dependencies = {
+  --     { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+  --   },
   --   lazy = false,
   --   priority = 1000,
-  --   opts = {},
+  --   preset = 'miami-nights',
+  --   opts = {
+  --     -- All of your `setup(opts)` will go here
+  --   },
   --   config = function()
-  --     vim.cmd.colorscheme 'tokyonight-moon'
-  --   end,
+  --     require('noirbuddy').setup {
+  --       preset = 'miami-nights',
+  --     }
+  --   end
   -- },
+
   {
-    'jesseleite/nvim-noirbuddy',
-    dependencies = {
-      { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
-    },
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    preset = 'miami-nights',
-    opts = {
-      -- All of your `setup(opts)` will go here
-    },
+    opts = {},
     config = function()
-      require('noirbuddy').setup {
-        preset = 'miami-nights',
-      }
+      vim.cmd.colorscheme 'tokyonight-moon'
     end
   },
 
@@ -106,7 +107,18 @@ require('lazy').setup({
         lualine_x = { 'encoding', 'fileformat' },
         lualine_y = { 'filetype' },
         lualine_z = { 'branch', 'diff', 'diagnostics' },
-      }
+      },
+      -- config = function()
+      --   local noirbuddy_lualine = require('noirbuddy.plugins.lualine')
+      --
+      --   require("nvim-lualine/lualine.nvim").setup({
+      --     opts = {
+      --       options = {
+      --         theme = noirbuddy_lualine.theme
+      --       }
+      --     }
+      --   })
+      -- end
     },
   },
 
@@ -128,13 +140,7 @@ require('lazy').setup({
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make',
-        cond = function()
-          return vim.fn.executable 'make' == 1
-        end,
-      },
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     },
   },
 

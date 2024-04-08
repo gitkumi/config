@@ -34,7 +34,6 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 # Helpful docs in Erlang
 export KERL_BUILD_DOCS="yes"
-export BAT_THEME="Catppuccin-mocha"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
