@@ -1,11 +1,11 @@
 # ls
-alias ls='eza --color=never'
-alias lsl='eza --oneline --color=never'
-alias ll='eza --long --color=never'
-alias lla='eza --long --all --color=never'
-alias lt='eza --tree --level=3 --color=never'
-alias lnew='eza --long --sort=new --reverse --color=never'
-alias lmod='eza --long --sort=modified --reverse --color=never'
+alias ls='eza'
+alias lsl='eza --oneline'
+alias ll='eza --long'
+alias lla='eza --long --all'
+alias lt='eza --tree --level=3'
+alias lnew='eza --long --sort=new --reverse'
+alias lmod='eza --long --sort=modified --reverse'
 alias c='clear'
 
 alias cat='bat'
