@@ -1,10 +1,8 @@
 ### Installation
 
-1. [Initialize](https://wiki.archlinux.org/title/SSH_keys) SSH key
+1. [Initialize](https://wiki.archlinux.org/title/SSH_keys) ssh key and [setup](https://github.com/White-Oak/arch-setup-for-dummies/blob/master/setting-up-ssh-agent.md) SSH agent
 
-https://github.com/White-Oak/arch-setup-for-dummies/blob/master/setting-up-ssh-agent.md
-
-2. Add SSH key to homelab and GitHub
+2. Add ssh key to homelab and GitHub
 
 3. Install [yay](https://github.com/Jguer/yay)
 
@@ -33,6 +31,10 @@ Check Arch/AUR and manually update the name in `Packages` or `Packages.aur`
 - Go
 - Elixir
 - Erlang
+
+8. (Arch Linux installation final boss) Check if [audio](https://wiki.archlinux.org/title/sound_system) is working (it's not) 
+
+Note: Install `pipewire` and it's related packages then run `wpctl status`. If Audio Sinks/Source is null, the required firmwares are not installed.  
  
 ### Adding a new config
 
