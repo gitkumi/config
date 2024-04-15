@@ -1,5 +1,7 @@
 accerciser
 alacritty
+alsa-firmware
+alsa-utils
 baobab
 base
 base-devel
@@ -8,6 +10,7 @@ cheese
 d-spy
 dconf-editor
 devhelp
+docker
 efibootmgr
 endeavour
 eog
@@ -90,6 +93,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-onedrive
 gvfs-smb
+helvum
 hitori
 htop
 iagno
@@ -98,6 +102,7 @@ inetutils
 intel-media-driver
 intel-ucode
 iwd
+jq
 libva-intel-driver
 libva-mesa-driver
 lightsoff
@@ -114,6 +119,8 @@ networkmanager
 noto-fonts-cjk
 orca
 otf-ipafont
+pipewire-alsa
+pipewire-docs
 polari
 quadrapassel
 ripgrep
@@ -122,6 +129,7 @@ seahorse
 simple-scan
 smartmontools
 snapshot
+sof-firmware
 sushi
 swell-foop
 sysprof
@@ -129,6 +137,7 @@ tailscale
 tali
 tecla
 tmux
+torbrowser-launcher
 tracker3-miners
 ttf-hanazono
 ttf-jetbrains-mono
