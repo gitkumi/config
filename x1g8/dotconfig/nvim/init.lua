@@ -32,6 +32,10 @@ require("lazy").setup({
 	},
 
 	{
+		"ThePrimeagen/vim-be-good",
+	},
+
+	{
 		-- Autocompletion
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -275,6 +279,7 @@ require("telescope").setup({
 			i = {
 				["<C-u>"] = false,
 				["<C-d>"] = false,
+				["<C-f>"] = require("telescope.actions").to_fuzzy_refine,
 			},
 		},
 	},
