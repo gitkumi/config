@@ -7,6 +7,7 @@ alias lt='eza --tree --level=3'
 alias lnew='eza --long --sort=new --reverse'
 alias lmod='eza --long --sort=modified --reverse'
 alias c='clear'
+alias x='exit'
 
 alias cat='bat'
 alias fetch='pfetch'

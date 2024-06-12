@@ -35,8 +35,6 @@ gnome-2048
 gnome-backgrounds
 gnome-boxes
 gnome-builder
-gnome-builder-clang
-gnome-builder-flatpak
 gnome-calculator
 gnome-calendar
 gnome-characters
@@ -130,6 +128,7 @@ simple-scan
 smartmontools
 snapshot
 sof-firmware
+steam
 sushi
 swell-foop
 sysprof
