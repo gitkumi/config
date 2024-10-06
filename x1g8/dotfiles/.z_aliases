@@ -91,3 +91,6 @@ alias d='docker'
 
 # kubernetes
 alias k='kubernetes'
+
+# imageviewier
+alias v='viewnior'

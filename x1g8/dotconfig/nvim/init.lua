@@ -78,7 +78,9 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				javascript = { { "prettierd", "prettier" } },
+				json = { { "prettierd", "prettier" } },
 				lua = { "stylua" },
+				templ = {},
 			},
 		},
 	},
@@ -355,7 +357,6 @@ require("nvim-treesitter.configs").setup({
 		"tsx",
 		"elixir",
 		"heex",
-		"templ",
 		"sql",
 	},
 	auto_install = false,
@@ -643,12 +644,6 @@ vim.keymap.set("n", "<leader>dp", ":diffget //3<Enter>]c")
 
 vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>")
 vim.keymap.set("n", "<leader>mir", "<cmd>CellularAutomaton make_it_rain<CR>")
-
-vim.filetype.add({
-	extension = {
-		templ = "templ",
-	},
-})
 
 vim.cmd([[autocmd BufNewFile,BufRead *.mdx set filetype=jsx]])
 vim.cmd([[autocmd BufNewFile,BufRead *Jenskinsfile* set filetype=groovy]])
