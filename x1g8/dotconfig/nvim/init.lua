@@ -408,10 +408,10 @@ require("nvim-treesitter.configs").setup({
 		swap = {
 			enable = true,
 			swap_next = {
-				["<leader>sw"] = "@parameter.inner",
+				["<leader>>"] = "@parameter.inner",
 			},
 			swap_previous = {
-				["<leader>Sw"] = "@parameter.inner",
+				["<leader><"] = "@parameter.inner",
 			},
 		},
 	},
@@ -583,10 +583,10 @@ vim.keymap.set({ "n", "v" }, "<leader>X", [["_dd]])
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Replace all
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
-vim.keymap.set("n", "<leader>R", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("v", "<leader>r", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
-vim.keymap.set("v", "<leader>R", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left>]])
+vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>s", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
+vim.keymap.set("v", "<leader>S", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
 
 -- Terminal
 vim.keymap.set("n", "<leader>`", ":vs | :term<Enter>a")

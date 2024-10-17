@@ -107,6 +107,7 @@ libva-mesa-driver
 lightsoff
 linux
 linux-firmware
+localsearch
 loupe
 malcontent
 man-db
@@ -123,6 +124,7 @@ pipewire-alsa
 pipewire-docs
 polari
 quadrapassel
+ranger
 ripgrep
 rygel
 seahorse
@@ -139,7 +141,6 @@ tali
 tecla
 tmux
 torbrowser-launcher
-tracker3-miners
 ttf-hanazono
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
