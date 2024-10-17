@@ -92,8 +92,5 @@ alias d='docker'
 # kubernetes
 alias k='kubernetes'
 
-# imageviewier
-alias v='viewnior'
-
 # sqlite3
 alias sql='sqlite3'

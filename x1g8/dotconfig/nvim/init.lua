@@ -588,9 +588,6 @@ vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("v", "<leader>s", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
 vim.keymap.set("v", "<leader>S", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
 
--- Terminal
-vim.keymap.set("n", "<leader>`", ":vs | :term<Enter>a")
-
 -- File tree
 vim.keymap.set("n", "<leader><space>", function()
 	require("oil").open()
