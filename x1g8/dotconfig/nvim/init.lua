@@ -104,6 +104,28 @@ require("lazy").setup({
 		end,
 	},
 
+	-- {
+	-- 	"uloco/bluloco.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	dependencies = { "rktjmp/lush.nvim" },
+	-- 	init = function()
+	-- 		vim.opt.termguicolors = true
+	-- 	end,
+	-- 	config = function()
+	-- 		require("bluloco").setup({
+	-- 			style = "dark",
+	-- 			transparent = false,
+	-- 			italics = false,
+	-- 			terminal = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
+	-- 			guicursor = true,
+	-- 		})
+	--
+	-- 		vim.opt.termguicolors = true
+	-- 		vim.cmd("colorscheme bluloco")
+	-- 	end,
+	-- },
+
 	{
 		-- Set lualine as statusline
 		"nvim-lualine/lualine.nvim",

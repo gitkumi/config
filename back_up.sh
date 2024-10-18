@@ -25,7 +25,6 @@ declare -r DOT_FILES=(
   .tmux.conf
   .tool-versions
   .gitconfig
-  .gitignore_global
   .sqliterc
 )
 

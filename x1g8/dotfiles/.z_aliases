@@ -34,7 +34,7 @@ alias pacorph='pacman -Qdt'
 alias pacorphc='pacman -Qqd | pacman -Rsu --print -'
 alias pacreorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacls='pacman -Qe'
-alias pacsave='/home/takumi/config/back_up.sh'
+alias pacsave='~/config/back_up.sh'
 
 # git
 alias g='git'
@@ -94,3 +94,6 @@ alias k='kubernetes'
 
 # sqlite3
 alias sql='sqlite3'
+
+# commander
+alias cmd='~/config/scripts/commander'

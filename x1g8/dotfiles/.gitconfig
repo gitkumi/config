@@ -31,3 +31,4 @@
   prompt = false
 [mergetool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$BASE\" \"$REMOTE\" -c \"wincmd w\" -c \"wincmd J\"
+
