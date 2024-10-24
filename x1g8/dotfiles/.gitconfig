@@ -1,10 +1,12 @@
 [user]
-	email = ito.tkmi@gmail.com
-	name = Takumi Ito
+    email = ito.tkmi@gmail.com
+    name = Takumi Ito
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [core]
     pager = delta
+[pull]
+    rebase = true
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -26,10 +28,10 @@
     conflictstyle = diff3
     tool = nvimdiff
 [diff]
-  colorMoved = default
+    colorMoved = default
 [mergetool]
-  keepBackup = false
-  prompt = false
+    keepBackup = false
+    prompt = false
 [mergetool "nvimdiff"]
-	cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$BASE\" \"$REMOTE\" -c \"wincmd w\" -c \"wincmd J\"
+    cmd = nvim -d \"$LOCAL\" \"$MERGED\" \"$BASE\" \"$REMOTE\" -c \"wincmd w\" -c \"wincmd J\"
 
