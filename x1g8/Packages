@@ -105,9 +105,9 @@ intel-ucode
 iwd
 jq
 kitty
+kubectl
 lazygit
 libva-intel-driver
-libva-mesa-driver
 lightsoff
 linux
 linux-firmware
@@ -115,6 +115,7 @@ localsearch
 loupe
 malcontent
 man-db
+minikube
 mpv
 nano
 nautilus
@@ -127,6 +128,7 @@ otf-ipafont
 pipewire-alsa
 pipewire-docs
 polari
+qbittorrent
 quadrapassel
 ranger
 ripgrep
@@ -143,6 +145,7 @@ sysprof
 tailscale
 tali
 tecla
+tk
 tmux
 torbrowser-launcher
 ttf-hanazono

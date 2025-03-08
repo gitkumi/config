@@ -7,7 +7,6 @@ alias lt='eza --tree --level=3'
 alias lnew='eza --long --sort=new --reverse'
 alias lmod='eza --long --sort=modified --reverse'
 alias c='clear'
-alias x='exit'
 
 alias cat='bat'
 alias fetch='pfetch'
@@ -63,6 +62,7 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
+alias gres='git restore'
 alias unstage='git reset'
 alias uncommit='git reset --soft HEAD^'
 alias gitclear='git reset --hard'
@@ -80,7 +80,8 @@ alias y='yarn'
 # pnpm
 alias p='pnpm'
 
-# mix/elixir
+# elixir
+alias x='elixir'
 alias m='mix'
 
 # go
@@ -90,10 +91,13 @@ alias goreshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/" &
 alias d='docker'
 
 # kubernetes
-alias k='kubernetes'
+alias k='kubectl'
 
 # sqlite3
 alias sql='sqlite3'
+
+# python
+alias activate="source .venv/bin/activate"
 
 # commander
 alias cmd='~/config/scripts/commander'

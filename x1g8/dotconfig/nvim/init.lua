@@ -52,6 +52,18 @@ require("lazy").setup({
 	},
 
 	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		opts = {
+			bigfile = { enabled = true },
+			quickfile = { enabled = true },
+			words = { enabled = true },
+			notifier = { enabled = true },
+		},
+	},
+
+	{
 		"stevearc/conform.nvim",
 		lazy = false,
 		keys = {
@@ -380,6 +392,7 @@ require("nvim-treesitter.configs").setup({
 		"elixir",
 		"heex",
 		"sql",
+		"python",
 	},
 	auto_install = false,
 	highlight = { enable = true },
