@@ -24,7 +24,8 @@ declare -r DOT_FILES=(
   .p10k.zsh
   .tmux.conf
   .tool-versions
-  .gitconfig
+  # TODO: Need to support multiple gitconfig
+  # .gitconfig
   .sqliterc
 )
 

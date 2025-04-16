@@ -32,10 +32,6 @@ require("lazy").setup({
 	},
 
 	{
-		"ThePrimeagen/vim-be-good",
-	},
-
-	{
 		-- Autocompletion
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -79,6 +75,14 @@ require("lazy").setup({
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
+				local bufname = vim.api.nvim_buf_get_name(bufnr)
+				if bufname:match("%.templ$") then
+					return
+				end
+				if bufname:match("/node_modules/") then
+					return
+				end
+
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
@@ -112,31 +116,9 @@ require("lazy").setup({
 		priority = 1000,
 		opts = {},
 		config = function()
-			vim.cmd.colorscheme("tokyonight-night")
+			vim.cmd.colorscheme("tokyonight-moon")
 		end,
 	},
-
-	-- {
-	-- 	"uloco/bluloco.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	dependencies = { "rktjmp/lush.nvim" },
-	-- 	init = function()
-	-- 		vim.opt.termguicolors = true
-	-- 	end,
-	-- 	config = function()
-	-- 		require("bluloco").setup({
-	-- 			style = "dark",
-	-- 			transparent = false,
-	-- 			italics = false,
-	-- 			terminal = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
-	-- 			guicursor = true,
-	-- 		})
-	--
-	-- 		vim.opt.termguicolors = true
-	-- 		vim.cmd("colorscheme bluloco")
-	-- 	end,
-	-- },
 
 	{
 		-- Set lualine as statusline

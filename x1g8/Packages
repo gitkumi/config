@@ -6,12 +6,15 @@ baobab
 base
 base-devel
 bat
+bind
 cheese
 d-spy
+dbeaver
 dconf-editor
 delve
 devhelp
 docker
+docker-compose
 efibootmgr
 endeavour
 eog
@@ -28,9 +31,11 @@ gdm
 geary
 gedit
 ghex
+ghostty
 git
 git-delta
 gitg
+github-cli
 glade
 gnome-2048
 gnome-backgrounds
@@ -82,8 +87,11 @@ gnome-tour
 gnome-user-docs
 gnome-user-share
 gnome-weather
+gnu-netcat
 gnumeric
+go-task
 grilo-plugins
+gum
 gvfs
 gvfs-afc
 gvfs-goa
@@ -93,6 +101,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-onedrive
 gvfs-smb
+helix
 helvum
 hitori
 htop
@@ -123,6 +132,7 @@ neovim
 network-manager-applet
 networkmanager
 noto-fonts-cjk
+opentofu
 orca
 otf-ipafont
 pipewire-alsa
@@ -134,10 +144,12 @@ ranger
 ripgrep
 rygel
 seahorse
+sentry-cli
 simple-scan
 smartmontools
 snapshot
 sof-firmware
+sshfs
 steam
 sushi
 swell-foop
@@ -148,6 +160,7 @@ tecla
 tk
 tmux
 torbrowser-launcher
+tree
 ttf-hanazono
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
@@ -169,6 +182,7 @@ xf86-video-ati
 xf86-video-nouveau
 xf86-video-vmware
 xorg-xinit
+yazi
 yelp
 zoxide
 zram-generator

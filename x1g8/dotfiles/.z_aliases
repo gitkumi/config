@@ -8,6 +8,8 @@ alias lnew='eza --long --sort=new --reverse'
 alias lmod='eza --long --sort=modified --reverse'
 alias c='clear'
 
+alias gitsed='git grep -l "" | xargs sed -i'
+
 alias cat='bat'
 alias fetch='pfetch'
 
@@ -81,7 +83,6 @@ alias y='yarn'
 alias p='pnpm'
 
 # elixir
-alias x='elixir'
 alias m='mix'
 
 # go
