@@ -3,7 +3,7 @@
 TERM = "xterm-256color"
 
 [font]
-size = 13.0
+size = 16.0
 
 [font.normal]
 family = "JetBrains Mono NerdFont"
@@ -16,7 +16,6 @@ columns = 110
 lines = 35
 
 [general]
-# import = ['~/.config/alacritty/theme.toml']
-import = []
+import = ['~/.config/alacritty/kanagawa_wave.toml']
 
 [terminal]
