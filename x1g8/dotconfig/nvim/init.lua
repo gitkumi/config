@@ -205,20 +205,30 @@ require("lazy").setup({
 
 	"tpope/vim-sleuth",
 	"tpope/vim-fugitive",
-	"RRethy/vim-illuminate",
 	"ThePrimeagen/harpoon",
 	"mbbill/undotree",
 	"nvim-tree/nvim-web-devicons",
 	"leafgarland/typescript-vim",
 	"peitalin/vim-jsx-typescript",
 
+	-- "RRethy/vim-illuminate",
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {},
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("tokyonight-moon")
+	-- 	end,
+	-- },
+
 	{
-		"folke/tokyonight.nvim",
+		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {},
 		config = function()
-			vim.cmd.colorscheme("tokyonight-moon")
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 
@@ -368,39 +378,6 @@ require("lazy").setup({
 		},
 	},
 }, {})
-
-vim.g.mapleader = "\\"
-vim.g.maplocalleader = "\\"
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-vim.scriptencoding = "utf-8"
-vim.opt.termguicolors = true
-vim.opt.showmode = false
-vim.opt.encoding = "utf-8"
-vim.opt.fileencoding = "utf-8"
-vim.opt.hidden = true
-vim.opt.number = true
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.smartindent = true
-vim.opt.wrap = false
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.updatetime = 50
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.scrolloff = 10
-vim.opt.signcolumn = "yes"
-vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = "menuone,noselect"
-vim.opt.cursorline = true
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 
@@ -679,6 +656,39 @@ cmp.setup({
 		{ name = "luasnip" },
 	},
 })
+
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = "\\"
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.scriptencoding = "utf-8"
+vim.opt.termguicolors = true
+vim.opt.showmode = false
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+vim.opt.hidden = true
+vim.opt.number = true
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.updatetime = 50
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.scrolloff = 10
+vim.opt.signcolumn = "yes"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.completeopt = "menuone,noselect"
+vim.opt.cursorline = true
 
 vim.diagnostic.config({
 	virtual_text = false,

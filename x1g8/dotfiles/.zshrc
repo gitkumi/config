@@ -12,7 +12,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 autoload -Uz compinit
 compinit
 
-plugins=(git fzf asdf)
+plugins=(git fzf asdf zellij)
 
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases

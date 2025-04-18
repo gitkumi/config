@@ -42,9 +42,54 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = tokyonight_moon
+# theme = "Snazzy"
+theme = "Kanagawa Wave"
 font-size = 18
 font-family= "JetBrains Mono NerdFont"
 window-width = 9999
 window-height = 9999
-keybind = super=unbind
+
+# Remove tab keybinds
+keybind = alt+one=unbind
+keybind = alt+two=unbind
+keybind = alt+three=unbind
+keybind = alt+four=unbind
+keybind = alt+five=unbind
+keybind = alt+six=unbind
+keybind = alt+seven=unbind
+keybind = alt+eight=unbind
+keybind = alt+nine=unbind
+keybind = ctrl+tab=unbind
+keybind = ctrl+page_up=unbind
+keybind = ctrl+page_down=unbind
+keybind = ctrl+shift+left=unbind
+keybind = ctrl+shift+w=unbind
+keybind = ctrl+shift+right=unbind
+keybind = ctrl+shift+t=unbind
+keybind = ctrl+shift+tab=unbind
+
+# Remove split keybinds
+keybind=super+ctrl+shift+plus=unbind
+keybind=super+ctrl+shift+up=unbind
+keybind=super+ctrl+shift+down=unbind
+keybind=super+ctrl+shift+right=unbind
+keybind=super+ctrl+shift+left=unbind
+keybind=ctrl+alt+shift+j=unbind
+keybind=super+ctrl+left_bracket=unbind
+keybind=super+ctrl+right_bracket=unbind
+keybind=super+ctrl+shift+up=unbind
+keybind=super+ctrl+shift+down=unbind
+keybind=super+ctrl+shift+right=unbind
+keybind=super+ctrl+shift+left=unbind
+keybind=super+ctrl+left_bracket=unbind
+keybind=super+ctrl+right_bracket=unbind
+keybind=ctrl+alt+up=unbind
+keybind=ctrl+alt+down=unbind
+keybind=ctrl+alt+right=unbind
+keybind=ctrl+alt+left=unbind
+keybind=ctrl+shift+o=unbind
+keybind=ctrl+shift+e=unbind
+keybind=ctrl+shift+enter=unbind
+keybind=ctrl+shift+n=unbind
+keybind=ctrl+shift+q=unbind
+keybind=ctrl+enter=unbind
