@@ -140,7 +140,6 @@ pipewire-docs
 polari
 qbittorrent
 quadrapassel
-ranger
 ripgrep
 rygel
 seahorse
@@ -184,6 +183,7 @@ xf86-video-vmware
 xorg-xinit
 yazi
 yelp
+zellij
 zoxide
 zram-generator
 zsh

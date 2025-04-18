@@ -73,8 +73,8 @@ alias greset!='git reset --hard && git clean -df'
 alias gmt='git mergetool'
 alias gitsed='~/config/scripts/git_sed.sh'
 
-# tmux
-alias t='tmux'
+# zellij
+alias zj='zellij'
 
 # yarn
 alias y='yarn'

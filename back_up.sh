@@ -33,7 +33,8 @@ declare -r DOT_FILES=(
 declare -r DOT_CONFIG_FILES=(
   nvim
   alacritty
-  ranger
+  ghostty
+  zellij
 )
 
 # Delete existing folders
