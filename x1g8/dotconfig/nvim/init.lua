@@ -237,7 +237,7 @@ require("lazy").setup({
 	},
 
 	"tpope/vim-sleuth",
-	"tpope/vim-fugitive",
+	-- "tpope/vim-fugitive",
 	"ThePrimeagen/harpoon",
 	"mbbill/undotree",
 	"nvim-tree/nvim-web-devicons",
@@ -409,6 +409,14 @@ require("lazy").setup({
 				desc = "Search and Replace (Fullscreen)",
 			},
 		},
+	},
+
+	{
+		"FabijanZulj/blame.nvim",
+		lazy = false,
+		config = function()
+			require("blame").setup({})
+		end,
 	},
 }, {})
 
@@ -784,6 +792,9 @@ end)
 vim.keymap.set("n", "<leader>5", function()
 	require("harpoon.ui").nav_file(5)
 end)
+
+-- git blame
+vim.keymap.set("n", "<leader>gb", ":BlameToggle virtual<Enter>")
 
 vim.keymap.set("n", "<leader>dq", ":diffget //2<Enter>]c")
 vim.keymap.set("n", "<leader>dp", ":diffget //3<Enter>]c")
