@@ -1,8 +1,9 @@
 show_startup_tips  false
 theme "kanagawa"
 pane_frames false
+default_layout "compact"
 keybinds clear-defaults=true {
-    unbind "Super b" "Super q" "Super n" "Super g" "Super o"
+    unbind "Super b" "Super q" "Super n" "Super h" "Super g" "Super o"
 
     normal {
         // uncomment this and adjust key if using copy_on_select=false
