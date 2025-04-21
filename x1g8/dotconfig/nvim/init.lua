@@ -805,13 +805,12 @@ end)
 
 -- git conflict
 vim.keymap.set("n", "<leader>co", ":GitConflictListQf<Enter>")
-vim.keymap.set("n", "co", ":GitConflictChooseOurs<Enter>")
-vim.keymap.set("n", "ct", ":GitConflictChooseTheirs<Enter>")
-vim.keymap.set("n", "ct", ":GitConflictChooseBoth<Enter>")
-vim.keymap.set("n", "cb", ":GitConflictChooseNone<Enter>")
-vim.keymap.set("n", "c0", ":GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "co", ":GitConflictChooseOurs<Enter>:GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "ct", ":GitConflictChooseTheirs<Enter>:GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "cb", ":GitConflictChooseBoth<Enter>:GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "c0", ":GitConflictChooseNone<Enter>:GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "]c", ":GitConflictNextConflict<Enter>")
 vim.keymap.set("n", "[c", ":GitConflictPrevConflict<Enter>")
-vim.keymap.set("n", "]c", ":GitConflictListQf<Enter>")
 
 -- git blame
 vim.keymap.set("n", "<leader>gb", ":BlameToggle virtual<Enter>")
