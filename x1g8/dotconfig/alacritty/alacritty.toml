@@ -11,6 +11,9 @@ family = "JetBrains Mono NerdFont"
 [terminal.shell]
 program = "/usr/bin/zsh"
 
+[window]
+startup_mode = "Maximized"
+
 [window.dimensions]
 columns = 110
 lines = 35

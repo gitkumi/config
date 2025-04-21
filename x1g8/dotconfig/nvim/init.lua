@@ -81,6 +81,16 @@ require("lazy").setup({
 	},
 
 	{
+		"akinsho/git-conflict.nvim",
+		version = "*",
+		config = function()
+			require("git-conflict").setup({
+				default_mappings = false,
+			})
+		end,
+	},
+
+	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
@@ -793,11 +803,18 @@ vim.keymap.set("n", "<leader>5", function()
 	require("harpoon.ui").nav_file(5)
 end)
 
+-- git conflict
+vim.keymap.set("n", "<leader>co", ":GitConflictListQf<Enter>")
+vim.keymap.set("n", "co", ":GitConflictChooseOurs<Enter>")
+vim.keymap.set("n", "ct", ":GitConflictChooseTheirs<Enter>")
+vim.keymap.set("n", "ct", ":GitConflictChooseBoth<Enter>")
+vim.keymap.set("n", "cb", ":GitConflictChooseNone<Enter>")
+vim.keymap.set("n", "c0", ":GitConflictNextConflict<Enter>")
+vim.keymap.set("n", "[c", ":GitConflictPrevConflict<Enter>")
+vim.keymap.set("n", "]c", ":GitConflictListQf<Enter>")
+
 -- git blame
 vim.keymap.set("n", "<leader>gb", ":BlameToggle virtual<Enter>")
-
-vim.keymap.set("n", "<leader>dq", ":diffget //2<Enter>]c")
-vim.keymap.set("n", "<leader>dp", ":diffget //3<Enter>]c")
 
 vim.keymap.set("n", "<leader>gol", "<cmd>CellularAutomaton game_of_life<CR>")
 vim.keymap.set("n", "<leader>mir", "<cmd>CellularAutomaton make_it_rain<CR>")

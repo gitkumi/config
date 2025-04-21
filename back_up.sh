@@ -26,6 +26,7 @@ declare -r DOT_FILES=(
   .tool-versions
   # TODO: Need to support multiple gitconfig
   # .gitconfig
+  .gitconfig.bak
   .sqliterc
 )
 
