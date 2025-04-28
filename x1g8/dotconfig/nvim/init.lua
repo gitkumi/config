@@ -219,24 +219,7 @@ require("lazy").setup({
 		},
 		opts = {
 			notify_on_error = false,
-			format_on_save = function(bufnr)
-				local bufname = vim.api.nvim_buf_get_name(bufnr)
-				if bufname:match("%.templ$") then
-					return
-				end
-				if bufname:match("/node_modules/") then
-					return
-				end
-
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
-				return {
-					timeout_ms = 500,
-					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-				}
-			end,
+			format_on_save = false,
 			formatters_by_ft = {
 				javascript = { { "prettierd", "prettier" } },
 				json = { { "prettierd", "prettier" } },
@@ -247,12 +230,12 @@ require("lazy").setup({
 	},
 
 	"tpope/vim-sleuth",
-	-- "tpope/vim-fugitive",
 	"ThePrimeagen/harpoon",
 	"mbbill/undotree",
 	"nvim-tree/nvim-web-devicons",
 	"leafgarland/typescript-vim",
 	"peitalin/vim-jsx-typescript",
+	"tpope/vim-fugitive",
 
 	-- "RRethy/vim-illuminate",
 	-- {
@@ -755,7 +738,7 @@ vim.keymap.set("n", "<leader>S", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("v", "<leader>s", [["zy:%s@<C-r>z@<C-r>z@g<Left><Left>]])
 vim.keymap.set("v", "<leader>S", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
 
--- File tree
+-- Oil
 vim.keymap.set("n", "<leader><space>", function()
 	require("oil").open()
 end)
