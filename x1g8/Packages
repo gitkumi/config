@@ -3,6 +3,7 @@ alacritty
 alsa-firmware
 alsa-utils
 antlr4
+arrow
 baobab
 base
 base-devel
@@ -24,10 +25,12 @@ evince
 evolution
 eza
 file-roller
+filezilla
 firefox
 five-or-more
 four-in-a-row
 fzf
+gdal
 gdm
 geary
 gedit
@@ -85,12 +88,11 @@ gnome-terminal
 gnome-tetravex
 gnome-text-editor
 gnome-tour
+gnome-tweaks
 gnome-user-docs
 gnome-user-share
 gnome-weather
-gnu-netcat
 gnumeric
-go-task
 grilo-plugins
 gum
 gvfs
@@ -117,6 +119,7 @@ jq
 kitty
 kubectl
 lazygit
+libspatialite
 libva-intel-driver
 lightsoff
 linux
@@ -136,9 +139,11 @@ noto-fonts-cjk
 opentofu
 orca
 otf-ipafont
+pass
 pipewire-alsa
 pipewire-docs
 polari
+postgresql
 qbittorrent
 quadrapassel
 ripgrep
@@ -166,6 +171,7 @@ ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd
 ueberzug
+vault
 vi
 vim
 vlc
@@ -180,10 +186,10 @@ xdg-utils
 xf86-video-amdgpu
 xf86-video-ati
 xf86-video-nouveau
-xf86-video-vmware
 xorg-xinit
 yazi
 yelp
+zed
 zellij
 zoxide
 zram-generator

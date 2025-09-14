@@ -206,27 +206,28 @@ require("lazy").setup({
 
 	{
 		"stevearc/conform.nvim",
-		lazy = false,
-		keys = {
-			{
-				"<leader>f",
-				function()
-					require("conform").format({ async = true, lsp_fallback = true })
-				end,
-				mode = "",
-				desc = "[F]ormat buffer",
-			},
-		},
-		opts = {
-			notify_on_error = false,
-			format_on_save = false,
-			formatters_by_ft = {
-				javascript = { { "prettierd", "prettier" } },
-				json = { { "prettierd", "prettier" } },
-				lua = { "stylua" },
-				templ = {},
-			},
-		},
+		opts = {},
+		config = function()
+			require("conform").setup({
+				default_mappings = false,
+        keys = {
+          {
+            "<leader>f",
+            function()
+              require("conform").format({ async = true, lsp_fallback = true })
+            end,
+            mode = "",
+            desc = "[F]ormat buffer",
+          },
+        },
+        formatters_by_ft = {
+          javascript = { "biome", "prettierd", "prettier" },
+          json = { "biome", "prettierd", "prettier" },
+          lua = { "stylua" },
+          templ = {},
+        },
+			})
+		end,
 	},
 
 	"tpope/vim-sleuth",
@@ -756,6 +757,12 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous dia
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+-- Copy current file path to clipboard
+vim.keymap.set('n', '<leader>cp', function()
+  vim.fn.setreg('+', vim.fn.expand('%:p'))
+  print('Copied: ' .. vim.fn.expand('%:p'))
+end, { desc = 'Copy current file path to clipboard' })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function()

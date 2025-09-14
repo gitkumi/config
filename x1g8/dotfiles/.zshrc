@@ -5,7 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="$HOME/.local/bin:$PATH"
+custom_paths=(
+  "$HOME/.local/bin"
+  "$HOME/.cargo/bin"
+)
+for dir in "${custom_paths[@]}"; do
+  [[ -d "$dir" && ":$PATH:" != *":$dir:"* ]] && PATH="$dir:$PATH"
+done
+export PATH
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -20,6 +27,10 @@ fi
 
 if [ -f ~/.z_keys ]; then
 . ~/.z_keys
+fi
+
+if [ -f ~/.xaion_vars ]; then
+. ~/.xaion_vars
 fi
 
 if [ -f /opt/asdf-vm/asdf.sh ]; then
@@ -37,6 +48,9 @@ export EDITOR="$VISUAL"
 # Helpful docs in Erlang
 export KERL_BUILD_DOCS="yes"
 
+# development
+# ttcp_ggjpGwZnLz
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -44,3 +58,5 @@ setopt appendhistory
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+. "$HOME/.limbo/env"

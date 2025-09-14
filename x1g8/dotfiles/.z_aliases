@@ -87,9 +87,6 @@ alias p='pnpm'
 # elixir
 alias m='mix'
 
-# go
-alias goreshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/" && export GOPATH="$(asdf where golang)/packages/"'
-
 # docker
 alias d='docker'
 
