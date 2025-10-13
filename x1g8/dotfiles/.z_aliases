@@ -101,3 +101,5 @@ alias activate="source .venv/bin/activate"
 
 # commander
 alias cmd='~/config/scripts/commander'
+
+alias cursor='cursor-agent'

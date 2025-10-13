@@ -114,6 +114,7 @@ inetutils
 inotify-tools
 intel-media-driver
 intel-ucode
+irssi
 iwd
 jq
 kitty
@@ -158,6 +159,7 @@ sshfs
 steam
 sushi
 swell-foop
+syncthing
 sysprof
 tailscale
 tali
