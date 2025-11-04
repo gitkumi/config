@@ -25,7 +25,7 @@ declare -r DOT_FILES=(
   .tmux.conf
   .tool-versions
   # TODO: Need to support multiple gitconfig
-  # .gitconfig
+  .gitconfig
   .gitconfig.bak
   .sqliterc
 )
