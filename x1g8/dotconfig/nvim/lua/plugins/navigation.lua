@@ -25,10 +25,6 @@ return {
 		},
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
-			{
-				"refractalize/oil-git-status.nvim",
-				config = true,
-			},
 		},
 		keys = {
 			{
@@ -39,6 +35,15 @@ return {
 				desc = "Open Oil file explorer",
 			},
 		},
+	},
+
+	-- Oil git status
+	{
+		"refractalize/oil-git-status.nvim",
+		dependencies = {
+			"stevearc/oil.nvim",
+		},
+		config = true,
 	},
 
 	-- Harpoon
