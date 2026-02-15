@@ -19,8 +19,17 @@ return {
 			view_options = {
 				show_hidden = true,
 			},
+			win_options = {
+				signcolumn = "yes:2",
+			},
 		},
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			{
+				"refractalize/oil-git-status.nvim",
+				config = true,
+			},
+		},
 		keys = {
 			{
 				"<leader><space>",
