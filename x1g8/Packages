@@ -2,6 +2,7 @@ accerciser
 alacritty
 alsa-firmware
 alsa-utils
+anki
 antlr4
 arrow
 baobab
@@ -9,7 +10,6 @@ base
 base-devel
 bat
 bind
-cheese
 d-spy
 dconf-editor
 delve
@@ -22,6 +22,7 @@ eog
 epiphany
 evince
 evolution
+ex-vi-compat
 eza
 file-roller
 filezilla
@@ -136,6 +137,7 @@ neovim
 network-manager-applet
 networkmanager
 noto-fonts-cjk
+obsidian
 opentofu
 orca
 otf-ipafont
@@ -173,11 +175,11 @@ ttf-jetbrains-mono-nerd
 ttf-meslo-nerd
 ueberzug
 vault
-vi
 vim
 vlc
 vulkan-intel
 vulkan-radeon
+webkit2gtk
 wget
 wireless_tools
 xclip

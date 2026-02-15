@@ -1,7 +1,7 @@
-anki
 asdf-vm
 beekeeper-studio
 boundary-bin
+cheese
 csview
 exercism
 flyctl
@@ -9,6 +9,7 @@ gnu-netcat
 google-chrome
 ibus-mozc
 oh-my-zsh-git
+opencode-bin
 pfetch
 preload
 slack-desktop

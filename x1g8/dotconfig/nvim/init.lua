@@ -29,6 +29,8 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.hlsearch = false
@@ -610,6 +612,8 @@ local servers = {
 	-- rust_analyzer = {},
 	-- tsserver = {},
 	-- html = { filetypes = { 'html', 'twig', 'hbs'} },
+
+	expert = {},
 
 	lua_ls = {
 		Lua = {

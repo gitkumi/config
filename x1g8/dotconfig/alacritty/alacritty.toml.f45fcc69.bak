@@ -21,10 +21,4 @@ lines = 35
 [general]
 import = ['~/.config/alacritty/kanagawa_wave.toml']
 
-# [terminal]
-#
-# [[keyboard.bindings]]
-# key = "Return"
-# mods = "Shift"
-# chars = "\x1b\r"
-
+[terminal]
