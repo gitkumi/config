@@ -40,12 +40,12 @@ return {
 			{
 				"<leader>pq",
 				function()
-					require("telescope.builtin").quickfix(require("telescope.themes").get_dropdown({
+					require("telescope.builtin").lsp_references(require("telescope.themes").get_dropdown({
 						winblend = 10,
 						previewer = false,
 					}))
 				end,
-				desc = "Quickfix list",
+				desc = "LSP references",
 			},
 			{
 				"<leader>pd",

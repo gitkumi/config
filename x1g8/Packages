@@ -134,6 +134,7 @@ minikube
 mpv
 nano
 nautilus
+ncdu
 neovim
 network-manager-applet
 networkmanager
@@ -158,7 +159,6 @@ smartmontools
 snapshot
 sof-firmware
 sshfs
-steam
 sushi
 swell-foop
 syncthing
