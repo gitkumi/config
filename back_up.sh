@@ -1,23 +1,15 @@
 #!/bin/bash
 
-declare -r DEVICE="$(hostname)"
+DEVICE=$(hostname)
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
 
-if [ -z "$DEVICE" ]; then
-  echo "Device is required."
-  exit 1;
-fi
-
-declare -r TIMESTAMP="`date +%Y%m%d%H%M%S`"
-
-declare -r USER=$(whoami)
-declare -r USER_DIR=/home/$USER
-declare -r CONFIG_DIR=$USER_DIR/config/$DEVICE
-
-declare -r DOT_DIR=$CONFIG_DIR/dotfiles
-declare -r DOT_CONFIG_DIR=$CONFIG_DIR/dotconfig
+REPO_DIR="$HOME/config"
+CONFIG_DIR="$REPO_DIR/$DEVICE"
+DOT_DIR="$CONFIG_DIR/dotfiles"
+DOT_CONFIG_DIR="$CONFIG_DIR/dotconfig"
 
 # ~/
-declare -r DOT_FILES=(
+DOT_FILES=(
   .zshrc
   .zprofile
   .z_aliases
@@ -31,7 +23,7 @@ declare -r DOT_FILES=(
 )
 
 # ~/.config
-declare -r DOT_CONFIG_FILES=(
+DOT_CONFIG_FILES=(
   nvim
   alacritty
   ghostty
@@ -39,38 +31,37 @@ declare -r DOT_CONFIG_FILES=(
 )
 
 # Delete existing folders
-rm -rf $DOT_DIR $DOT_CONFIG_DIR
+rm -rf "$DOT_DIR" "$DOT_CONFIG_DIR"
 
 # Initialize
 echo "Device: $DEVICE"
 echo "Initializing directories.."
-mkdir -p $DOT_DIR $DOT_CONFIG_DIR
+mkdir -p "$DOT_DIR" "$DOT_CONFIG_DIR"
 
 # Save installed packages
 echo "Copying installed arch packages.."
-pacman -Qqen > $CONFIG_DIR/Packages
+pacman -Qqen > "$CONFIG_DIR/Packages"
 
-# Save installed packages
 echo "Copying installed arch packages (AUR).."
-pacman -Qqem > $CONFIG_DIR/Packages.aur
+pacman -Qqem > "$CONFIG_DIR/Packages.aur"
 
 # ~/
-for file in ${DOT_FILES[*]}
+for file in "${DOT_FILES[@]}"
 do
   echo "Copying $file.."
-  cp -R $USER_DIR/$file $DOT_DIR
+  cp -R "$HOME/$file" "$DOT_DIR"
 done
 
 # ~/.config
-for file in ${DOT_CONFIG_FILES[*]}
+for file in "${DOT_CONFIG_FILES[@]}"
 do
   echo "Copying $file.."
-  cp -R $USER_DIR/.config/$file $DOT_CONFIG_DIR
+  cp -R "$HOME/.config/$file" "$DOT_CONFIG_DIR"
 done
 
 # commit changes and push to repo
 echo "Committing changes and pushing to repo.."
-git -C "$CONFIG_DIR" add -A
-git -C "$CONFIG_DIR" commit -m "$TIMESTAMP" 
-git -C "$CONFIG_DIR" rebase origin/master
-git -C "$CONFIG_DIR" push
+git -C "$REPO_DIR" add -A
+git -C "$REPO_DIR" commit -m "$TIMESTAMP"
+git -C "$REPO_DIR" rebase origin/master
+git -C "$REPO_DIR" push
