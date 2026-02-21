@@ -100,6 +100,6 @@ alias sql='sqlite3'
 alias activate="source .venv/bin/activate"
 
 # commander
-alias cmd='~/config/scripts/commander'
+alias cmd='commander'
 
 alias cursor='cursor-agent'
