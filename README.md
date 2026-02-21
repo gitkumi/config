@@ -48,7 +48,3 @@ Note: Install `pipewire` and it's related packages then run `wpctl status`. If A
 ### Restoring config
 
 - Run `restore.sh`
-
-### TODO
-
-- Setup cron to automatically run `back_up.sh`
