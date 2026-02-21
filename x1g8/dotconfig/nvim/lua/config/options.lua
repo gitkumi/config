@@ -53,4 +53,4 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menuone,noselect"
 
 -- Update time
-vim.opt.updatetime = 50
+vim.opt.updatetime = 10

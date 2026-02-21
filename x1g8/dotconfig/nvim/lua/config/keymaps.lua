@@ -43,7 +43,7 @@ vim.keymap.set("v", "<leader>S", [["zy:%s@<C-r>z@<C-r>z@gI<Left><Left><Left>]])
 
 -- Quickfix
 vim.keymap.set("n", "<leader>qx", ":call setqflist([], 'r')<Enter>:close<Enter>", { desc = "Clear Quickfixlist" })
-vim.keymap.set("n", "<leader>qo", ":copen<Enter>", { desc = "Open Quickfixlist" })
+vim.keymap.set("n", "<leader>qo", ":vert copen<Enter>", { desc = "Open Quickfixlist" })
 vim.keymap.set("n", "<leader>qc", ":cclose<Enter>", { desc = "Close Quickfixlist" })
 
 -- Diagnostics
