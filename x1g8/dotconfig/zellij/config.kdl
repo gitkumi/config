@@ -3,7 +3,7 @@ theme "kanagawa"
 pane_frames false
 // default_layout "compact"
 keybinds clear-defaults=true {
-    unbind "Super b" "Super q" "Super n" "Super h" "Super g" "Super o"
+    unbind "Super b" "Super q" "Super n" "Super h" "Super g"
     pane {
         bind "Super p" { SwitchToMode "Normal"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
