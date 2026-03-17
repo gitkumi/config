@@ -73,7 +73,7 @@ alias greset='git reset --hard'
 alias greset!='git reset --hard && git clean -df'
 alias gmt='git mergetool'
 alias gitsed='~/config/scripts/git_sed.sh'
-alias wip='git add -A && git commit -m "wip" && git push'
+alias wip='git add -A && git commit -m "slop" && git push'
 
 # zellij
 alias zj='zellij'
