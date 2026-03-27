@@ -35,7 +35,7 @@ return {
 
 					nmap("K", vim.lsp.buf.hover, "Hover Documentation")
 					nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
-					nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+					nmap("gr", vim.lsp.buf.references, "[G]oto [R]eferences")
 					nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
 					nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 					nmap("gi", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
