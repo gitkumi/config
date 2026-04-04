@@ -35,7 +35,6 @@ DOT_FILES=(
 DOT_CONFIG_FILES=(
   nvim
   alacritty
-  ghostty
   zellij
 )
 

@@ -8,6 +8,7 @@ fi
 custom_paths=(
   "$HOME/.local/bin"
   "$HOME/.cargo/bin"
+  "/snap/bin"
 )
 for dir in "${custom_paths[@]}"; do
   [[ -d "$dir" && ":$PATH:" != *":$dir:"* ]] && PATH="$dir:$PATH"
