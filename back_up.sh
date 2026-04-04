@@ -39,6 +39,25 @@ DOT_CONFIG_FILES=(
   zellij
 )
 
+copy_path() {
+  local source_path="$1"
+  local destination_dir="$2"
+  local label="$3"
+
+  if [[ ! -e "$source_path" ]]; then
+    echo "Skipping $label: not found"
+    return 0
+  fi
+
+  if [[ -f "$source_path" && ! -s "$source_path" ]]; then
+    echo "Skipping $label: file is empty"
+    return 0
+  fi
+
+  echo "Copying $label.."
+  cp -R "$source_path" "$destination_dir"
+}
+
 # Delete existing folders
 rm -rf "$DOT_DIR" "$DOT_CONFIG_DIR"
 
@@ -71,15 +90,13 @@ esac
 # ~/
 for file in "${DOT_FILES[@]}"
 do
-  echo "Copying $file.."
-  cp -R "$HOME/$file" "$DOT_DIR"
+  copy_path "$HOME/$file" "$DOT_DIR" "$file"
 done
 
 # ~/.config
 for file in "${DOT_CONFIG_FILES[@]}"
 do
-  echo "Copying $file.."
-  cp -R "$HOME/.config/$file" "$DOT_CONFIG_DIR"
+  copy_path "$HOME/.config/$file" "$DOT_CONFIG_DIR" "$file"
 done
 
 # commit changes and push to repo

@@ -1,0 +1,30 @@
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "JetBrains Mono NerdFont"
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+
+[window]
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 110
+lines = 35
+
+[general]
+import = ['~/.config/alacritty/kanagawa_wave.toml']
+
+# [terminal]
+#
+# [[keyboard.bindings]]
+# key = "Return"
+# mods = "Shift"
+# chars = "\x1b\r"
+
