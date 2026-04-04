@@ -61,3 +61,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+eval "$(/home/takumi/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
