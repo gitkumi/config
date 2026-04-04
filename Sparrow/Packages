@@ -6,7 +6,9 @@ curl
 dash
 debianutils
 diffutils
+eza
 findutils
+fzf
 git
 grep
 gzip
@@ -19,3 +21,4 @@ ncurses-bin
 ubuntu-minimal
 ubuntu-wsl
 util-linux
+zsh
