@@ -21,7 +21,7 @@ fi
 autoload -Uz compinit
 compinit
 
-plugins=(git fzf asdf zellij)
+plugins=(git fzf zellij)
 
 if [ -f ~/.z_aliases ]; then
 . ~/.z_aliases
@@ -29,10 +29,6 @@ fi
 
 if [ -f ~/.z_keys ]; then
 . ~/.z_keys
-fi
-
-if [ -f /opt/asdf-vm/asdf.sh ]; then
-. /opt/asdf-vm/asdf.sh
 fi
 
 if command -v zoxide >/dev/null 2>&1; then

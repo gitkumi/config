@@ -1,6 +1,7 @@
 base-files
 bash
 bsdutils
+build-essential
 coreutils
 curl
 dash
@@ -18,6 +19,7 @@ libattr1
 login
 ncurses-base
 ncurses-bin
+neovim
 ubuntu-minimal
 ubuntu-wsl
 util-linux
