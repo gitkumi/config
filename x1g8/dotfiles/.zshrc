@@ -29,10 +29,6 @@ if [ -f ~/.z_keys ]; then
 . ~/.z_keys
 fi
 
-if [ -f ~/.xaion_vars ]; then
-. ~/.xaion_vars
-fi
-
 if [ -f /opt/asdf-vm/asdf.sh ]; then
 . /opt/asdf-vm/asdf.sh
 fi
@@ -47,9 +43,6 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 # Helpful docs in Erlang
 export KERL_BUILD_DOCS="yes"
-
-# development
-# ttcp_ggjpGwZnLz
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
